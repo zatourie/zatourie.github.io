@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "MS SQL Server SET Command"
+date:   2013-06-05 17:23:32
+categories: DB
+---
 # MS SQL Server SET Command
 발제 : 유재섭
 일시 : 2015.7.22 (수) 11:00~12:00
