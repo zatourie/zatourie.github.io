@@ -5,7 +5,7 @@ date: 2015-08-19 18:23:00
 categories: github
 ---
 
-```shell
+```Shell
 git status
 git add -all
 git commit -m"Commit message"
