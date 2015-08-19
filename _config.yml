@@ -12,10 +12,8 @@ paginate: 3
 
 # Links
 links:
-  - title: "abt"
+  - title: "about"
     url: /about
-  - title: "twt"
-    url: ""
   - title: "git"
     url: http://github.com/zatourie
   - title: "rss"
