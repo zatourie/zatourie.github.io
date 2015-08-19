@@ -1,6 +1,14 @@
 ---
-layout: default
+layout: post
+
+title: "2015년 스터디 계획"
+subtitle: "-"
+cover_image: blog-cover.jpg
+
+author:
+  name: mango
 ---
+
 # 짜투리 시간에 하는 함께 더 멀리 가는 스터디
 
   *  자발적, 의욕적
