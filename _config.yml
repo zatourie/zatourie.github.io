@@ -123,3 +123,4 @@ assets:
   cache: false
   gzip: [ text/css, application/javascript ]
   debug: false
+  
