@@ -5,9 +5,9 @@ date: 2015-08-19 18:23:00
 categories: github
 ---
 
-```
+
 {% highlight shell%}
-git status
+    git status
 
 git add -all
 
@@ -18,4 +18,4 @@ git push origin master
 git commit -m"rebuild" --allow-empty
 
 {% endhighlight %}
-```
+
