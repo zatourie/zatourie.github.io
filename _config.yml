@@ -11,4 +11,4 @@ github_username:  zatourie
 
 # Build settings
 markdown: kramdown
-
+highlighter: pygments
