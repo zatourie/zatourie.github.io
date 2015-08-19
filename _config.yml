@@ -1,0 +1,22 @@
+# Site settings
+title: "Zatourie Study"
+description: "짜투리시간에하는스터디"
+baseurl: ""
+url: "http://zatourie.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
+paginate: 3
+
+# Links
+links:
+  - title: "abt"
+    url: /about
+  - title: "twt"
+    url: ""
+  - title: "git"
+    url: http://github.com/zatourie
+  - title: "rss"
+    url: /feed.xml
