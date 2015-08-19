@@ -6,7 +6,7 @@ categories: github
 ---
 
 ```
-{% highlight %}
+{% highlight shell%}
 git status
 
 git add -all
