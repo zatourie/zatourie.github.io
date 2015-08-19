@@ -7,6 +7,10 @@ categories: github
 
 
 {% highlight bash%}
-    git status
+git status
+git add -all
+git commit -m"Commit message"
+git push origin master
+git commit -m"rebuild" --allow-empty
 {% endhighlight %}
 
