@@ -10,11 +10,3 @@ categories: github
     git status
 {% endhighlight %}
 
-
-git add -all
-
-git commit -m"Commit message"
-
-git push origin master
-
-git commit -m"rebuild" --allow-empty
