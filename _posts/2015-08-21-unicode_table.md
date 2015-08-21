@@ -3,12 +3,6 @@ layout: post
 title: 유니코드 폰트 테이블
 ---
 
-&#9733;
+<span style="font-size:20px;">&#127804;&#127904;</span>
 
-&#9728;
-
-&#127904;
-
-<sub style="font-size:20px;">&#127804;</sub>
-
-http://unicode-table.com/en/
+참조 : http://unicode-table.com/en/
