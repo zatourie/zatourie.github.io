@@ -9,6 +9,6 @@ title: 유니코드 폰트 테이블
 
 &#127904;
 
-<span style="font-size:20px;">&#127804;</span>
+<sub style="font-size:20px;">&#127804;</sub>
 
 http://unicode-table.com/en/
