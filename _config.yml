@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
-url:
+title:            Zatouri Study
+locale:           kr_KR
+url:zatourie.github.io
 
 
 # Jekyll configuration
@@ -26,9 +26,9 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: mango
   avatar: bio-photo.jpg
-  bio: "Describe your self."
+  bio: "carpe diem"
   email:
   disqus-shortname:
   twitter: #username
