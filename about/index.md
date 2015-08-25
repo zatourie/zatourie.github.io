@@ -3,7 +3,7 @@ layout: page
 title: 짜투리 스터디는
 tags: [about, Jekyll, theme, responsive]
 modified: 2015-08-25T10:51:07.573882-04:00
-comments: true
+comments: false
 ---
 
 이곳은 자투리 스터디 홈페이지입니다. 
