@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About the Theme
+title: 짜투리 스터디는
 tags: [about, Jekyll, theme, responsive]
-modified: 2014-08-08T20:53:07.573882-04:00
+modified: 2015-08-25T10:51:07.573882-04:00
 comments: true
 image:
   feature: sample-image-2.jpg
@@ -10,16 +10,12 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-Minimal Mistakes is responsive Jekyll theme with large featured images and solid typography. As the name implies the styling is fairly minimal to make it easier for you to build on top of.
+이곳은 자투리 스터디 홈페이지입니다. 
+짜투리 스터디는 사내 스터디 모임으로 2013년부터 3년째 매주 수요일 점심시간을 이용하여 IT기술관련 스터디를 진행하고 있습니다. 
 
-## Minimal Mistakes is all about:
+## 이곳에서는:
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
+* 짜투리 스터디 스케줄 및 내용
+* 최신 IT기술 관련 
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+이 다루어집니다.
