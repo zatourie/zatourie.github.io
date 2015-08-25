@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "네이티브 앱 vs 모바일 웹 vs 하이브리드 앱 vs (반응형 웹 vs 적응형 웹) "
+title:  "SQL Server 튜닝가이드 "
 date:   2015-06-03 11:00:00
 share: false
 comments: true
