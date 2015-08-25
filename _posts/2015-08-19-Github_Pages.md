@@ -3,6 +3,8 @@ layout: post
 title: "Github Pages를 이용한 웹싸이트 만들기"
 date: 2015-08-19 18:23:00
 categories: github
+share: false
+comments: true
 ---
 
 

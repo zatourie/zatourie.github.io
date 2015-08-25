@@ -3,6 +3,8 @@ layout: post
 title:  "DB Tunning"
 date:   2013-06-05 17:23:32
 categories: DB
+share: false
+comments: true
 ---
 
 일시 : 2013.6.5 (수) 11:00~12:00
