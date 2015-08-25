@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SQL Server 튜닝가이드 "
-date:   2015-06-03 11:00:00
+date:   2015-08-19 11:00:00
 share: false
 comments: true
 ---
