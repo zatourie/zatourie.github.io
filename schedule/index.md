@@ -4,7 +4,7 @@ title:  "2015년 스터디 계획"
 date:   2015-08-19 17:23:32
 categories: plan
 share: false
-comments: true
+comments: false
 ---
 
   * 스터디 일정입니다. 스터디 후 주제 적어주시고, Link 걸어 주시면 됩니다.
