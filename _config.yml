@@ -27,9 +27,9 @@ kramdown:
 # Site owner
 owner:
   name: mango
-  avatar: bio-photo.jpg
-  bio: "carpe diem"
-  email:
+  avatar: mango.jpg
+  bio: "que sera sera"
+  email: minkyu.shim@gmail.com
   disqus-shortname:
   twitter: #username
   facebook: #username
