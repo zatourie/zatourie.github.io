@@ -14,13 +14,13 @@ comments: true
 * 2015.04.08 (이정훈) 7. Functional Programming Paradigm 
 * 2015.04.15 (심민규) 8. Dining Philosopher Problem (w/ semophore) 
 * 2015.04.22 (이소윤) 9. 장애 lessons learned 
-* 2015.04.29 (이돈휘) 10. Information is beautiful , http://www.informationisbeautiful.net/ 
+* 2015.04.29 (이돈휘) 10. Information is beautiful , <http://www.informationisbeautiful.net/>
 * 2015.05.06 (심민규,이정훈) 한글->로마자 변환, 세벌식 자판 
 * 2015.05.13 (심민규) 11. Email HTML & DB에서 쿼리로 HTML 생성하기 
-* 2015.05.20 (이정훈) 12. English Email http://www.englishtown.com/community/channels/article.aspx?articlename=184-email 
+* 2015.05.20 (이정훈) 12. English Email <http://www.englishtown.com/community/channels/article.aspx?articlename=184-email >
 * 2015.06.10 (김민정) 13. 모바일 앱/웹 
 * 2015.06.17 (박지현) 14. MS SQL Server DMV query 
-* 2015.06.24 (이정훈) 15. GSP후기 + Netflix의 Simian Army  http://techblog.netflix.com/2011/07/netflix-simian-army.html 
+* 2015.06.24 (이정훈) 15. GSP후기 + Netflix의 Simian Army  <http://techblog.netflix.com/2011/07/netflix-simian-army.html> 
 * 2015.07.01 (심민규) 16. MSSQL Server Clustered Index vs. Non-clustered Index 
 * 2015.07.08 (이정훈) 17. GSP후기2   
 * 2015.07.22 (유재섭) 18. MSSQL Server SET Command   
