@@ -11,3 +11,10 @@ comments: true
 #!/bin/bash
 echo "Hello world!"
 {% endhighlight %}
+
+{% highlight bash%}
+pid=`ps -e | grep crond | awk '{print $1}'`
+kill -9 $pid
+{% endhighlight %}
+
+awk / sed
