@@ -162,3 +162,30 @@ perror("fopen"fopen: Permission denied
 ) 
 {% endhighlight %>
 
+## lsof - list open files
+
+* 특정파일을 오픈하고 있는 프로세스 추적
+
+{% highlight bash%}
+lsof /etc/passwd
+{% endhighlight %>
+
+* ftp포트가 열고있는 파일리스트 
+
+{% highlight bash%}
+lsof -i:ftp 
+{% endhighlight %>
+
+* 반복
+
+{% highlight bash%}
+lsof 0r 3 -i:telnet
+{% endhighlight %>
+
+* 특정 프로세스가 오픈하고 있는 파일
+
+{% highlight bash%}
+lsof -p `pgrep sshd`
+{% endhighlight %>
+
+
