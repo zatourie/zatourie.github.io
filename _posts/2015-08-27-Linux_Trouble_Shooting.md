@@ -37,7 +37,7 @@ kill -9 $pid
 
 ## 프로세스 상태
 
-!(http://www.makelinux.net/books/lkd2/graphics/03fig03.gif)
+![](http://www.makelinux.net/books/lkd2/graphics/03fig03.gif)
 
 <http://www.makelinux.net/books/lkd2/ch03lev1sec1>
 
