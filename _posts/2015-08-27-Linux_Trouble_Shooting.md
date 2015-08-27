@@ -15,8 +15,8 @@ echo "Hello world!"
 {% endhighlight %}
 
 {% highlight bash%}
-# pid=`ps -e | grep crond | awk '{print $1}'`
-# kill -9 $pid
+pid=`ps -e | grep crond | awk '{print $1}'`
+kill -9 $pid
 {% endhighlight %}
 
 ## 유용한 툴
@@ -42,5 +42,33 @@ echo "Hello world!"
 <http://www.makelinux.net/books/lkd2/ch03lev1sec1>
 
 
+{% highlight bash%}
+# pid_max
+man proc
 
+# Process State Codes
+man ps 
+{% endhighlight %}
+
+### 좀비 프로세스 확인 및 처리
+
+ps -el 
+
+#### 좀비프로세스 확인
+
+{% highlight bash%}
+ps-el | awk '$2=="Z" { print $5 }'
+{% endhighlight %>
+
+#### zombie.sh
+
+{% highlight bash%}
+#!/bin/bash
+# check the zombie process
+ppid=`ps -el | awk '$2=="Z" {print $5}'`
+for pid in $ppid
+do
+        ps -e | grep $pid
+done
+{% endhighlight %>
 
