@@ -7,7 +7,7 @@ share: false
 comments: true
 ---
 
-{% highlight %}
+{% highlight bash%}
 #!/bin/bash
 echo "Hello world!"
 {% endhighlight %}
@@ -17,4 +17,7 @@ pid=`ps -e | grep crond | awk '{print $1}'`
 kill -9 $pid
 {% endhighlight %}
 
-awk / sed
+
+# 유용한 툴
+
+* awk / sed
