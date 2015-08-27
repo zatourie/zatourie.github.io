@@ -7,8 +7,7 @@ share: false
 comments: true
 ---
 
-{%highlight%}
+{% highlight %}
 #!/bin/bash
-
 echo "Hello world!"
-{%endhighlight%}
+{% endhighlight %}
