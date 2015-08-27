@@ -7,7 +7,7 @@ share: false
 comments: true
 ---
 
-# Shell 
+# Shell Programming
 
 {% highlight bash%}
 #!/bin/bash
@@ -176,16 +176,25 @@ lsof /etc/passwd
 lsof -i:ftp 
 {% endhighlight %>
 
-* 반복
+* 명령 반복
 
 {% highlight bash%}
 lsof 0r 3 -i:telnet
 {% endhighlight %>
 
-* 특정 프로세스가 오픈하고 있는 파일
+* 특정 프로세스가 오픈하고 있는 파일 
 
 {% highlight bash%}
 lsof -p `pgrep sshd`
 {% endhighlight %>
 
+lsof -p 명령은 PID를 하나만 받으므로 sshd 프로세스가 여러개일경우 오류가 날 수 있다.
 
+## netstat
+
+{% highlight bash%}
+netstat -atp
+netstat -atp | grep telnet
+{% endhighlight %>
+
+ p 옵션 강추. 프로세스 정보도 함께 보여줌
