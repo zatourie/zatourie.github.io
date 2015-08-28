@@ -65,3 +65,15 @@ ps -el
 {% highlight bash%}
 ps-el | awk '$2=="Z" { print $5 }'
 {% endhighlight %}
+
+#### zombie.sh
+
+{% highlight bash%}
+#!/bin/bash
+# check the zombie process
+ppid=`ps -el | awk '$2=="Z" {print $5}'`
+for pid in $ppid
+do
+        ps -e | grep $pid
+done
+{% endhighlight %}
