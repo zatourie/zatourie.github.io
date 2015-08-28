@@ -3,6 +3,7 @@ layout: post
 title: Linux Trouble Shooting 정리
 date: 2015-08-27 09:00:00
 categories: DB
+author: billy_rick
 share: false
 comments: true
 ---
