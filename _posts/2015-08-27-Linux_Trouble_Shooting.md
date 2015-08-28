@@ -23,7 +23,7 @@ kill -9 $pid
 
 * vi
 * gedit
-* awk 
+* awk
 * sed
 
 # Troble Shooting
@@ -49,12 +49,12 @@ man proc
 
 #### Process State Codes
 {% highlight bash%}
-man ps 
+man ps
 {% endhighlight %}
 
 ### 좀비 프로세스 확인 및 처리
 
-ps -el 
+ps -el
 
 #### 좀비프로세스 확인
 
@@ -159,7 +159,7 @@ ltrace ./fileopen
 {% highlight bash%}
 fopen("/etc/shadow", "r")               = 0
 perror("fopen"fopen: Permission denied
-) 
+)
 {% endhighlight %>
 
 ## lsof - list open files
@@ -170,10 +170,10 @@ perror("fopen"fopen: Permission denied
 lsof /etc/passwd
 {% endhighlight %>
 
-* ftp포트가 열고있는 파일리스트 
+* ftp포트가 열고있는 파일리스트
 
 {% highlight bash%}
-lsof -i:ftp 
+lsof -i:ftp
 {% endhighlight %>
 
 * 명령 반복
@@ -182,7 +182,7 @@ lsof -i:ftp
 lsof 0r 3 -i:telnet
 {% endhighlight %>
 
-* 특정 프로세스가 오픈하고 있는 파일 
+* 특정 프로세스가 오픈하고 있는 파일
 
 {% highlight bash%}
 lsof -p `pgrep sshd`
@@ -202,7 +202,7 @@ netstat -atp | grep telnet
 
 ## ifconfig
 
-UP BROADCAST RUNNING MULTICAST 
+UP BROADCAST RUNNING MULTICAST
 올라와있고 broadcast 가능하며 실행되고 있고 multicast가능
 
 eth+숫자 : 외부와 통신
@@ -215,11 +215,11 @@ lo : loopback
 ## Gateway 확인
 
 {% highlight bash%}
-route 
-or 
+route
+or
 netstat -r
 
-## ARP 
+## ARP
 
 1, 2계층에서는 mac addr을 사용하여 통신함
 
@@ -245,3 +245,132 @@ yum install wireshark-gnome
 {% highlight bash%}
 ifup lo
 {% endhighlight %>
+
+# Linux Filesystem
+
+![](http://www.learnlinux.org.za/courses/build/images/diagram07.png)
+
+![](http://docstore.mik.ua/orelly/networking/puis/figs/puis_0501.gif)
+
+## history
+
+ext2 -> ext3 (journaling) -> ext4 (journal checksum, delayed file space allocation)
+
+<http://www.linuxdevelopernews.com/a-brief-history-of-ext2-ext3-and-ext4-2011-12>
+
+xfs, brfs(Btree Filesystem)
+
+----
+## 참고
+http://egaoneko.github.io/os/2015/05/24/linux-starter-guide-4.html
+
+## e2fsch
+
+{% highlight bash%}
+[root@localhost VMware Tools]# umount /data
+[root@localhost VMware Tools]# df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda2       18143556  5160340  12054912  30% /
+tmpfs            1958420      224   1958196   1% /dev/shm
+/dev/sda1         289293    74645    199288  28% /boot
+.host:/        104318044 71775404  32542640  69% /mnt/hgfs
+/dev/sr0           71618    71618         0 100% /media/VMware Tools
+[root@localhost VMware Tools]#
+
+[root@localhost VMware Tools]# e2fsck /dev/sdb1
+e2fsck 1.41.12 (17-May-2010)
+/dev/sdb1: clean, 11/327680 files, 55935/1309289 blocks
+[root@localhost VMware Tools]# e2fsck -f /dev/sdb1
+e2fsck 1.41.12 (17-May-2010)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/sdb1: 11/327680 files (0.0% non-contiguous), 55935/1309289 blocks
+[root@localhost VMware Tools]#
+{% endhighlight %>
+
+## mke2fs 를 이용한 superblock backup확인
+
+`mke2fs /dev/sdb1 --날라감 포맷명령`
+
+{% highlight bash%}
+[root@localhost VMware Tools]# mke2fs -n /dev/sdb1
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+327680 inodes, 1309289 blocks
+65464 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=1342177280
+40 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks:
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+[root@localhost VMware Tools]#
+{% endhighlight %>
+
+## tune2fs
+
+ext2 -> ext3 인 경우 journaling 추가
+
+tune2fs -j 장치명
+
+ext3 -> ext4
+
+{% highlight bash%}
+[root@localhost ~]# mount
+/dev/sda2 on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+.host:/ on /mnt/hgfs type vmhgfs (rw,ttl=1)
+vmware-vmblock on /var/run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,nodev,default_permissions,allow_other)
+gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
+/dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
+/dev/sdb1 on /data type ext3 (rw)
+[root@localhost ~]#
+{% endhighlight %>
+
+# tune2fs -O extents,uninit_bg,dir_index /dev/sdb1
+# e2fsck /dev/sdb1
+
+# mount /data --오류! cat /etc/fstab에 정의된 fs타입과 다름
+
+# mount /dev/sdb1 /data
+
+{% highlight bash%}
+[root@localhost ~]# mount
+/dev/sda2 on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+.host:/ on /mnt/hgfs type vmhgfs (rw,ttl=1)
+vmware-vmblock on /var/run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,nodev,default_permissions,allow_other)
+gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
+/dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
+/dev/sdb1 on /data type ext4 (rw)
+{% endhighlight %>
+  
+----
+
+참고
+To enable the ext4 features on an existing ext3 filesystem, use the command:
+# tune2fs -O extents,uninit_bg,dir_index /dev/DEV
+WARNING: Once you run this command, the filesystem will no longer be mountable using the ext3 filesystem!
+After running this command (specifically, after setting the uninit_bg parameter), you MUST run fsck to fix up some on-disk structures that tune2fs has modified:
+# e2fsck -fDC0 /dev/DEV
+
+<https://ext4.wiki.kernel.org/index.php/Ext4_Howto#Converting_an_ext3_filesystem_to_ext4>
