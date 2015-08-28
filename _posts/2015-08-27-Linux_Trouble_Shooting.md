@@ -712,3 +712,17 @@ cat /proc/sys/fs/file-max
 {% highlight bash %}
 sysctl -p
 {% endhighlight %}
+
+### 네트워크 보안
+
+#### TCP Wrapper
+
+* 설정화일 위치
+
+  /etc/hosts.deny
+  /etc/hosts.allow
+
+* man 참조
+
+  man hosts.deny
+  man hosts.allow
