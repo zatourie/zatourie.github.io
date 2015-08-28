@@ -6,6 +6,7 @@ categories: DB
 share: false
 comments: true
 ---
+강좌명:Linux Trouble Shooting, 일시:2015.8.27~28
 
 # Shell Programming
 
@@ -143,13 +144,13 @@ strace -p `pgrep xinetd` -f -e trace=network
 
 좋은데 결과를 읽기가 너무 힘들다 ㅠㅠ
 
-참고
+* 참고
 
 <http://chadfowler.com/blog/2014/01/26/the-magic-of-strace/>
 
 <http://www.hokstad.com/5-simple-ways-to-troubleshoot-using-strace>
 
-조금더 간단한 명령 ltrace
+* 조금더 간단한 명령 ltrace
 
 ### 실제 예제
 
@@ -671,3 +672,24 @@ find / -perm -2000
 {% highlight bash %}
 find / -perm -4000
 {% endhighlight %}
+
+### 파일속성
+
+* a : append만 가능
+* i : immutable 추가,변경,삭제 불가
+
+{% highlight bash %}
+lsattr /etc/passwd
+
+chattr +i /etc/passwd
+
+chattr -i /etc/passwd
+{% endhighlight %}
+
+### 커널 파라미터
+
+sysctl -a | grep file-max
+fs.file-max = 385767
+
+cat /proc/sys/fs/file-max
+385767
