@@ -103,3 +103,26 @@ do
         sleep 3
 done
 {% endhighlight %}
+
+## pgrep, pstree, top
+
+
+## strace
+
+파일로 결과 저장
+
+{% highlight bash %}
+strace -o /tmp/id.strace id
+{% endhighlight %}
+
+파일에 관련된 것만 출력
+
+{% highlight bash %}
+strace -e trace=file id
+{% endhighlight %}
+
+프로세스에 관련된 것만 출력
+
+{% highlight bash %}
+strace -e trace=process id
+{% endhighlight %}
