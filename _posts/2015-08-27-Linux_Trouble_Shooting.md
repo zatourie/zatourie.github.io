@@ -126,3 +126,57 @@ strace -e trace=file id
 {% highlight bash %}
 strace -e trace=process id
 {% endhighlight %}
+
+### telnet 설치
+
+{% highlight bash %}
+yum install -y telnetd
+
+service xinetd restart
+
+yum install -y telnet
+
+strace -p `pgrep xinetd`
+
+strace -p `pgrep xinetd` -f -e trace=network
+{% endhighlight %}
+
+좋은데 결과를 읽기가 너무 힘들다 ㅠㅠ
+
+참고
+
+<http://chadfowler.com/blog/2014/01/26/the-magic-of-strace/>
+
+<http://www.hokstad.com/5-simple-ways-to-troubleshoot-using-strace>
+
+조금더 간단한 명령 ltrace
+
+### 실제 예제
+
+fileopen 이라는 프로그램이 실행시 Permission denied가 뜬다
+
+#### strace 실행
+
+{% highlight bash %}
+strace ./fileopen
+{% endhighlight %}
+
+#### 결과
+
+{% highlight bash%}
+open("/etc/shadow", O_RDONLY)           = -1 EACCES (Permission denied)
+{% endhighlight %}
+
+#### ltrace 실행
+
+{% highlight bash%}
+ltrace ./fileopen
+{% endhighlight %}
+
+#### 결과
+
+{% highlight bash%}
+fopen("/etc/shadow", "r")               = 0
+perror("fopen"fopen: Permission denied
+)
+{% endhighlight %}
