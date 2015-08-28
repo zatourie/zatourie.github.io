@@ -338,3 +338,62 @@ Superblock backups stored on blocks:
 
 [root@localhost VMware Tools]#
 {% endhighlight %}
+
+## tune2fs
+
+ext2 -> ext3 인 경우 journaling 추가
+
+tune2fs -j 장치명
+
+ext3 -> ext4
+
+{% highlight bash%}
+[root@localhost ~]# mount
+/dev/sda2 on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+.host:/ on /mnt/hgfs type vmhgfs (rw,ttl=1)
+vmware-vmblock on /var/run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,nodev,default_permissions,allow_other)
+gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
+/dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
+/dev/sdb1 on /data type ext3 (rw)
+[root@localhost ~]#
+{% endhighlight %}
+
+# tune2fs -O extents,uninit_bg,dir_index /dev/sdb1
+# e2fsck /dev/sdb1
+
+# mount /data --오류! cat /etc/fstab에 정의된 fs타입과 다름
+
+# mount /dev/sdb1 /data
+
+{% highlight bash%}
+[root@localhost ~]# mount
+/dev/sda2 on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+.host:/ on /mnt/hgfs type vmhgfs (rw,ttl=1)
+vmware-vmblock on /var/run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,nodev,default_permissions,allow_other)
+gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
+/dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
+/dev/sdb1 on /data type ext4 (rw)
+{% endhighlight %}
+
+----
+
+참고
+To enable the ext4 features on an existing ext3 filesystem, use the command:
+# tune2fs -O extents,uninit_bg,dir_index /dev/DEV
+WARNING: Once you run this command, the filesystem will no longer be mountable using the ext3 filesystem!
+After running this command (specifically, after setting the uninit_bg parameter), you MUST run fsck to fix up some on-disk structures that tune2fs has modified:
+# e2fsck -fDC0 /dev/DEV
+
+<https://ext4.wiki.kernel.org/index.php/Ext4_Howto#Converting_an_ext3_filesystem_to_ext4>
