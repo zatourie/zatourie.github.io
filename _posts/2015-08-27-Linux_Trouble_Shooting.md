@@ -240,3 +240,42 @@ or
 {% highlight bash %}
 netstat -r
 {% endhighlight %}
+
+## ARP
+
+OSI 1, 2계층에서는 mac addr을 사용하여 통신함
+
+arp 테이블에서 IP와 mac addr을 매핑해둔다
+
+## tcpdump
+
+{% highlight bash%}
+tcpdump -i lo -w /tmp/tcpdump.log
+
+tcpdump -r /tmp/tcpdump.log port telnet
+{% endhighlight %}
+
+
+## wireshark
+
+{% highlight bash%}
+yum install wireshark-gnome
+{% endhighlight %}
+
+## lo 살리기
+
+{% highlight bash%}
+ifup lo
+{% endhighlight %}
+
+# Linux Filesystem
+
+![](http://www.learnlinux.org.za/courses/build/images/diagram07.png)
+
+![](http://docstore.mik.ua/orelly/networking/puis/figs/puis_0501.gif)
+
+## history
+
+ext2 -> ext3 (journaling) -> ext4 (journal checksum, delayed file space allocation)
+
+<http://www.linuxdevelopernews.com/a-brief-history-of-ext2-ext3-and-ext4-2011-12>
