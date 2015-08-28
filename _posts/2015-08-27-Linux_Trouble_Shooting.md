@@ -439,3 +439,140 @@ Service tuned: enabled, running
 Service ktune: enabled, running
 [root@localhost tune-profiles]#
 {% endhighlight %}
+
+## 부팅시 문제
+
+![](http://i2.wp.com/www.linuxnix.com/wp-content/uploads/2013/04/Linux-Booting-process.png)
+
+RHEL6 vs RHEL7 교재 참고
+
+### root 비밀번호 잊어버렸을때
+
+* 부팅시 runlevel 1로 변경 후 재부팅하면 비번없이 로그인됨 (RHEL6의 경우)
+* passwd root 로 비번 재설정
+
+### 파일시스템 마운트 실패시
+
+#### /etc/fstab
+
+{% highlight bash%}
+# /etc/fstab
+# Created by anaconda on Tue Aug 25 01:29:29 2015
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+UUID=807ea5cc-3c92-4a88-be4d-2630553640af /                       ext4    defaults        1 1
+UUID=71e68e21-ea8c-4a16-a71d-85e0e03789a8 /boot                   ext4    defaults        1 2
+UUID=fdff50ba-06c8-4548-a803-2a9e02aebbeb swap                    swap    defaults        0 0
+tmpfs                   /dev/shm                tmpfs   defaults        0 0
+devpts                  /dev/pts                devpts  gid=5,mode=620  0 0
+sysfs                   /sys                    sysfs   defaults        0 0
+proc                    /proc                   proc    defaults        0 0
+UUID="06770c0a-8b83-43ab-be41-f53be632e42b" /data               ext3    defaults        1 3
+{% endhighlight %}
+
+{% highlight bash%}
+[root@localhost ~]# blkid /dev/sdb1
+/dev/sdb1: UUID="06770c0a-8b83-43ab-be41-f53be632e42b" TYPE="ext4"
+{% endhighlight %}
+
+파일시스템 마운트 실패시 파일시스템이 읽기전용으로 마운트됨
+
+파일시스템을 쓰기가능한 상태로 다시 마운트
+mount -o remount,rw /
+
+### /sbin/init이 깨졌을때
+
+부팅시 `init=/bin/bash`로 재부팅
+`rpm -qf /sbin/init`로 패키지 확인후 복구
+
+
+## 커널 문제 추적
+
+디바이스 드라이버는 커널에 적재되어 실행됨
+
+커널 메시지 확인 명령
+dmesg
+
+### 리눅스 커널 빌드
+
+{% highlight bash%}
+make oldconfig/menuconfig/xconfig
+
+make
+
+make install
+{% endhighlight %}
+
+### Kernel Panic, oops, 세그멘테이션 오류(segmentation fault)
+
+#### Kernel Panic
+
+![](http://i.imgur.com/fuH1F.png)
+
+#### Kernel oops
+
+![](http://skeymedia.com/wp-content/uploads/2007/11/opps.GIF)
+
+#### kdb를 이용한 커널 디버깅
+
+``@_@;;``
+
+#### Kernel 덤프
+
+##### dump 도구
+
+* diskdump
+* kdump (기본)
+* LKCD
+
+##### 분석 도구
+
+* crash
+
+##### kdump 설정
+
+/boot/grub/grub.conf 수정 - crashkernel=128M@16M
+
+chkconfig kdump on
+
+service kdump start
+
+service kdump status
+
+런레별별 서비스 시작여부 확인
+
+chkconfig --list kdump
+
+현재 런레벨
+
+runlevel
+
+#### crash로 분석
+
+vmlinx 파일 위치 확인
+
+find / -name vmlinux
+
+crash 명령
+
+crash vmlinux /var/crash/127.0.0.1-2015-08-27-21:57:03/vmcore
+
+crash> set 1
+PID: 1
+COMMAND: "init"
+
+crash> ascii 0x41424344
+41424344: DCBA
+
+bt [option][PID]
+
+
+bt -l
+
+커널소스파일 및 라인번호 정보
+
+live 커널 디버깅
+
+crash vmlinux
