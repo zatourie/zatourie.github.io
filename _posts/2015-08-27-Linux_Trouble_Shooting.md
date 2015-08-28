@@ -533,46 +533,141 @@ make install
 
 ##### kdump 설정
 
-/boot/grub/grub.conf 수정 - crashkernel=128M@16M
+* /boot/grub/grub.conf 수정 - crashkernel=128M@16M
 
+{% highlight bash %}
 chkconfig kdump on
 
 service kdump start
 
 service kdump status
+{% endhighlight %}
 
-런레별별 서비스 시작여부 확인
+* 런레별별 서비스 시작여부 확인
 
+{% highlight bash %}
 chkconfig --list kdump
+{% endhighlight %}
 
-현재 런레벨
+* 현재 런레벨
 
+{% highlight bash %}
 runlevel
+{% endhighlight %}
 
 #### crash로 분석
 
-vmlinx 파일 위치 확인
+* vmlinx 파일 위치 확인
 
+{% highlight bash %}
 find / -name vmlinux
+{% endhighlight %}
 
-crash 명령
+* crash 명령
 
+{% highlight bash %}
 crash vmlinux /var/crash/127.0.0.1-2015-08-27-21:57:03/vmcore
+{% endhighlight %}
 
+{% highlight bash %}
 crash> set 1
 PID: 1
 COMMAND: "init"
 
 crash> ascii 0x41424344
 41424344: DCBA
+{% endhighlight %}
 
-bt [option][PID]
+* bt [option][PID]
 
-
+{% highlight bash %}
 bt -l
+{% endhighlight %}
 
 커널소스파일 및 라인번호 정보
 
 live 커널 디버깅
 
+{% highlight bash %}
 crash vmlinux
+{% endhighlight %}
+
+## 모듈
+
+/lib/modules/`uname -r`/kernel/drivers/ 하위에 ``*.ko``
+
+{% highlight bash %}
+insmod modulename
+
+modprobe slip
+
+insmod oops.ko -> crash
+{% endhighlight %}
+
+## 시스템 보안
+
+### 서비스 시작 설정
+
+{% highlight bash %}
+ntsysv
+
+chkconfig --list
+
+chkconfig --list xinetd
+
+chkconfig --level 3 xinetd off
+
+chkconfig xinetd off
+{% endhighlight %}
+
+### 포트 관련
+
+{% highlight bash %}
+netstat -atp
+
+lsof -i:smtp
+{% endhighlight %}
+
+### PAM
+
+* 설정화일: /etc/pam.d/
+* 모듈위치: /lib/security/ 혹은 /lib64/security/
+* pam_nologin.so모듈 설정예
+
+{% highlight bash %}
+touch /etc/nologin
+{% endhighlight %}
+
+### ulimit
+
+* ctrl + \ 로 core 파일 떨어짐
+
+{% highlight bash %}
+ulimit -c unlimited
+{% endhighlight %}
+
+* core파일 안떨어짐
+
+{% highlight bash %}
+ulimit -c 0
+{% endhighlight %}
+
+### 파일사용권한 타그룹 권한 t
+
+``-rwsr-sr-t ``
+
+* s : set uid 누가 실행하든 만든 사용자의 사용자아이디로 설정함
+* s : set gid 누가 실행하든 만든 사용자의 그룹아이디로 설정함
+* t : sticky 디렉토리 권한, 타사용자가 생성한 파일 삭제 안됨
+
+* setuid 파일 검색
+
+{% highlight bash %}
+find / -perm -2000
+{% endhighlight %}
+
+* setgid 파일 검색
+
+{% highlight bash %}
+find / -perm -4000
+{% endhighlight %}
