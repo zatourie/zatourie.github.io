@@ -720,9 +720,26 @@ sysctl -p
 * 설정화일 위치
 
   /etc/hosts.deny
+
   /etc/hosts.allow
 
 * man 참조
 
-  man hosts.deny
-  man hosts.allow
+{% highlight bash %}
+man hosts.deny
+man hosts.allow
+{% endhighlight %}
+
+#### 방화벽
+
+* 방화벽 설정 확인
+
+{% highlight bash %}
+iptables -L
+{% endhighlight %}
+
+* 설정
+
+{% highlight bash %}
+iptables -A INPUT -s 192.168.10.0/24 --dport 80 -j REJECT
+{% endhighlight %}
