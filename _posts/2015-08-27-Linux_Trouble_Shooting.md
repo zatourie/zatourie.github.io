@@ -180,3 +180,31 @@ fopen("/etc/shadow", "r")               = 0
 perror("fopen"fopen: Permission denied
 )
 {% endhighlight %}
+
+## lsof - list open files
+
+* 특정파일을 오픈하고 있는 프로세스 추적
+
+{% highlight bash %}
+lsof /etc/passwd
+{% endhighlight %}
+
+* ftp포트가 열고있는 파일리스트
+
+{% highlight bash %}
+lsof -i:ftp
+{% endhighlight %}
+
+* 명령 반복
+
+{% highlight bash %}
+lsof 0r 3 -i:telnet
+{% endhighlight %}
+
+* 특정 프로세스가 오픈하고 있는 파일
+
+{% highlight bash %}
+lsof -p `pgrep sshd`
+{% endhighlight %}
+
+lsof -p 명령은 PID를 하나만 받으므로 sshd 프로세스가 여러개일경우 오류가 날 수 있다.
