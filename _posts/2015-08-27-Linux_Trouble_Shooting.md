@@ -60,7 +60,7 @@ ps -el
 
 {% highlight bash%}
 ps-el | awk '$2=="Z" { print $5 }'
-{% endhighlight %>
+{% endhighlight %}
 
 #### zombie.sh
 
@@ -72,7 +72,7 @@ for pid in $ppid
 do
         ps -e | grep $pid
 done
-{% endhighlight %>
+{% endhighlight %}
 
 ### thread 조회
 
@@ -81,7 +81,7 @@ gcc countThead.c -o countThread -lpthread
 ps -eL | grep countThread
 ps -eLo "pcpu,rss,vsz,command" | grep countThread
 ps -eo "pid,ppid,rss,vsz,command" | grep firefox
-{% endhighlight %>
+{% endhighlight %}
 
 ### Process monitoring
 
@@ -98,7 +98,7 @@ do
         ps -eo "pid,ppid,rss,vsz,command" | grep $1 | grep -v grep
         sleep 3
 done
-{% endhighlight %>
+{% endhighlight %}
 
 ## pgrep, pstree, top
 
@@ -140,19 +140,19 @@ fileopen 이라는 프로그램이 실행시 Permission denied가 뜬다
 
 {% highlight bash%}
 strace ./fileopen
-{% endhighlight %>
+{% endhighlight %}
 
 #### 결과
 
 {% highlight bash%}
 open("/etc/shadow", O_RDONLY)           = -1 EACCES (Permission denied)
-{% endhighlight %>
+{% endhighlight %}
 
 #### ltrace 실행
 
 {% highlight bash%}
 ltrace ./fileopen
-{% endhighlight %>
+{% endhighlight %}
 
 #### 결과
 
@@ -160,7 +160,7 @@ ltrace ./fileopen
 fopen("/etc/shadow", "r")               = 0
 perror("fopen"fopen: Permission denied
 )
-{% endhighlight %>
+{% endhighlight %}
 
 ## lsof - list open files
 
@@ -168,25 +168,25 @@ perror("fopen"fopen: Permission denied
 
 {% highlight bash%}
 lsof /etc/passwd
-{% endhighlight %>
+{% endhighlight %}
 
 * ftp포트가 열고있는 파일리스트
 
 {% highlight bash%}
 lsof -i:ftp
-{% endhighlight %>
+{% endhighlight %}
 
 * 명령 반복
 
 {% highlight bash%}
 lsof 0r 3 -i:telnet
-{% endhighlight %>
+{% endhighlight %}
 
 * 특정 프로세스가 오픈하고 있는 파일
 
 {% highlight bash%}
 lsof -p `pgrep sshd`
-{% endhighlight %>
+{% endhighlight %}
 
 lsof -p 명령은 PID를 하나만 받으므로 sshd 프로세스가 여러개일경우 오류가 날 수 있다.
 
@@ -195,7 +195,7 @@ lsof -p 명령은 PID를 하나만 받으므로 sshd 프로세스가 여러개�
 {% highlight bash%}
 netstat -atp
 netstat -atp | grep telnet
-{% endhighlight %>
+{% endhighlight %}
 
  p 옵션 강추. 프로세스 정보도 함께 보여줌
 
@@ -231,20 +231,20 @@ arp 테이블에서 IP와 mac addr을 매핑해둔다
 tcpdump -i lo -w /tmp/tcpdump.log
 
 tcpdump -r /tmp/tcpdump.log port telnet
-{% endhighlight %>
+{% endhighlight %}
 
 
 ## wireshark
 
 {% highlight bash%}
 yum install wireshark-gnome
-{% endhighlight %>
+{% endhighlight %}
 
 ## lo 살리기
 
 {% highlight bash%}
 ifup lo
-{% endhighlight %>
+{% endhighlight %}
 
 # Linux Filesystem
 
@@ -289,7 +289,7 @@ Pass 4: Checking reference counts
 Pass 5: Checking group summary information
 /dev/sdb1: 11/327680 files (0.0% non-contiguous), 55935/1309289 blocks
 [root@localhost VMware Tools]#
-{% endhighlight %>
+{% endhighlight %}
 
 ## mke2fs 를 이용한 superblock backup확인
 
@@ -314,7 +314,7 @@ Superblock backups stored on blocks:
 	32768, 98304, 163840, 229376, 294912, 819200, 884736
 
 [root@localhost VMware Tools]#
-{% endhighlight %>
+{% endhighlight %}
 
 ## tune2fs
 
@@ -339,7 +339,7 @@ gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
 /dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
 /dev/sdb1 on /data type ext3 (rw)
 [root@localhost ~]#
-{% endhighlight %>
+{% endhighlight %}
 
 # tune2fs -O extents,uninit_bg,dir_index /dev/sdb1
 # e2fsck /dev/sdb1
@@ -362,7 +362,7 @@ vmware-vmblock on /var/run/vmblock-fuse type fuse.vmware-vmblock (rw,nosuid,node
 gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
 /dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
 /dev/sdb1 on /data type ext4 (rw)
-{% endhighlight %>
+{% endhighlight %}
 
 ----
 
@@ -391,13 +391,13 @@ default             laptop-battery-powersave  virtual-guest
 desktop-powersave   latency-performance       virtual-host
 enterprise-storage  server-powersave
 functions           spindown-disk
-{% endhighlight %>
+{% endhighlight %}
 
 ### 커널파라미터 확인
 
 {% highlight bash%}
 sysctl -a
-{% endhighlight %>
+{% endhighlight %}
 
 ### 프로파일 변경
 
@@ -415,7 +415,86 @@ Current active profile: enterprise-storage
 Service tuned: enabled, running
 Service ktune: enabled, running
 [root@localhost tune-profiles]#
-{% endhighlight %>
+{% endhighlight %}
 
 
 ## 부팅시 문제
+
+![](http://i2.wp.com/www.linuxnix.com/wp-content/uploads/2013/04/Linux-Booting-process.png)
+
+RHEL6 vs RHEL7 교재 참고
+
+### root 비밀번호 잊어버렸을때
+
+* 부팅시 runlevel 1로 변경 후 재부팅하면 비번없이 로그인됨 (RHEL6의 경우)
+* passwd root 로 비번 재설정
+
+### 파일시스템 마운트 실패시
+
+#### /etc/fstab
+
+{% highlight bash%}
+# /etc/fstab
+# Created by anaconda on Tue Aug 25 01:29:29 2015
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+UUID=807ea5cc-3c92-4a88-be4d-2630553640af /                       ext4    defaults        1 1
+UUID=71e68e21-ea8c-4a16-a71d-85e0e03789a8 /boot                   ext4    defaults        1 2
+UUID=fdff50ba-06c8-4548-a803-2a9e02aebbeb swap                    swap    defaults        0 0
+tmpfs                   /dev/shm                tmpfs   defaults        0 0
+devpts                  /dev/pts                devpts  gid=5,mode=620  0 0
+sysfs                   /sys                    sysfs   defaults        0 0
+proc                    /proc                   proc    defaults        0 0
+UUID="06770c0a-8b83-43ab-be41-f53be632e42b" /data               ext3    defaults        1 3
+{% endhighlight %}
+
+{% highlight bash%}
+[root@localhost ~]# blkid /dev/sdb1
+/dev/sdb1: UUID="06770c0a-8b83-43ab-be41-f53be632e42b" TYPE="ext4"
+{% endhighlight %}
+
+파일시스템 마운트 실패시 파일시스템이 읽기전용으로 마운트됨
+
+파일시스템을 쓰기가능한 상태로 다시 마운트
+mount -o remount,rw /
+
+### /sbin/init이 깨졌을때
+
+부팅시 `init=/bin/bash`로 재부팅
+`rpm -qf /sbin/init`로 패키지 확인후 복구
+
+
+## 커널 문제 추적
+
+디바이스 드라이버는 커널에 적재되어 실행됨
+
+커널 메시지 확인 명령
+dmesg
+
+### 리눅스 커널 빌드
+
+{% highlight bash%}
+make oldconfig/menuconfig/xconfig
+
+make
+
+make install
+{% endhighlight %}
+
+### Kernel Panic, oops, 세그멘테이션 오류(segmentation fault)
+
+#### Kernel Panic
+
+![](http://i.imgur.com/fuH1F.png)
+
+#### Kernel oops
+
+![](http://skeymedia.com/wp-content/uploads/2007/11/opps.GIF)
+
+#### kdb를 이용한 커널 디버깅
+
+``@_@;;``
+
+#### Kernel 덤프
