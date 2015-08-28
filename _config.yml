@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Zatourie Study 
+title:            Zatourie Study
 locale:           kr_KR
 url:              http://zatourie.github.io
 
@@ -26,13 +26,13 @@ kramdown:
 
 # Site owner
 owner:
-  name: mango
+  name: zatourie
   avatar: mango.png
-  bio: "que sera sera"
-  email: minkyu.shim@gmail.com
+  bio: "공부해서 남주자"
+  email:
   disqus-shortname: zatourie
   twitter: #username
-  facebook: "minkyu.shim"
+  facebook:
   google:
     plus: #username
     analytics:
@@ -40,7 +40,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: zatourie
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
