@@ -40,3 +40,9 @@ kill -9 $pid
 ![](http://www.makelinux.net/books/lkd2/graphics/03fig03.gif)
 
 <http://www.makelinux.net/books/lkd2/ch03lev1sec1>
+
+#### pid_max
+
+{% highlight bash%}
+man proc
+{% endhighlight %}
