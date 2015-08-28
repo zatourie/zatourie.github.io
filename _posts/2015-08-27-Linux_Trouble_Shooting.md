@@ -208,3 +208,25 @@ lsof -p `pgrep sshd`
 {% endhighlight %}
 
 * lsof -p 명령은 PID를 하나만 받으므로 sshd 프로세스가 여러개일경우 오류가 날 수 있다.
+
+## netstat
+
+{% highlight bash%}
+netstat -atp
+netstat -atp | grep telnet
+{% endhighlight %}
+
+ p 옵션 강추. 프로세스 정보도 함께 보여줌
+
+
+## ifconfig
+
+UP BROADCAST RUNNING MULTICAST
+올라와있고 broadcast 가능하며 실행되고 있고 multicast가능
+
+eth+숫자 : 외부와 통신
+lo : loopback
+
+* ::1/128 -> ipv6 앞부분이 모두 00인 경우 표기법
+
+/etc/sysconfig/network-scripts/ifcfg-eth? 네트웍설정
