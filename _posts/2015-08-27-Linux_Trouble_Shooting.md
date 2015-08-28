@@ -77,3 +77,29 @@ do
         ps -e | grep $pid
 done
 {% endhighlight %}
+
+### thread 조회
+
+{% highlight bash%}
+gcc countThead.c -o countThread -lpthread
+ps -eL | grep countThread
+ps -eLo "pcpu,rss,vsz,command" | grep countThread
+ps -eo "pid,ppid,rss,vsz,command" | grep firefox
+{% endhighlight %}
+
+### Process monitoring
+
+{% highlight bash%}
+#!/bin/bash
+#Monitoring processes
+if [ $# -ne 1 ]
+then
+        echo "Usage : $0 process_name"
+        exit 1
+fi
+while true
+do
+        ps -eo "pid,ppid,rss,vsz,command" | grep $1 | grep -v grep
+        sleep 3
+done
+{% endhighlight %}
