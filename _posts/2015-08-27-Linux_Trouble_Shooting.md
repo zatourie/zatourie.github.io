@@ -46,3 +46,22 @@ kill -9 $pid
 {% highlight bash%}
 man proc
 {% endhighlight %}
+
+
+#### Process State Codes
+
+{% highlight bash%}
+man ps
+{% endhighlight %}
+
+### 좀비 프로세스 확인 및 처리
+
+{% highlight bash%}
+ps -el
+{% endhighlight %}
+
+#### 좀비프로세스 확인
+
+{% highlight bash%}
+ps-el | awk '$2=="Z" { print $5 }'
+{% endhighlight %}
