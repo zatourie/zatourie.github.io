@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux Trouble Shooting
+title: Linux Trouble Shooting 정리
 date: 2015-08-27 09:00:00
 categories: DB
 share: false
@@ -742,4 +742,16 @@ iptables -L
 
 {% highlight bash %}
 iptables -A INPUT -s 192.168.10.0/24 --dport 80 -j REJECT
+{% endhighlight %}
+
+* 삭제
+
+{% highlight bash %}
+iptables -D INPUT -s 192.168.10.0/24 --dport 80 -j REJECT
+{% endhighlight %}
+
+*
+
+{% highlight bash %}
+iptables -P INPUT DROP
 {% endhighlight %}
