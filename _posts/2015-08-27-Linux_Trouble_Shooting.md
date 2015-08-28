@@ -363,7 +363,7 @@ gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
 /dev/sr0 on /media/VMware Tools type iso9660 (ro,nosuid,nodev,uhelper=udisks,uid=0,gid=0,iocharset=utf8,mode=0400,dmode=0500)
 /dev/sdb1 on /data type ext4 (rw)
 {% endhighlight %>
-  
+
 ----
 
 참고
@@ -374,3 +374,48 @@ After running this command (specifically, after setting the uninit_bg parameter)
 # e2fsck -fDC0 /dev/DEV
 
 <https://ext4.wiki.kernel.org/index.php/Ext4_Howto#Converting_an_ext3_filesystem_to_ext4>
+
+
+## 시스템 튜닝 데몬 tuned
+
+### 참고
+<docs.redhat.com>
+
+
+{% highlight bash%}
+[root@localhost tune-profiles]# pwd
+/etc/tune-profiles
+[root@localhost tune-profiles]# ls
+active-profile      laptop-ac-powersave       throughput-performance
+default             laptop-battery-powersave  virtual-guest
+desktop-powersave   latency-performance       virtual-host
+enterprise-storage  server-powersave
+functions           spindown-disk
+{% endhighlight %>
+
+### 커널파라미터 확인
+
+{% highlight bash%}
+sysctl -a
+{% endhighlight %>
+
+### 프로파일 변경
+
+{% highlight bash%}
+[root@localhost tune-profiles]# tuned-adm profile enterprise-storage
+Switching to profile 'enterprise-storage'
+Applying deadline elevator: sda sdb sdc                    [  OK  ]
+Applying ktune sysctl settings:
+/etc/ktune.d/tunedadm.conf:                                [  OK  ]
+Calling '/etc/ktune.d/tunedadm.sh start':                  [  OK  ]
+Applying sysctl settings from /etc/sysctl.conf
+Starting tuned:                                            [  OK  ]
+[root@localhost tune-profiles]# tuned-adm active
+Current active profile: enterprise-storage
+Service tuned: enabled, running
+Service ktune: enabled, running
+[root@localhost tune-profiles]#
+{% endhighlight %>
+
+
+## 부팅시 문제
