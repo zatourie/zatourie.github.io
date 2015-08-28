@@ -313,3 +313,28 @@ Pass 5: Checking group summary information
 /dev/sdb1: 11/327680 files (0.0% non-contiguous), 55935/1309289 blocks
 [root@localhost VMware Tools]#
 {% endhighlight %}
+
+## mke2fs 를 이용한 superblock backup확인
+
+`mke2fs /dev/sdb1 --날라감 포맷명령`
+
+{% highlight bash%}
+[root@localhost VMware Tools]# mke2fs -n /dev/sdb1
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+327680 inodes, 1309289 blocks
+65464 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=1342177280
+40 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks:
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+[root@localhost VMware Tools]#
+{% endhighlight %}
