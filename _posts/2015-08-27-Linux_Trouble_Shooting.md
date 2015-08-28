@@ -371,7 +371,7 @@ gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
 
 # mount /dev/sdb1 /data
 
-{% highlight bash%}
+{% highlight bash %}
 [root@localhost ~]# mount
 /dev/sda2 on / type ext4 (rw)
 proc on /proc type proc (rw)
@@ -402,10 +402,10 @@ After running this command (specifically, after setting the uninit_bg parameter)
 
 ### 참고
 
-<docs.redhat.com>
+<http://docs.redhat.com>
 
 
-{% highlight bash%}
+{% highlight bash %}
 [root@localhost tune-profiles]# pwd
 /etc/tune-profiles
 [root@localhost tune-profiles]# ls
