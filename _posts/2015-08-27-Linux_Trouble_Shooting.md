@@ -279,3 +279,37 @@ ifup lo
 ext2 -> ext3 (journaling) -> ext4 (journal checksum, delayed file space allocation)
 
 <http://www.linuxdevelopernews.com/a-brief-history-of-ext2-ext3-and-ext4-2011-12>
+
+
+xfs, brfs(Btree Filesystem)
+
+----
+## 참고
+http://egaoneko.github.io/os/2015/05/24/linux-starter-guide-4.html
+
+## e2fsck
+
+{% highlight bash%}
+[root@localhost VMware Tools]# umount /data
+[root@localhost VMware Tools]# df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda2       18143556  5160340  12054912  30% /
+tmpfs            1958420      224   1958196   1% /dev/shm
+/dev/sda1         289293    74645    199288  28% /boot
+.host:/        104318044 71775404  32542640  69% /mnt/hgfs
+/dev/sr0           71618    71618         0 100% /media/VMware Tools
+[root@localhost VMware Tools]#
+
+[root@localhost VMware Tools]# e2fsck /dev/sdb1
+e2fsck 1.41.12 (17-May-2010)
+/dev/sdb1: clean, 11/327680 files, 55935/1309289 blocks
+[root@localhost VMware Tools]# e2fsck -f /dev/sdb1
+e2fsck 1.41.12 (17-May-2010)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/sdb1: 11/327680 files (0.0% non-contiguous), 55935/1309289 blocks
+[root@localhost VMware Tools]#
+{% endhighlight %}
