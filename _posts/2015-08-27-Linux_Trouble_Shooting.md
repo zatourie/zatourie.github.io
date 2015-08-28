@@ -224,9 +224,19 @@ netstat -atp | grep telnet
 UP BROADCAST RUNNING MULTICAST
 올라와있고 broadcast 가능하며 실행되고 있고 multicast가능
 
-eth+숫자 : 외부와 통신
-lo : loopback
-
+* eth+숫자 : 외부와 통신
+* lo : loopback
 * ::1/128 -> ipv6 앞부분이 모두 00인 경우 표기법
+* /etc/sysconfig/network-scripts/ifcfg-eth? 네트웍설정
 
-/etc/sysconfig/network-scripts/ifcfg-eth? 네트웍설정
+## Gateway 확인
+
+{% highlight bash %}
+route
+{% endhighlight %}
+
+or
+
+{% highlight bash %}
+netstat -r
+{% endhighlight %}
