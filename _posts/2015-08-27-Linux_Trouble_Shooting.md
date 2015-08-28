@@ -478,10 +478,12 @@ UUID="06770c0a-8b83-43ab-be41-f53be632e42b" /data               ext3    defaults
 /dev/sdb1: UUID="06770c0a-8b83-43ab-be41-f53be632e42b" TYPE="ext4"
 {% endhighlight %}
 
-파일시스템 마운트 실패시 파일시스템이 읽기전용으로 마운트됨
+* 파일시스템 마운트 실패시 파일시스템이 읽기전용으로 마운트됨
+* 파일시스템을 쓰기가능한 상태로 다시 마운트
 
-파일시스템을 쓰기가능한 상태로 다시 마운트
+{% highlight bash%}
 mount -o remount,rw /
+{% endhighlight %}
 
 ### /sbin/init이 깨졌을때
 
@@ -494,7 +496,10 @@ mount -o remount,rw /
 디바이스 드라이버는 커널에 적재되어 실행됨
 
 커널 메시지 확인 명령
+
+{% highlight bash%}
 dmesg
+{% endhighlight %}
 
 ### 리눅스 커널 빌드
 
@@ -688,8 +693,22 @@ chattr -i /etc/passwd
 
 ### 커널 파라미터
 
+* 기본사용법
+
+{% highlight bash %}
 sysctl -a | grep file-max
 fs.file-max = 385767
 
 cat /proc/sys/fs/file-max
 385767
+{% endhighlight %}
+
+* 수정
+
+/etc/sysctl.conf 수정
+
+* sysctl.conf 즉시적용
+
+{% highlight bash %}
+sysctl -p
+{% endhighlight %}
