@@ -36,7 +36,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 * User 싸이트가 더 쉬우므로 이 글에서는 User site로 진행함
 
 
-1. Github에 계정생성
+1. Github 가입
 
 2. user_name.github.io 라는 이름으로 repository 생성. user_name 부분은 실제 계정이름으로 치환
 
@@ -98,5 +98,5 @@ Reference
 
 https://www.youtube.com/watch?v=WDyRhiG_BHM
 
-
+https://github.com/necolas/jekyll-boilerplate
 
