@@ -36,13 +36,13 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 * User 싸이트가 더 쉬우므로 이 글에서는 User site로 진행함
 
 
-1. Github 가입
+1) Github 가입
 
-2. user_name.github.io 라는 이름으로 repository 생성. user_name 부분은 실제 계정이름으로 치환
+2) user_name.github.io 라는 이름으로 repository 생성. user_name 부분은 실제 계정이름으로 치환
 
 ![계정.github.io의 이름으로 repo 생성](https://guides.github.com/features/pages/create-new-repo-screen.png)
 
-3. index.html을 만들어보자. 
+3) index.html을 만들어보자. 
 
 {% highlight html %}
 <html>
@@ -53,18 +53,14 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 </html>
 {% endhighlight %}
 
-4. http://user_name.github.io로 접속
+4) http://user_name.github.io로 접속
 
-짜잔~
+`짜잔~`
 
+화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까. 
 
-화면에 덩그러니 Hello Github pages!가 보이실겁니다. 
+여기서 ~~제길~~ 아니 Jekyll이 등장합니다. 
 
-
-뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까. 
-
-
-여기서 제길 아니 Jekyll이 등장합니다. 
 
 ## Jekyll?
 
@@ -159,7 +155,7 @@ git push origin master
 ----
 Reference
 
-https://www.youtube.com/watch?v=WDyRhiG_BHM
+<https://www.youtube.com/watch?v=WDyRhiG_BHM>
 
-https://github.com/necolas/jekyll-boilerplate
+<https://github.com/necolas/jekyll-boilerplate>
 
