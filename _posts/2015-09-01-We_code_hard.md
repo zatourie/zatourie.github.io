@@ -7,6 +7,9 @@ excerpt:
 tags: []
 image:
   feature:
+author: mango
+share: false
+comments: true
 ---
 We've been coding hard in a... where are we?
 
