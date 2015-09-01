@@ -13,7 +13,7 @@ comments: true
 ---
 자바로 만들어져있으며 CLI 실행 가능
 
-링크 <https://github.com/na-ka-na/ExcelCompare>
+<https://github.com/na-ka-na/ExcelCompare>
 
 {% highlight bash %}
 excel_cmp xxx.xlsx yyy.xlsx --ignore1 Sheet1 --ignore2 Sheet1
