@@ -63,8 +63,23 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 	<figcaption>지킬박사와 하이드?</figcaption>
 </figure>
 
+요게 아니고.
 
+<figure>
+	<img style="width:100px;" src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1424055625jekyll.png"></a>
+	<figcaption>요겁니다.</figcaption>
+</figure>
 
+지킬 공식홈페이지 설명에 따르면 
+<http://jekyllrb.com/>
+
+>Transform your plain text into static websites and blogs.
+
+랍니다. 다시 말해서, plain text파일을 html로 변환시켜주는 툴입니다. 루비로 만들어져있구요. 로컬에 루비를 설치하고 jekyll을 세팅하면 markdown으로 코딩된 파일을 html로 변환해줍니다.
+
+로컬에서 실행하려면 ruby가 필요하지만, github pages에서 제공하는 서비스가 바로 이 지킬입니다. 
+
+![](http://comoyo.github.io/assets/img/posts/comoyo_jekyll_blog.png)
 
 
 
