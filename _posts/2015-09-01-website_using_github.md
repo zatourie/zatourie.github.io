@@ -64,14 +64,14 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 ## Jekyll?
 
 <figure>
-	<img style="width:300px;" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg"></a>
+	<img src="http://images.moviepostershop.com/jekyll-movie-poster-2007-1020439848.jpg"></a>
 	<figcaption>지킬박사와 하이드?</figcaption>
 </figure>
 
 요게 아니고.
 
 <figure>
-	<img style="width:300px;" src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1424055625jekyll.png"></a>
+	<img src="http://jekyllrb.com/img/logo-2x.png"></a>
 	<figcaption>요겁니다.</figcaption>
 </figure>
 
