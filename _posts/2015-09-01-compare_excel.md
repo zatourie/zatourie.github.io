@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 엑셀파일을 비교할 수 있는 툴
+title: Diff excel 
 modified: 
 categories: 
-excerpt: diff excel
+excerpt: 엑셀파일을 비교할 수 있는 툴
 tags: [excel]
 image: 
   feature: 
