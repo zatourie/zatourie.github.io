@@ -92,7 +92,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ## Github
 
-### CLI (Command Line Interface) <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
+### CLI (Command Line Interface) <a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a>
 
 1) `Don't invent the wheels` 라고, 이미 존재하는 보일러플레이트 클로닝
 ~~~ dos
@@ -141,7 +141,7 @@ git push origin master
 10) http://heartonbit.github.io 접속하여 확인
 
 
-### Github Desktop <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
+### Github Desktop <a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a>
 
 
 
