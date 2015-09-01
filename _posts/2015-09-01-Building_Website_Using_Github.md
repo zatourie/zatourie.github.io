@@ -94,41 +94,52 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ### CLI (Command Line Interface) <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
+1) `Don't invent the wheels` 라고, 이미 존재하는 보일러플레이트 클로닝
 ~~~ dos
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
 ~~~
 
+2) repository 연결 확인
 ~~~ dos
 git remote -v
 ~~~
 
+3) 보일러플레이트 repo에다가 작업할 것이 아니니 삭제
 ~~~ dos
 git remote rm origin
 ~~~
 
+4) 작업할 repo 연결 
 ~~~ dos
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
 ~~~
 
+5) 확인
 ~~~ dos
 git remote -v
 ~~~
 
+6) 파일 상태 확인
 ~~~ dos
 git status
 ~~~
 
+7) 변경된 사항 add
 ~~~ dos
 git add --all
 ~~~
 
+8) 변경된 사항 commit
 ~~~ dos
 git commit -m"Commit message"
 
-
+9) 변경된 사항 push, github 계정과 비번을 입력해주면 push됨
 ~~~ dos
 git push origin master
 ~~~
+
+10) http://heartonbit.github.io 접속하여 확인
+
 
 ### Github Desktop <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
