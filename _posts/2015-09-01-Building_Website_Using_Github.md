@@ -98,39 +98,23 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ~~~ dos
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
-~~~
 
-{% highlight shell %}
 git remote -v
-{% endhighlight %}
 
-{% highlight shell %}
 git remote rm origin
-{% endhighlight %}
 
-{% highlight shell %}
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
-{% endhighlight %}
 
-{% highlight shell %}
 git remote -v
-{% endhighlight %}
 
-{% highlight shell %}
 git status
-{% endhighlight %}
 
-{% highlight shell %}
 git add --all
-{% endhighlight %}
 
-{% highlight shell %}
 git commit -m"Commit message"
-{% endhighlight %}
 
-{% highlight shell %}
 git push origin master
-{% endhighlight %}
+~~~
 
 ### Github Desktop
 
