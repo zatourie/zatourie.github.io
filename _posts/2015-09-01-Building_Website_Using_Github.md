@@ -92,13 +92,13 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ## Github
 
-### CLI (Command Line Interface)
+### CLI (Command Line Interface) <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
-<div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
+{% highlight dos %}
+git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
+{% endhighlight %}
 
 ~~~ dos
-git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
-
 git remote -v
 
 git remote rm origin
@@ -116,9 +116,7 @@ git commit -m"Commit message"
 git push origin master
 ~~~
 
-### Github Desktop
-
-<div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
+### Github Desktop <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
 
 
