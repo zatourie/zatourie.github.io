@@ -59,6 +59,8 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까. 
 
+
+
 여기서 ~~제길~~ 아니 Jekyll이 등장합니다. 
 
 
@@ -82,6 +84,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 랍니다. 다시 말해서, plain text파일을 html로 변환시켜주는 툴입니다. 루비로 만들어져있구요. 로컬에 루비를 설치하고 jekyll을 세팅하면 markdown으로 코딩된 파일을 html로 변환해줍니다. 
 로컬에서 실행하려면 ruby가 필요하지만, github pages에서 제공하는 서비스가 바로 이 지킬입니다. 
+
 
 
 우리가 해야할 일은 한가지. Markdown 형태의 포스팅을 작성하고 commit 하기만 하면 됩니다. Github가 jekyll을 대신 돌려서 static HTML을 생성해서 올리고 서비스해줍니다. 
