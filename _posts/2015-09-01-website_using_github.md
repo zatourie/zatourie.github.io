@@ -75,8 +75,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 	<figcaption>요겁니다.</figcaption>
 </figure>
 
-지킬 공식홈페이지 설명에 따르면 
-<http://jekyllrb.com/>
+지킬 [공식홈페이지]<http://jekyllrb.com/> 설명에 따르면 
 
 >Transform your plain text into static websites and blogs.
 
