@@ -1,14 +1,13 @@
 ---
 layout: post
 title: Linux Trouble Shooting 정리
+excerpt: 강좌명:Linux Trouble Shooting, 일시:2015.8.27~28
 date: 2015-08-27 09:00:00
 categories: DB
 author: mango
 share: false
 comments: true
 ---
-강좌명:Linux Trouble Shooting, 일시:2015.8.27~28
-
 # Shell Programming
 
 {% highlight bash%}
