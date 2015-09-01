@@ -94,25 +94,39 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ### CLI (Command Line Interface) <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
-{% highlight dos %}
+~~~ dos
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
-{% endhighlight %}
+~~~
 
 ~~~ dos
 git remote -v
+~~~
 
+~~~ dos
 git remote rm origin
+~~~
 
+~~~ dos
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
+~~~
 
+~~~ dos
 git remote -v
+~~~
 
+~~~ dos
 git status
+~~~
 
+~~~ dos
 git add --all
+~~~
 
+~~~ dos
 git commit -m"Commit message"
 
+
+~~~ dos
 git push origin master
 ~~~
 
