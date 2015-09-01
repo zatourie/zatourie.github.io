@@ -15,7 +15,7 @@ comments: true
 
 링크 <https://github.com/na-ka-na/ExcelCompare>
 
-```
+{% highlight bash %}
 excel_cmp xxx.xlsx yyy.xlsx --ignore1 Sheet1 --ignore2 Sheet1
 EXTRA Cell in WB1 Sheet2!A1 => 'abc'
 EXTRA Cell in WB2 Sheet3!A1 => 'haha'
@@ -33,4 +33,4 @@ Rows: [1]
 Cols: [A]
 -----------------------------------------
 Excel files xxx.xlsx and yyy.xlsx differ
-```
+{% endhighlight %}
