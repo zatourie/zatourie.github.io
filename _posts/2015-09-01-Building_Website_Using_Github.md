@@ -51,7 +51,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 3) index.html 파일을 다음과 같이 생성합니다.
 
-{% highlight html %}
+{% highlight html linenos %}
 <html>
 <head><title>Hello Github</title></head>
 <body>
@@ -138,7 +138,7 @@ git push origin master
 
 7) \_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다.
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 ---
 layout: post
