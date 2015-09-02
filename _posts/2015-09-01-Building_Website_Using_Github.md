@@ -60,7 +60,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까.
 
-여기서 ~~제길~~ 아니 Jekyll이 등장합니다.
+여기서 ~~~제길~~~ 아니 Jekyll이 등장합니다.
 
 
 ## Jekyll?
