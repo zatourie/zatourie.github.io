@@ -15,22 +15,21 @@ comments: true
 
 ## Github란? <http://www.github.com>
 
-* web으로 git repository를 서비스하는 싸이트
-* 단순히 repo를 제공하는데 그치지 않고 해당 repo를 이용해서 웹싸이트를 만들과 관리할 수 있는 Github Pages 서비스를 하고 있음.<https://pages.github.com/>
+* Web으로 Git repository를 서비스하는 싸이트
+* 단순히 repo를 제공하는데 그치지 않고 해당 repo를 이용해서 웹싸이트를 만들과 관리할 수 있는 Github Pages 서비스도 제공하고 있습니다.<https://pages.github.com/>
 
 
 ## Github Page Basic
 
 ![](http://comoyo.github.io/assets/img/posts/comoyo_jekyll_blog.png)
 
-
-간단하게 설명하면 Github repo를 특정 형태로 세팅하고 파일을 생성 혹은 commit 하면 웹싸이트에 게재됨.
-
+간단하게 설명하면 Github repo를 특정 형태로 세팅하고 파일을 생성 혹은 commit 하면 웹싸이트에 게재(publish)됩니다.
 
 ## 만들어보자
 
 백문이 불여일타. 만들어봅시다.
-Github Pages는 User or organization site와 Project site의 두가지 서비스를 제공한다.
+
+Github Pages는 User or organization site와 Project site의 두가지 서비스를 제공합니다.
 
 * User or organization은 계정당 하나씩 만들 수 있고 url이 user_name.github.io 의 형태가 된다.
 * Project site는 계정에 관계없이 여러개 생성이 가능하고 url은 다음과 같은 형태가 된다. user_name.github.io/repo_name
@@ -56,11 +55,11 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 4) http://user_name.github.io로 접속
 
-**짜잔**
+짜잔
 
 화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까.
 
-여기서 **제길** 아니 Jekyll이 등장합니다.
+여기서 제길 아니 Jekyll이 등장합니다.
 
 
 ## Jekyll?
@@ -86,7 +85,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ## Github를 사용하는 두가지 방법 : CLI or Github for Desktop
 
-### Command Line Interface : CLI
+### Command Line Interface (CLI)
 
 <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
@@ -103,9 +102,7 @@ git remote -v
 
 3) 보일러플레이트 repo에다가 작업할 것이 아니니 삭제
 
-{% highlight %}
 git remote rm origin
-{% endhighlight %}
 
 4) 작업할 repo 연결
 
