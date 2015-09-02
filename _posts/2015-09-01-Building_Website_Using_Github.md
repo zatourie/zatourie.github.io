@@ -136,15 +136,17 @@ git push origin master
 여기까지만 작업해도 http://heartonbit.github.io 내용은 보실 수 있습니다. 테스트로 포스팅을 추가해보겠습니다.
 {: .notice}
 
-7) \_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다. 
+7) \_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다.
 
 {% highlight markdown %}
+{% raw %}
 ---
 layout: post
 title: Test Page
 ---
 
 **{{ page.title }}** written in markdown.
+{% endraw %}
 {% endhighlight %}
 
 8) repo 파일 상태를 확인하고
