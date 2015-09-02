@@ -84,9 +84,11 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 우리가 해야할 일은 한가지. Markdown 형태의 포스팅을 작성하고 commit 하기만 하면 됩니다. Github가 jekyll을 대신 돌려서 static HTML을 생성해서 올리고 서비스해줍니다.
 
-## Github를 사용하는 두가지 방법 CLI / Github for Desktop
+## Github를 사용하는 두가지 방법 : CLI or Github for Desktop
 
-### CLI (Command Line Interface) <a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a>
+### Command Line Interface : CLI
+
+<div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
 1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝
 
@@ -144,7 +146,9 @@ git push origin master
 10) http://heartonbit.github.io 접속하여 확인
 
 
-### Github Desktop <a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a>
+### Github Desktop
+
+<div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
 내용 작성예정
 
