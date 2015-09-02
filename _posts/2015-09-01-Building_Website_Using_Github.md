@@ -110,9 +110,7 @@ git remote rm origin
 
 4) 작업할 repo 연결
 
-~~~ dos
-git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
-~~~
+`git remote add origin https://github.com/heartonbit/heartonbit.github.io.git`
 
 5) 확인
 
