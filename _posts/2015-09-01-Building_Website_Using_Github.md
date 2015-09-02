@@ -193,3 +193,4 @@ CLI로 작업하는데도 무리는 없지만 Github에서는 Github Desktop이�
 * Webcast: Getting Started with GitHub Pages <https://www.youtube.com/watch?v=WDyRhiG_BHM>
 * Jekyll Boilerplate<https://github.com/necolas/jekyll-boilerplate>
 * Github Flavoured Markdown <https://help.github.com/articles/github-flavored-markdown/>
+* Github Pages, Dependency versions <https://pages.github.com/versions/>
