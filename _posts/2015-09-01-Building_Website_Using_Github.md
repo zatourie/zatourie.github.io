@@ -94,7 +94,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ### 5.1.Command Line Interface (CLI)
 
-<div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
+<div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows Download</a></div>
 
 1) `Don't reinvent the wheel` 이라고, 이미 존재하는 보일러플레이트 클로닝(cloning)해서 진행합니다.
 
@@ -181,7 +181,7 @@ CLI로 작업하는데도 무리는 없지만 Github에서는 Github Desktop이�
 
 ### 5.2.Github Desktop
 
-<div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
+<div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop 다운로드</a></div>
 
 내용 작성예정
 
