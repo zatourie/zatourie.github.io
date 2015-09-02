@@ -79,13 +79,6 @@
 }
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
-.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
-.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
-.lineno::selection {background-color: transparent;} /* Other major browsers */
-.linenos {
-	background-color: #ededed;
-	margin-top: 1px;
-	margin-bottom: 1px;
-	padding-right: 0;
-	@include rounded(4px);
-}
+//.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
+//.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+//.lineno::selection {background-color: transparent;} /* Other major browsers */
