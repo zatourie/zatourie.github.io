@@ -177,8 +177,7 @@ git push origin master
 
 <http://heartonbit.github.io/>
 
-CLI로 작업에 무리는 없지만 Github에서는 Github Desktop이라는 설치용 소프트웨어도 제공하고 있습니다.
-다음에는 Github Desktop을 사용하여 진행해보겠습니다.
+CLI로 작업하는데도 무리는 없지만 Github에서는 Github Desktop이라는 설치용 소프트웨어도 제공하고 있습니다. 다음에는 Github Desktop을 사용하여 진행해보겠습니다.
 
 ### 5.2.Github Desktop
 
@@ -189,7 +188,7 @@ CLI로 작업에 무리는 없지만 Github에서는 Github Desktop이라는 설
 
 
 ----
-Reference
+# Reference
 
 * Webcast: Getting Started with GitHub Pages <https://www.youtube.com/watch?v=WDyRhiG_BHM>
 * Jekyll Boilerplate<https://github.com/necolas/jekyll-boilerplate>
