@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Github를 이용한 웹싸이트 만들기
-modified: 
-categories: 
-excerpt: Github로 웹싸이트 만들기 및 관리하기 
+modified:
+categories:
+excerpt: Github로 웹싸이트 만들기 및 관리하기
 tags: [github]
-image: 
-  feature: 
+image:
+  feature:
 author: mango
 share: true
 comments: true  
@@ -18,7 +18,7 @@ comments: true
 * 단순히 repo를 제공하는데 그치지 않고 해당 repo를 이용해서 웹싸이트를 만들과 관리할 수 있는 Github Pages 서비스를 하고 있음.<https://pages.github.com/>
 
 
-## Github Page Basic 
+## Github Page Basic
 
 ![](http://comoyo.github.io/assets/img/posts/comoyo_jekyll_blog.png)
 
@@ -29,7 +29,7 @@ comments: true
 ## 만들어보자
 
 백문이 불여일타. 만들어봅시다.
-Github Pages는 User or organization site와 Project site의 두가지 서비스를 제공한다. 
+Github Pages는 User or organization site와 Project site의 두가지 서비스를 제공한다.
 
 * User or organization은 계정당 하나씩 만들 수 있고 url이 user_name.github.io 의 형태가 된다.
 * Project site는 계정에 관계없이 여러개 생성이 가능하고 url은 다음과 같은 형태가 된다. user_name.github.io/repo_name
@@ -42,7 +42,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 ![계정.github.io의 이름으로 repo 생성](https://guides.github.com/features/pages/create-new-repo-screen.png)
 
-3) index.html을 만들어보자. 
+3) index.html을 만들어보자.
 
 {% highlight html %}
 <html>
@@ -55,45 +55,39 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 4) http://user_name.github.io로 접속
 
-`짜잔~`
+~짜잔~
 
-화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까. 
+화면에 덩그러니 Hello Github pages!가 보이실겁니다. 뭔가 한것 같은데, 허전하죠. 이걸로 뭘할 수 있을까.
 
-
-
-여기서 ~~제길~~ 아니 Jekyll이 등장합니다. 
+여기서 ~~제길~~ 아니 Jekyll이 등장합니다.
 
 
 ## Jekyll?
 
 <figure>
 	<img src="http://images.moviepostershop.com/jekyll-movie-poster-2007-1020439848.jpg"></a>
-	<figcaption>지킬박사와 하이드?</figcaption>
+	<figcaption>요런 지킬박사?가 아니고</figcaption>
 </figure>
-
-요게 아니고.
 
 <figure>
 	<img src="http://jekyllrb.com/img/logo-2x.png"></a>
 	<figcaption>요겁니다.</figcaption>
 </figure>
 
-지킬 [공식홈페이지]<http://jekyllrb.com/> 설명에 따르면 
+지킬 [공식홈페이지]<http://jekyllrb.com/> 설명에 따르면
 
 >Transform your plain text into static websites and blogs.
 
-랍니다. 다시 말해서, plain text파일을 html로 변환시켜주는 툴입니다. 루비로 만들어져있구요. 로컬에 루비를 설치하고 jekyll을 세팅하면 markdown으로 코딩된 파일을 html로 변환해줍니다. 
-로컬에서 실행하려면 ruby가 필요하지만, github pages에서 제공하는 서비스가 바로 이 지킬입니다. 
+랍니다. 다시 말해서, plain text파일을 html로 변환시켜주는 툴입니다. 루비로 만들어져있구요. 로컬에 루비를 설치하고 jekyll을 세팅하면 markdown으로 코딩된 파일을 html로 변환해줍니다.
+로컬에서 실행하려면 ruby가 필요하지만, github pages에서 제공하는 서비스가 바로 이 지킬입니다.
 
+우리가 해야할 일은 한가지. Markdown 형태의 포스팅을 작성하고 commit 하기만 하면 됩니다. Github가 jekyll을 대신 돌려서 static HTML을 생성해서 올리고 서비스해줍니다.
 
-
-우리가 해야할 일은 한가지. Markdown 형태의 포스팅을 작성하고 commit 하기만 하면 됩니다. Github가 jekyll을 대신 돌려서 static HTML을 생성해서 올리고 서비스해줍니다. 
-
-## Github
+## Github를 사용하는 두가지 방법 CLI / Github for Desktop
 
 ### CLI (Command Line Interface) <a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a>
 
-1) `Don't invent the wheels` 라고, 이미 존재하는 보일러플레이트 클로닝
+1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝
 
 ~~~ dos
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
@@ -111,7 +105,7 @@ git remote -v
 git remote rm origin
 ~~~
 
-4) 작업할 repo 연결 
+4) 작업할 repo 연결
 
 ~~~ dos
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
@@ -151,14 +145,13 @@ git push origin master
 
 ### Github Desktop <a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a>
 
-
+내용 작성예정
 
 
 
 ----
 Reference
 
-<https://www.youtube.com/watch?v=WDyRhiG_BHM>
-
-<https://github.com/necolas/jekyll-boilerplate>
-
+* Webcast: Getting Started with GitHub Pages <https://www.youtube.com/watch?v=WDyRhiG_BHM>
+* Jekyll Boilerplate<https://github.com/necolas/jekyll-boilerplate>
+* Github Flavoured Markdown <https://help.github.com/articles/github-flavored-markdown/>
