@@ -13,19 +13,19 @@ comments: true
 ---
 {% include _toc.html %}
 
-## Github란? <http://www.github.com>
+## 1.Github란? <http://www.github.com>
 
 * Web으로 Git repository를 서비스하는 싸이트
 * 단순히 repo를 제공하는데 그치지 않고 해당 repo를 이용해서 웹싸이트를 만들과 관리할 수 있는 Github Pages 서비스도 제공하고 있습니다.<https://pages.github.com/>
 
 
-## Github Page Basic
+## 2.Github Page Basic
 
 ![](http://comoyo.github.io/assets/img/posts/comoyo_jekyll_blog.png)
 
 간단하게 설명하면 Github repo를 특정 형태로 세팅하고 파일을 생성 혹은 commit 하면 웹싸이트에 게재(publish)됩니다.
 
-## 만들어보자
+## 3.만들어보자
 
 백문이 불여일타. 만들어봅시다.
 
@@ -34,7 +34,6 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 * User or organization은 계정당 하나씩 만들 수 있고 url이 user_name.github.io 의 형태가 된다.
 * Project site는 계정에 관계없이 여러개 생성이 가능하고 url은 다음과 같은 형태가 된다. user_name.github.io/repo_name
 * User 싸이트가 더 쉬우므로 이 글에서는 User site로 진행함
-
 
 1) Github 가입
 
@@ -62,7 +61,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 여기서 제길 아니 Jekyll이 등장합니다.
 
 
-## Jekyll?
+## 4.Jekyll?
 
 <figure>
 	<img src="http://images.moviepostershop.com/jekyll-movie-poster-2007-1020439848.jpg"></a>
@@ -83,9 +82,9 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 우리가 해야할 일은 한가지. Markdown 형태의 포스팅을 작성하고 commit 하기만 하면 됩니다. Github가 jekyll을 대신 돌려서 static HTML을 생성해서 올리고 서비스해줍니다.
 
-## Github를 사용하는 두가지 방법 : CLI or Github for Desktop
+## 5.Github를 사용하는 두가지 방법 : CLI or Github for Desktop
 
-### Command Line Interface (CLI)
+### 5.1.Command Line Interface (CLI)
 
 <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
@@ -146,8 +145,9 @@ git push origin master
 
 10) http://heartonbit.github.io 접속하여 변경된 내용확인
 
+<http://heartonbit.github.io/>
 
-### Github Desktop
+### 5.2.Github Desktop
 
 <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
