@@ -110,37 +110,37 @@ git remote rm origin
 
 4) 작업할 repo 연결
 
-`git remote add origin https://github.com/heartonbit/heartonbit.github.io.git`
+git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
 
 5) 확인
 
-~~~ dos
+
 git remote -v
-~~~
+
 
 6) 파일 상태 확인
 
-~~~ dos
+
 git status
-~~~
+
 
 7) 변경된 사항 add
 
-~~~ dos
+
 git add --all
-~~~
+
 
 8) 변경된 사항 commit
 
-~~~ dos
+
 git commit -m"Commit message"
-~~~
+
 
 9) 변경된 사항 push, github 계정과 비번을 입력해주면 push됨
 
-~~~ dos
+
 git push origin master
-~~~
+
 
 10) http://heartonbit.github.io 접속하여 확인
 
