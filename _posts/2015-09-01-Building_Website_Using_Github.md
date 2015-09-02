@@ -138,7 +138,7 @@ git push origin master
 
 7) \_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다.
 
-{% highlight markdown %}
+{% highlight html %}
 {% raw %}
 ---
 layout: post
