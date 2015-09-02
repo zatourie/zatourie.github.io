@@ -104,9 +104,9 @@ git remote -v
 
 3) 보일러플레이트 repo에다가 작업할 것이 아니니 삭제
 
-~~~ dos
+{% highlight %}
 git remote rm origin
-~~~
+{% endhighlight %}
 
 4) 작업할 repo 연결
 
