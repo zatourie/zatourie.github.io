@@ -11,7 +11,15 @@ author: mango
 share: true
 comments: true  
 ---
-{% include _toc.html %}
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer" markdown="1">
+*  Auto generated table of contents
+{:toc}
+</div>
+</section><!-- /#table-of-contents -->
 
 ## 1.Github란? <http://www.github.com>
 
@@ -31,17 +39,17 @@ comments: true
 
 Github Pages는 User or organization site와 Project site의 두가지 서비스를 제공합니다.
 
-* User or organization은 계정당 하나씩 만들 수 있고 url이 user_name.github.io 의 형태가 된다.
-* Project site는 계정에 관계없이 여러개 생성이 가능하고 url은 다음과 같은 형태가 된다. user_name.github.io/repo_name
-* User 싸이트가 더 쉬우므로 이 글에서는 User site로 진행함
+* User or organization은 계정당 하나씩 만들 수 있고 url이 user_name.github.io 의 형태가 됩니다.
+* Project site는 계정에 관계없이 여러개 생성이 가능하고 url은 다음과 같은 형태가 됩니다. user_name.github.io/repo_name
+* User 싸이트가 더 쉬우므로 이 글에서는 User site로 진행하도록 하겠습니다.
 
-1) Github 가입
+1) Github 가입합니다.
 
-2) user_name.github.io 라는 이름으로 repository 생성. user_name 부분은 실제 계정이름으로 치환
+2) user_name.github.io 라는 이름으로 repository 생성합니다. user_name 부분은 실제 계정이름으로 치환해서 생성해야합니다.
 
 ![계정.github.io의 이름으로 repo 생성](https://guides.github.com/features/pages/create-new-repo-screen.png)
 
-3) index.html을 만들어보자.
+3) index.html 파일을 다음과 같이 생성합니다.
 
 {% highlight html %}
 <html>
@@ -52,7 +60,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 </html>
 {% endhighlight %}
 
-4) http://user_name.github.io로 접속
+4) http://user_name.github.io로 접속하면
 
 짜잔
 
@@ -88,14 +96,14 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 <div markdown="0"><a href="https://git-scm.com/download/win" class="btn btn-info">Git for Windows</a></div>
 
-1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝
+1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝(cloning)해서 진행합니다.
 
 {% highlight bash %}
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
 {% endhighlight %}
 
 
-2) repository 연결 확인
+2) repository 연결을 확인해봅니다.
 
 {% highlight bash %}
 git remote -v
@@ -107,51 +115,74 @@ git remote -v
 git remote rm origin
 {% endhighlight %}
 
-4) 작업할 repo 연결
+4) 작업할 repo로 연결합니다.
 
 {% highlight bash %}
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
 {% endhighlight %}
 
-5) 확인
+5) 제대로 연결되었는지 확인해봅니다.
 
 {% highlight bash %}
 git remote -v
 {% endhighlight %}
 
-6) 파일 상태 확인
-
-{% highlight bash %}
-git status
-{% endhighlight %}
-
-7) 변경된 사항 add
-
-{% highlight bash %}
-git add --all
-{% endhighlight %}
-
-8) 변경된 사항 commit
-
-{% highlight bash %}
-git commit -m"Commit message"
-{% endhighlight %}
-
-9) 변경된 사항 push, github 계정과 비번을 입력해주면 push됨
+6) 내 Github repo로 push합니다. 계정과 비번을 물어보는데 그대로 입력해줍니다.
 
 {% highlight bash %}
 git push origin master
 {% endhighlight %}
 
-10) http://heartonbit.github.io 접속하여 변경된 내용확인
+여기까지만 작업해도 http://heartonbit.github.io 내용은 보실 수 있습니다. 테스트로 포스팅을 추가해보겠습니다.
+{: .notice}
+
+7) `_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다. 
+
+{% highlight markdown %}
+---
+layout: post
+title: Test Page
+---
+
+**{{ page.title }}** written in markdown.
+{% endhighlight %}
+
+8) repo 파일 상태를 확인하고
+
+{% highlight bash %}
+git status
+{% endhighlight %}
+
+9) 추가된 변경사항을 add 해줍니다.
+
+{% highlight bash %}
+git add --all
+{% endhighlight %}
+
+10) 변경된 사항을 commit 합니다.
+
+{% highlight bash %}
+git commit -m"Commit message"
+{% endhighlight %}
+
+11) 변경된 사항 push, github 계정과 비번을 입력해주면 push해줍니다.
+
+{% highlight bash %}
+git push origin master
+{% endhighlight %}
+
+12) http://heartonbit.github.io 접속해보면 포스팅이 늘어있는 것을 확인할 수 있습니다.
 
 <http://heartonbit.github.io/>
+
+CLI로 작업에 무리는 없지만 Github에서는 Github Desktop이라는 설치용 소프트웨어도 제공하고 있습니다.
+다음에는 Github Desktop을 사용하여 진행해보겠습니다.
 
 ### 5.2.Github Desktop
 
 <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
-내용 작성예정
+_내용 작성예정_
 
 
 
