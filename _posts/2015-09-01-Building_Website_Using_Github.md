@@ -134,6 +134,7 @@ git add --all
 
 ~~~ dos
 git commit -m"Commit message"
+~~~
 
 9) 변경된 사항 push, github 계정과 비번을 입력해주면 push됨
 
