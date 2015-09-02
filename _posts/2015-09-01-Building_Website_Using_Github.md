@@ -98,9 +98,9 @@ git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
 
 2) repository 연결 확인
 
-~~~ dos
+{% highlight shell %}
 git remote -v
-~~~
+{% endhighlight %}
 
 3) 보일러플레이트 repo에다가 작업할 것이 아니니 삭제
 
