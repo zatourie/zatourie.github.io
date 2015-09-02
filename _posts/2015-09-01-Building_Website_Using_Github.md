@@ -91,54 +91,60 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝
 
+{% highlight bash %}
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
+{% endhighlight %}
 
 
 2) repository 연결 확인
 
-
+{% highlight bash %}
 git remote -v
-
+{% endhighlight %}
 
 3) 보일러플레이트 repo에다가 작업할 것이 아니니 삭제
 
+{% highlight bash %}
 git remote rm origin
+{% endhighlight %}
 
 4) 작업할 repo 연결
 
+{% highlight bash %}
 git remote add origin https://github.com/heartonbit/heartonbit.github.io.git
+{% endhighlight %}
 
 5) 확인
 
-
+{% highlight bash %}
 git remote -v
-
+{% endhighlight %}
 
 6) 파일 상태 확인
 
-
+{% highlight bash %}
 git status
-
+{% endhighlight %}
 
 7) 변경된 사항 add
 
-
+{% highlight bash %}
 git add --all
-
+{% endhighlight %}
 
 8) 변경된 사항 commit
 
-
+{% highlight bash %}
 git commit -m"Commit message"
-
+{% endhighlight %}
 
 9) 변경된 사항 push, github 계정과 비번을 입력해주면 push됨
 
-
+{% highlight bash %}
 git push origin master
+{% endhighlight %}
 
-
-10) http://heartonbit.github.io 접속하여 확인
+10) http://heartonbit.github.io 접속하여 변경된 내용확인
 
 
 ### Github Desktop
