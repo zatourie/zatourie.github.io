@@ -51,7 +51,7 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 3) index.html 파일을 다음과 같이 생성합니다.
 
-{% highlight html lineno=table %}
+{% highlight html linenos=table %}
 <html>
 <head><title>Hello Github</title></head>
 <body>
