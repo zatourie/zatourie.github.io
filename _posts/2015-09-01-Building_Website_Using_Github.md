@@ -92,9 +92,9 @@ Github Pages는 User or organization site와 Project site의 두가지 서비스
 
 1) `Don't invent the wheels` 이라고, 이미 존재하는 보일러플레이트 클로닝
 
-~~~
+```
 git clone https://github.com/necolas/jekyll-boilerplate.git heartonbit.github.io
-~~~
+```
 
 2) repository 연결 확인
 
