@@ -136,7 +136,7 @@ git push origin master
 여기까지만 작업해도 http://heartonbit.github.io 내용은 보실 수 있습니다. 테스트로 포스팅을 추가해보겠습니다.
 {: .notice}
 
-7) `_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다. 
+7) \_post 폴더에 2015-09-02-Test_Page.md 화일을 다음과 같은 코드로 만듭니다. 
 
 {% highlight markdown %}
 ---
@@ -182,7 +182,7 @@ CLI로 작업에 무리는 없지만 Github에서는 Github Desktop이라는 설
 
 <div markdown="0"><a href="https://desktop.github.com/" class="btn btn-info">Github Desktop</a></div>
 
-_내용 작성예정_
+내용 작성예정
 
 
 
