@@ -7,14 +7,14 @@
 	font-family: $code-font;
 	@include font(12);
 	color: #333332;
-	margin-bottom: 1.5em;
+	//margin-bottom: 1.5em;
 	@include rounded(4px);
 	pre {
 		position: relative;
 		margin: 0;
 		padding: 1em;
 	}
-	.lineno { padding-right: 24px; color: lighten(#333332,50);}
+	.lineno { padding-right: 24px; color: lighten(#333332,50);-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
 	.hll { background-color: #ffffcc }
 	.c { color: #999988; font-style: italic } /* Comment */
 	.err { color: #a61717; background-color: #e3d2d2 } /* Error */
@@ -77,3 +77,8 @@
 	.vi { color: #008080 } /* Name.Variable.Instance */
 	.il { color: #009999 } /* Literal.Number.Integer.Long */
 }
+
+/* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
+//.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
+//.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+//.lineno::selection {background-color: transparent;} /* Other major browsers */
