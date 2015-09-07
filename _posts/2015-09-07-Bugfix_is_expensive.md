@@ -12,4 +12,4 @@ share: true
 comments: true  
 ---
 
-![내가힘든이유가여기있었어]<http://image.slidesharecdn.com/c3codereviewtoobusy-100614181446-phpapp02/95/code-review-for-teams-too-busy-to-review-code-atlassian-summit-2010-10-728.jpg?cb=1276714324>
+![내가힘든이유가여기있었어](http://image.slidesharecdn.com/c3codereviewtoobusy-100614181446-phpapp02/95/code-review-for-teams-too-busy-to-review-code-atlassian-summit-2010-10-728.jpg?cb=1276714324)
