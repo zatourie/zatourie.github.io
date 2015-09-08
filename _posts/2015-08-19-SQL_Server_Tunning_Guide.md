@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  "SQL Server 튜닝가이드 "
-date:   2015-08-19 11:00:00
+title: "SQL Server 튜닝가이드 "
+modified:
+categories: db
+excerpt: "MS SQL Server 튜닝 가이드"
+tags: [MSSQL]
+image:
+  feature:
 author: ahaljh
-share: false
-comments: true
+share: true
+comments: true  
 ---
-
 
 ## 수칙 1. SELECT는 필요한 결과값만을 요구하는가?
 
@@ -19,6 +23,7 @@ select * from titles
 ## 수칙 2. 적절한 WHERE 조건을 사용하는가?(인덱스 사용 고려)
 
 ### 가. 범위 스캔이 불가능하거나 인덱스 사용이 아예 불가능한 경우
+
 아래와 같이 인덱스 선두 칼럼을 조건절에서 가공하면 (FBI 인덱스를 정의하지 않는 한) 정상적으로 인덱스를 사용할 수 없다.
 
 {% highlight sql %}
