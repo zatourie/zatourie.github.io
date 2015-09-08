@@ -23,3 +23,4 @@ comments: true
 * [Building Reactive Apps with Play Framework, Akka, and Scala](https://vimeo.com/78892176)
 * [Reactive Manifesto](http://www.reactivemanifesto.org/)
 * [Typesafe Activator](https://www.typesafe.com/activator/download)
+* [Typesafe Activator](https://www.typesafe.com/activator/download)
