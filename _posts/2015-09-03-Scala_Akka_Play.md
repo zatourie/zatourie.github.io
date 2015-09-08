@@ -16,7 +16,7 @@ comments: true
 
 <figure>
 	<a href="http://www.slideshare.net/bancek/typesafe-stack-scala-akka-and-play"><img src="http://image.slidesharecdn.com/typesafe-121220074433-phpapp02/95/typesafe-stack-scala-akka-and-play-1-638.jpg?cb=1356660465"></a>
-	<figcaption><a href="http://www.slideshare.net/bancek/typesafe-stack-scala-akka-and-play" title="Typesafe stack: Scala,Akka and Play Dec. 2012</a>.</figcaption>
+	<figcaption><a href="http://www.slideshare.net/bancek/typesafe-stack-scala-akka-and-play" title="Typesafe stack: Scala,Akka and Play Dec. 2012">Typesafe stack: Scala,Akka and Play Dec. 2012</a>.</figcaption>
 </figure>
 
 * [Scala, Akka, Play:An Introduction on Heroku](http://www.slideshare.net/havocp/scala-akka-and-play-an-introduction-on-heroku)
