@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "SQL Server 튜닝가이드 "
+title: SQL Server 튜닝가이드
 modified:
 categories: db
-excerpt: "MS SQL Server 튜닝 가이드"
+excerpt: MS SQL Server 튜닝 가이드
 tags: [MSSQL]
 image:
   feature:
