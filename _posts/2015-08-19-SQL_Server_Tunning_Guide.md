@@ -2,6 +2,7 @@
 layout: post
 title:  "SQL Server 튜닝가이드 "
 date:   2015-08-19 11:00:00
+author: ahaljh
 share: false
 comments: true
 ---
@@ -10,9 +11,9 @@ comments: true
 ## 수칙 1. SELECT는 필요한 결과값만을 요구하는가?
 
 {% highlight sql %}
-select title , price from titles where title_id = 'BU1032' 
-select title , price from titles 
-select * from titles 
+select title , price from titles where title_id = 'BU1032'
+select title , price from titles
+select * from titles
 {% endhighlight %}
 
 ## 수칙 2. 적절한 WHERE 조건을 사용하는가?(인덱스 사용 고려)
@@ -57,7 +58,7 @@ COUNT(*) 와 COUNT(컬럼명)의 차이는 중요합니다. COUNT 하는 해당 
 
 ## 수칙 4. 커서 및 임시 테이블의 내용을 최대한 자제하는가?
 
-결론부터 말씀 드리자면 커서보다는 임시테이블이 임시테이블보다는 테이블 변수를 사용하는 것이 성능에 보탬이 됩니다. 
+결론부터 말씀 드리자면 커서보다는 임시테이블이 임시테이블보다는 테이블 변수를 사용하는 것이 성능에 보탬이 됩니다.
 커서는 내부적으로 임시 테이블을 사용하기 때문에 임시테이블을 쓴다고 부하가 더 발생하진 않습니다. 오히려 커서의 부가적 기능 때문에 서버 자원을 더 낭비하게 됩니다. (커서로 할 수 있는 건 임시테이블이나 테이블 변수로도 모두 처리가 가능합니다.)
 
 ## 수칙 5. VIEW의 총사용을 줄였는가?
@@ -102,13 +103,13 @@ select lastname,firstname from employees VS select * from EmployeesView 중간 �
 데이터가 변화하면(인덱스를 추가하거나 인덱스된 열의 데이터를 변경하는 등의 작업 수행 시) 그에 걸맞게 실행계획도 변화해 갑니다. 그에 대처하기 위해서 다음과 같은 리컴파일 방법를 제공합니다.
 저장 프로시저 리컴 파일 모드에는 다음의 3가지가 있습니다.
 
-CREATE PROCEDURE [WITH RECOMPILE] 
+CREATE PROCEDURE [WITH RECOMPILE]
 는 SQL SERVER가 이 저장 프로시저의 계획을 캐시하지 않기 때문에 이 저장 프로시저가 실행 할 때 마다 다시 컴파일 됩니다(실행 속도가 느려짐).
 
-EXECUTE [WITH RECOMPILE] 
+EXECUTE [WITH RECOMPILE]
 는 지금 이순간만 리컴파일 하고 다시 저장 프로시저 실행하면 예전 실행 계획대로 작동하는 것입니다. 제공하는 매개 변수가 불규칙하거나 저장 프로시저를 만든 다음 데이터가 많이 변경되었을 경우 이 옵션을 사용합니다.
 
-sp_recompile 
+sp_recompile
 는 저장 프로시저가 다음에 실행될 때 첫 실행처럼 컴파일되고 실행되도록 하는 것입니다
 
 ## 수칙 8. 저장 프로시저 작명 시 SP외의 접두어를 사용한다
