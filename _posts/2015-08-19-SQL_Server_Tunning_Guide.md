@@ -7,7 +7,7 @@ excerpt: MS SQL Server 튜닝 가이드
 tags: [MSSQL]
 image:
   feature:
-author: ahaljh
+author: 
 share: true
 comments: true  
 ---
