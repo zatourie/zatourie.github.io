@@ -5,8 +5,6 @@ excerpt: 버그는 운영에서 고치는 것이 가장 비쌉니다
 date: 2015-09-07 12:00:00
 categories:
 tags: [bug]
-image:
-  feature:
 author: mango
 share: true
 comments: true  
