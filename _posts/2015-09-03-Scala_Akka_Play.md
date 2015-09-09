@@ -2,7 +2,7 @@
 layout: post
 title: Scala, Akka and Play
 excerpt: Scala, Akka and Play 관련
-modified:
+date: 2015.09.03 11:00:00
 categories: scala
 tags: [scala,akka, play]
 image:
