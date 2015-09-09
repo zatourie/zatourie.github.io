@@ -2,7 +2,7 @@
 layout: post
 title: They code hard in a cubicle
 excerpt: We've been coding hard in a... where are we?
-modified: 
+date: 2015-09-01 11:00:00
 categories: fun
 tags: []
 image:

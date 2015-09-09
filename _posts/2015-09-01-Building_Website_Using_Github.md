@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github를 이용한 웹싸이트 만들기
-modified:
+date: 2015-09-01 13:00:00
 categories:
 excerpt: Github로 웹싸이트 만들기 및 관리하기
 tags: [github]

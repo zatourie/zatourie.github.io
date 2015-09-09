@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Diff excel 
-modified: 
-categories: 
+title: Diff excel
+date: 2015-09-01 12:00:00 
+categories:
 excerpt: 엑셀파일을 비교할 수 있는 툴
 tags: [excel]
-image: 
-  feature: 
+image:
+  feature:
 author: mango
 share: true
 comments: true  
