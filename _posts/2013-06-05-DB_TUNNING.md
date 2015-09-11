@@ -151,20 +151,20 @@ SELECT TOP (30)
         execution_count AS [Execution Count],
         CONVERT(decimal(38,2), (CONVERT(float, total_worker_time) / execution_count) / 1000) AS [Average CPU Time (ms)] ,
         SUBSTRING(execText.text,
-          -- starting value for substring 
-          CASE WHEN deqs.statement_start_offset = 0 
-             OR deqs.statement_start_offset IS NULL 
-               THEN 1 
+          -- starting value for substring
+          CASE WHEN deqs.statement_start_offset = 0
+             OR deqs.statement_start_offset IS NULL
+               THEN 1
                ELSE deqs.statement_start_offset/2 + 1 END,
           -- ending value for substring
-          CASE WHEN deqs.statement_end_offset = 0 
-            OR deqs.statement_end_offset = -1 
-            OR deqs.statement_end_offset IS NULL 
-               THEN LEN(execText.text) 
-               ELSE deqs.statement_end_offset/2 END - 
-                 CASE WHEN deqs.statement_start_offset = 0 
-                   OR deqs.statement_start_offset IS NULL 
-                     THEN 1 
+          CASE WHEN deqs.statement_end_offset = 0
+            OR deqs.statement_end_offset = -1
+            OR deqs.statement_end_offset IS NULL
+               THEN LEN(execText.text)
+               ELSE deqs.statement_end_offset/2 END -
+                 CASE WHEN deqs.statement_start_offset = 0
+                   OR deqs.statement_start_offset IS NULL
+                     THEN 1
                      ELSE deqs.statement_start_offset/2  END + 1
         ) AS [Query Text],
         execText.text AS [Object Text]
@@ -236,16 +236,16 @@ C.     이와 관련된 통계, 인덱스 관련 쿼리
 ```
 /* 테이블 조각화 조회 - 밀도가 90%에 미치지 못하면 인덱스 재생성을 해야한다고 함 */
 DBCC showcontig(tb_mst_quot)
- 
+
 /* 인덱스 조각모음 - 테이블 크기가 클경우 인덱스 단위로 실행 */
 DBCC dbreindex(tb_mst_quot)
- 
+
 /* 통계 Update */
 UPDATE STATISTICS tb_mst_quot
- 
+
 /* 전체 통계 Update */
 EXEC sp_updatestats;
- 
+
 /* 인덱스 Rebuild */
 ALTER INDEX PK_TB_MST_QUOT_1 ON tb_mst_quot
 REBUILD;
@@ -264,7 +264,7 @@ B.      쿼리 실행 옵션을 이용하여 쿼리 실행
 
 ```
 set statistics io on
-set statistics time on 
+set statistics time on
 --쿼리문..
 exec USP_HEDGE_FRM301300_SELECT '2014','20140806'
 set statistics time off        
