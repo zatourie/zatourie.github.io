@@ -25,7 +25,7 @@ select sum(convert(bigint, size_in_bytes))/ 1048576 [size_in_MB]  from sys.dm_ex
 
 {% highlight SQL %}
 
-SELECT objtype, count(\*) num_of_plans, sum(convert(numeric, size_in_bytes)) / 1048576 [size_in_MB]
+SELECT objtype, count(*) num_of_plans, sum(convert(numeric, size_in_bytes)) / 1048576 [size_in_MB]
 FROM (
      SELECT objtype, query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
@@ -40,7 +40,7 @@ GROUP BY objtype
 
 {% highlight SQL %}
 
-SELECT objtype,query_hash, query_plan_hash, COUNT(\*), MAX(text), sum(convert(numeric, size_in_bytes)) / 1048576 [size_in_MB]
+SELECT objtype,query_hash, query_plan_hash, COUNT(*), MAX(text), sum(convert(numeric, size_in_bytes)) / 1048576 [size_in_MB]
 FROM (
      SELECT objtype,query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
@@ -49,7 +49,7 @@ FROM (
 
 ) T
 GROUP BY objtype,query_hash, query_plan_hash
-ORDER BY COUNT(\*) DESC
+ORDER BY COUNT(*) DESC
 
 {% endhighlight %}
 
