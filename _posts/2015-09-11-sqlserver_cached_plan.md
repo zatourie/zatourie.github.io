@@ -30,7 +30,6 @@ FROM (
      SELECT objtype, query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
      CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS t
-     --WHERE objtype = 'Prepared'
 ) T
 GROUP BY objtype
 
@@ -45,7 +44,6 @@ FROM (
      SELECT objtype,query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
      CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS t
-     --WHERE objtype = 'Prepared'
 
 ) T
 GROUP BY objtype,query_hash, query_plan_hash
