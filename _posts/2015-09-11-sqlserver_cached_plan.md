@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL Server Cached Plan
-excerpt: SQL Server의 Execution Plan Cache 관련 쿼리
+excerpt: SQL Server의 Execution Plan Cache를 분석해보는 글. 전체 용량과 타입별 용량 1회성 Plan의 용량을 확인해볼 수 있다.
 modified:
 categories: db
 tags: [sqlserver]
@@ -10,8 +10,9 @@ share: true
 comments: true  
 ---
 
-SQL Server의 Cached Plan을 확인할 수 있는 쿼리
+## SQL Server Execution Plan Cache란?
 
+쿼리, 프로시저, Prepared Statement의 플랜을 저장해놓은 저장소
 
 ## 전체 Cached Plan 용량
 
@@ -21,7 +22,7 @@ select sum(convert(bigint, size_in_bytes))/ 1048576 [size_in_MB]  from sys.dm_ex
 
 {% endhighlight %}
 
-## TYPE별 용량 Cached Plan
+## TYPE별 Cached Plan 용량
 
 {% highlight SQL %}
 
@@ -30,7 +31,6 @@ FROM (
      SELECT objtype, query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
      CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS t
-     --WHERE objtype = 'Prepared'
 ) T
 GROUP BY objtype
 
@@ -45,8 +45,6 @@ FROM (
      SELECT objtype,query_hash, query_plan_hash, text,size_in_bytes FROM sys.dm_exec_cached_plans AS cp
      JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
      CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS t
-     --WHERE objtype = 'Prepared'
-
 ) T
 GROUP BY objtype,query_hash, query_plan_hash
 ORDER BY COUNT(*) DESC
