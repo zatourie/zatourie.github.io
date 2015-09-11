@@ -9,17 +9,3 @@ author: mango
 share: true
 comments: true  
 ---
-
-{% highlight SQL linenos=table %}
-{% raw %}
-
-
-
-{% endraw %}
-{% endhighlight %}
-
-----
-
-## Reference
-
-*
