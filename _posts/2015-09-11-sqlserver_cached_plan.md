@@ -11,6 +11,7 @@ comments: true
 ---
 
 {% highlight SQL linenos=table %}
+{% raw %}
 
 /* 전체 Cached Plan 용량 */
 select sum(convert(bigint, size_in_bytes))/ 1048576 [size_in_MB]  from sys.dm_exec_cached_plans
@@ -38,6 +39,8 @@ FROM (
 ) T
 GROUP BY objtype,query_hash, query_plan_hash
 ORDER BY COUNT(*) DESC
+
+{% endraw %}
 {% endhighlight %}
 
 ----
