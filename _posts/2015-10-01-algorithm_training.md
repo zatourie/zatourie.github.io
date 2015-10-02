@@ -10,21 +10,20 @@ share: true
 comments: true  
 ---
 
-h2. 한국어
+## 한국어
 
-* [](https://algospot.com/)
-* [](http://www.acmicpc.net)
-* http://codingdojo.kr/)
-* [](http://www.dovelet.com)
+* [알고스팟](https://algospot.com/)
+* [Baekjoon online judge](http://www.acmicpc.net)
+* [코딩도장](http://codingdojang.com/)
+* [DoVelet](http://www.dovelet.com)
 
-h2. 영어
+## 영어
 
-* [](http://www.topcoder.com/)
-* [](http://code.google.com/codejam/contests.html)
-* [](http://poj.org/)
-* [](http://community.topcoder.com/tc)
-* [](http://www.spoj.com/)
-* [](https://www.hackerrank.com/)
+* [Topcoder](http://www.topcoder.com/)
+* [Google Codejam](http://code.google.com/codejam/contests.html)
+* [Peking Univ. Judge Online](http://poj.org/)
+* [Sphere Online Judge](http://www.spoj.com/)
+* [HackerRank](https://www.hackerrank.com/)
 
 ----
 
