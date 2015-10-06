@@ -27,6 +27,6 @@ comments: true
 
 ----
 
-h2. Reference
+## Reference
 
 * [곽중선님 블로그](http://sunnykwak.tistory.com/86) : 알고리즘 학습 전반에 대해 잘 정리되어있습니다.
