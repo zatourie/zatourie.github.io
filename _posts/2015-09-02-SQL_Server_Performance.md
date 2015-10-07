@@ -3,12 +3,12 @@ layout: post
 title: SQL Server Performance Monitoring
 excerpt: SQL Server Performance 관련
 date: 2015-09-02 11:00:00
-categories: IoT
+categories:
 tags: [db]
 image:
   feature:
 author: mango
-share: false
+share: true
 comments: true  
 ---
 
