@@ -12,15 +12,15 @@ comments: true
 
 ## 영어
 
-* ![Topcode logo](https://lh5.googleusercontent.com/-e4iAnzputlg/AAAAAAAAAAI/AAAAAAAAAAA/RHisDcJH9pE/s0-c-k-no-ns/photo.jpg)[Topcoder](http://www.topcoder.com/)
+* ![Topcode logo](https://lh5.googleusercontent.com/-e4iAnzputlg/AAAAAAAAAAI/AAAAAAAAAAA/RHisDcJH9pE/s0-c-k-no-ns/photo.jpg) [Topcoder](http://www.topcoder.com/)
 * [Google Codejam](http://code.google.com/codejam/contests.html)
-* ![Hackerrank logo](https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/brand/typemark--inverse60x200.png)[HackerRank](https://www.hackerrank.com/)
-    ** [Scala 지원 2.11.0 2015.10.7 기준](https://www.hackerrank.com/environment)
+* ![Hackerrank logo](https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/brand/typemark--inverse60x200.png) [HackerRank](https://www.hackerrank.com/)
+    * [Scala 지원 2.11.0 2015.10.7 기준](https://www.hackerrank.com/environment)
 * ![Codeforces logo](http://st.codeforces.com/images/codeforces-logo-with-telegram.png)[Codeforces](http://codeforces.com/)
-    ** sponsered by Telegram
-    ** Scala 지원 2.11.1 2015.10.7 기준
+    * sponsered by Telegram
+    * Scala 지원 2.11.1 2015.10.7 기준
 * ![Codechef logo](https://www.codechef.com/sites/all/themes/abessive/logo.png)[Codechef](https://www.codechef.com/)
-    ** [Scala 지원 2.11.4 2015.10.7 기준](https://www.codechef.com/ide)
+    * [Scala 지원 2.11.4 2015.10.7 기준](https://www.codechef.com/ide)
 * [Peking Univ. Judge Online](http://poj.org/)
 * [Sphere Online Judge](http://www.spoj.com/)
 
