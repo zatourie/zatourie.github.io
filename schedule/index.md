@@ -29,4 +29,5 @@ comments: true
 * 2015.08.12 (심민규) 19. Art of Readable Code       
 * 2015.08.19 (김민정) 20. SQL Server 튜닝 가이드      
 * 2015.09.02 (심민규) 21. Building Website using Github pages
-* 2015.09.16 (미정)
+* 2015.09.16 (김형태) 22. Column based table and Business Process Management using SQL Server
+* 2015.10.08 (컨테스트) 23. HackerRank Simply SQL Contest
