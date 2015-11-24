@@ -102,4 +102,4 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 
 [2] Paros : http://www.parosproxy.org/
 [3] Burp Suite : https://portswigger.net/burp/
-
+[4] Pangolin : http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/
