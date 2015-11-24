@@ -89,25 +89,8 @@ https://www.ssllabs.com/projects/documentation/index.html
 * HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 * Benchmark: http://hsqldb.org/PolePosition.pdf
 
-# web.xml
+# web.xml 웹서버 설정 폴더 리스팅 / 파일쓰기 권한 등 
 
-    <servlet>
-	<servlet-name>default</servlet-name>
-	<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
-	<init-param>
-		<param-name>debug</param-name>
-		<param-value>0</param-value>
-	</init-param>
-	<init-param>
-		<param-name>listings</param-name>
-		<param-value>false</param-value>
-	</init-param>
-	<init-param>
-		<param-name>readonly</param-name>
-		<param-value>false</param-value>
-	</init-param>
-	<load-on-startup>1</load-on-startup>
-    </servlet>
 
 ----
 
