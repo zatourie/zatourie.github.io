@@ -79,6 +79,12 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 ![](https://i-technet.sec.s-msft.com/en-us/security/hh855044.STRIDE-mitigation-categories(en-us,MSDN.10).jpg)
 
+# OWASP Webgoat Project
+
+* WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
+* https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+
+
 ----
 
 # Footnotes
