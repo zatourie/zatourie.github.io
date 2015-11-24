@@ -10,6 +10,12 @@ share: true
 comments: true  
 ---
 
+# What is vulnerability
+
+> In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
+
+https://en.wikipedia.org/wiki/Vulnerability_(computing)
+
 # Refs
 
 * 행자부 (Secure Coding Guide)
@@ -22,16 +28,11 @@ comments: true
 * CWE SANS Top 25
 * OWASP Top 10
 
-# What is vulneribility
-
-> In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
-
-https://en.wikipedia.org/wiki/Vulnerability_(computing)
-
-# Strange user behaviour monitoring, 이상징후 모니터링
+# Mitigate Vulnerability
 
 * Network Layer : Traffic, Packet monitoring
-* Application Layer : Request, pattern monitoring
+* App Op Layer : Request, pattern monitoring
+* App Dev Layer : Secure Coding
 
 # Cases
 
