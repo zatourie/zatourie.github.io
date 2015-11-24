@@ -28,9 +28,20 @@ comments: true
 
 https://en.wikipedia.org/wiki/Vulnerability_(computing)
 
+# Strange user behaviour 이상징후
+
+* Network Layer : Traffic, Packet monitoring
+* Application Layer : Request, pattern monitoring
+
+# Cases
+
+KT : 
+
 ----
 
 Secure Coding 진단원 
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
+
+Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
 
