@@ -59,6 +59,12 @@ https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
 
 https://www.ssllabs.com/projects/documentation/index.html
 
+# MS SDL (Security Development Lifecycle)
+
+* https://www.microsoft.com/en-us/sdl/
+
+
+![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
 ----
 
 # Footnotes
