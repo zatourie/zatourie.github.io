@@ -63,8 +63,14 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 * https://www.microsoft.com/en-us/sdl/
 
+![](http://i.msdn.microsoft.com/cc448177.SDL-Lifecycle-gradient_0609(en-us,MSDN.10).jpg)
 
 ![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
+
+* DREAD : http://www.openeg.co.kr/541
+
+![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-25-728.jpg?cb=1332160190) 
+
 ----
 
 # Footnotes
