@@ -84,7 +84,12 @@ https://www.ssllabs.com/projects/documentation/index.html
 * WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
 * https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
 
-# HSQLDB: http://hsqldb.org/PolePosition.pdf
+# HSQLDB: http://hsqldb.org/
+
+* HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
+* Benchmark: http://hsqldb.org/PolePosition.pdf
+
+
 
 ----
 
@@ -96,3 +101,5 @@ http://darksoulstory.tistory.com/324
 https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
 
 [2] Paros : http://www.parosproxy.org/
+[3] Burp Suite : https://portswigger.net/burp/
+
