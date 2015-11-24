@@ -83,6 +83,9 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 # Footnotes
 
-[1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+[1] Wehshell : 웹상에서 서버 CLI를 사용하도록 해주는 툴
+
+http://darksoulstory.tistory.com/324 
+https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
 
 [2] Paros : http://www.parosproxy.org/
