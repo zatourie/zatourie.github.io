@@ -89,7 +89,25 @@ https://www.ssllabs.com/projects/documentation/index.html
 * HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 * Benchmark: http://hsqldb.org/PolePosition.pdf
 
+# web.xml
 
+<servlet>
+	<servlet-name>default</servlet-name>
+	<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+	<init-param>
+		<param-name>debug</param-name>
+		<param-value>0</param-value>
+	</init-param>
+	<init-param>
+		<param-name>listings</param-name>
+		<param-value>false</param-value>
+	</init-param>
+	<init-param>
+		<param-name>readonly</param-name>
+		<param-value>false</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+</servlet>
 
 ----
 
@@ -107,5 +125,8 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 [4] Pangolin : http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/
 
 [5] Cooxie Toolbar : http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html
+
+[6] Zap : https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+
 
 
