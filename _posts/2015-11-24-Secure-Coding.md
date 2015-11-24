@@ -53,9 +53,16 @@ OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 * https://en.wikipedia.org/wiki/Mitre_Corporation
 * http://www.oxforddictionaries.com/definition/english/mitre 
 
+# Qualys
+
+https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
+
+https://www.ssllabs.com/projects/documentation/index.html
+
 ----
 
 # Footnotes
 
 [1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+
 [2] Paros : http://www.parosproxy.org/
