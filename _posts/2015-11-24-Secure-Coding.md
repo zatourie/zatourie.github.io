@@ -91,7 +91,7 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 # web.xml
 
-<servlet>
+    <servlet>
 	<servlet-name>default</servlet-name>
 	<servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
 	<init-param>
@@ -107,7 +107,7 @@ https://www.ssllabs.com/projects/documentation/index.html
 		<param-value>false</param-value>
 	</init-param>
 	<load-on-startup>1</load-on-startup>
-</servlet>
+    </servlet>
 
 ----
 
