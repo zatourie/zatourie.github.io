@@ -41,12 +41,11 @@ https://en.wikipedia.org/wiki/Vulnerability_(computing)
 
 
 ----
+# etc
 
 Secure Coding 진단원 
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
-
-
 
 # Mitre corporation
 
@@ -55,7 +54,8 @@ OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 * http://www.oxforddictionaries.com/definition/english/mitre 
 
 ----
-Footnotes
+
+# Footnotes
 
 [1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
 [2] Paros : http://www.parosproxy.org/
