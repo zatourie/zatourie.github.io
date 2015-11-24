@@ -24,7 +24,7 @@ comments: true
 
 # What is vulneribility
 
-`In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
+> In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
 
 https://en.wikipedia.org/wiki/Vulnerability_(computing)
 
