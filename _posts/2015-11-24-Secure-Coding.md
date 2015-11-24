@@ -22,6 +22,15 @@ comments: true
 * CWE SANS Top 25
 * OWASP Top 10
 
+# What is vulneribility
+
+'In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
+
+-https://en.wikipedia.org/wiki/Vulnerability_(computing)
+
 ----
 
 Secure Coding 진단원 
+
+OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
+
