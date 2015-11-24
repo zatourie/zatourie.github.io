@@ -91,6 +91,9 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 # web.xml 웹서버 설정 폴더 리스팅 / 파일쓰기 권한 등 
 
+# URL Encoding : URL에 사용할 수 있는 형태로 encoding
+
+# HTML Encoding : 브라우저 렌더링 escape
 
 ----
 
