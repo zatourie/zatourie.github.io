@@ -28,14 +28,17 @@ comments: true
 
 https://en.wikipedia.org/wiki/Vulnerability_(computing)
 
-# Strange user behaviour 이상징후
+# Strange user behaviour monitoring, 이상징후 모니터링
 
 * Network Layer : Traffic, Packet monitoring
 * Application Layer : Request, pattern monitoring
 
 # Cases
 
-KT : 
+* Authentication flaw + non-authorized request exploitation
+* Webshell[1] attack 
+* Library vulneribility exploitation
+
 
 ----
 
@@ -43,5 +46,11 @@ Secure Coding 진단원
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
-Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+[1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+
+# Mitre corporation
+
+* http://www.mitre.org/
+* https://en.wikipedia.org/wiki/Mitre_Corporation
+* http://www.oxforddictionaries.com/definition/english/mitre 
 
