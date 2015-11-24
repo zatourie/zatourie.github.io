@@ -36,7 +36,7 @@ https://en.wikipedia.org/wiki/Vulnerability_(computing)
 # Cases
 
 * Authentication flaw + non-authorized request exploitation
-* Webshell[1] attack 
+* Webshell[1] attack using Paros[2]
 * Library vulneribility exploitation
 
 
@@ -46,7 +46,7 @@ Secure Coding 진단원
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
-[1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+
 
 # Mitre corporation
 
@@ -54,3 +54,8 @@ OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 * https://en.wikipedia.org/wiki/Mitre_Corporation
 * http://www.oxforddictionaries.com/definition/english/mitre 
 
+----
+Footnotes
+
+[1] Wehshell : http://darksoulstory.tistory.com/324 콩글리시 인듯 외국자료는 거의 나오지 않음
+[2] Paros : http://www.parosproxy.org/
