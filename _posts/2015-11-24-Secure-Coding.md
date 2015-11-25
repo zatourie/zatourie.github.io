@@ -179,6 +179,18 @@ OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_She
 
 And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
+# File Upload
+
+* 웹에서 직접 접근이 불가능한 위치에 파일 업로드 할 것
+* 사용자가 올린 파일명과 저장된 물리적 파일명을 다르게 할 것 (둘 사이의 연결 정보 관리필요)
+* 실행가능한 파일 업로드 불가
+* 파일을 업로드하면서 weakness를 모두 없애는 것은 쉽지 않다
+
+# 신뢰되지 않는 URL주소로 Redirect
+
+* URL주소를 whitelist로 관리
+* 적절하게 encode
+
 
 # Secure Coding Conclusion : 
 
