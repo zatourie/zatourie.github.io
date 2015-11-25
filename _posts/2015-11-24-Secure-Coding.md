@@ -143,10 +143,27 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 ## Mitigate
 
+* Using JSTL
+
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     ....
     <c:out value="${board.content}" />
     ....
+    or
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+    ....
+    <${fn:escapeXml(board.content)}
+    ....
+
+* Using Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
+
+    String dirty = "\"><script>alert('xss');</script>";
+    String clean = XssPreventer.escape(dirty); //&quot;&gt;&lt;script&gt;alert(&#39xss&#39);&lt;/script&gt;
+
+    String dirty = "<img src=\"<img src=1\\ onerror=alert(1234)>\" onerror=\"alert('XSS')\">";
+    String clean = filter.doFilter(dirty); //<img src=\"\"><!-- Not Allowed Attribute Filtered ( onerror=alert(1234)) --><img src=1\\>\" onerror=\"alert('XSS')\"&gt;
+
+## OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
 
 ## Mass SQL Injection [참고] http://using.tistory.com/11
 
