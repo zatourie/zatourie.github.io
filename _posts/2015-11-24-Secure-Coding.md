@@ -204,6 +204,10 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 ![](http://www.opensourceforu.efytimes.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png)
 
+# mitigate csrf : https://www.google.com/recaptcha
+
+* 이런 의견도 있음. : https://gist.github.com/homakov/5607607
+
 # Secure Coding Conclusion : 
 
 > *DO NOT BELIEVE ANYONE*
