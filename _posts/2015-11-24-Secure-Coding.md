@@ -179,7 +179,7 @@ OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_She
 
 And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
-# File Upload
+# Malicious File Upload
 
 * 웹에서 직접 접근이 불가능한 위치에 파일 업로드 할 것
 * 사용자가 올린 파일명과 저장된 물리적 파일명을 다르게 할 것 (둘 사이의 연결 정보 관리필요)
@@ -191,6 +191,18 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * URL주소를 whitelist로 관리
 * 적절하게 encode
 
+# XPath Injection
+
+* XQuery를 사용하라 (PreparedStatement와 유사)
+
+# LDAP Injection
+
+* 검색어);추가정보; : 검색어 정보와 추가정보가 함께 조회됨
+* 검증되지 않은 입력값 검증 필요 
+
+# Cross Site Request Forgery (CSRF)
+
+![](http://www.opensourceforu.efytimes.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png)
 
 # Secure Coding Conclusion : 
 
