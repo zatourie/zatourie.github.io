@@ -102,17 +102,42 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 # MySQL SQL Injection
 
+## SQL Injection Sample
+
     ' union select 1,2,3,4,5,6 #
     ' union select schema_name,2,3,4,5,6 from information_schema.schemata#
     ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
     ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 
-# Mitigate SQL Injection
+## Mitigate SQL Injection
 
 * Use static query 
 * Use PreparedStatement properly when using JDBC API
 * Use # in My/IBatis query
 * In case of dynamic query, use a proper filter to remove/replace special characters which enable attacks
+
+# Access Control 경로조작 및 자원 삽입
+
+## 주어진 권한을 넘어서는 리소스 탈취/수정
+
+## Mitigate Access Control Attack
+
+* Application에게 과도한 권한을 주지 말 것: root, administrator 사용금지
+* Application내에서 whitelist, input string validation 등 수행
+
+
+# Cross Site Script
+
+## 종류 regarding where malicious script originated
+
+* Stored XSS
+![](http://excess-xss.com/persistent-xss.png)
+
+* Reflected XSS
+![](http://excess-xss.com/reflected-xss.png)
+
+* DOM XSS
+![](http://excess-xss.com/dom-based-xss.png)
 
 ----
 
