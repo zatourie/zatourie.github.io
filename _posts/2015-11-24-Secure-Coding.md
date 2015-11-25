@@ -141,7 +141,16 @@ https://www.ssllabs.com/projects/documentation/index.html
 * DOM XSS
 ![](http://excess-xss.com/dom-based-xss.png)
 
+## Mitigate
+
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    ....
+    <c:out value="${board.content}" />
+    ....
+
 ## Mass SQL Injection [참고] http://using.tistory.com/11
+
+
 
 # Secure Coding Conclusion : DO NOT BELIEVE ANYONE
 
