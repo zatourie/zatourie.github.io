@@ -145,31 +145,34 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 * Using JSTL
 
-```
+{% highlight java%}
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 ....
 <c:out value="${board.content}" />
 ....
-````
+{% endhighlight %}
 
 or
 
-````Java
+{% highlight java%}
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 ....
 <${fn:escapeXml(board.content)}
 ....
-```
+{% endhighlight %}
 
 * Using Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
 
-```Java
+{% highlight java%}
 String dirty = "\"><script>alert('xss');</script>";
 String clean = XssPreventer.escape(dirty); //&quot;&gt;&lt;script&gt;alert(&#39xss&#39);&lt;/script&gt;
 
 String dirty = "<img src=\"<img src=1\\ onerror=alert(1234)>\" onerror=\"alert('XSS')\">";
 String clean = filter.doFilter(dirty); //<img src=\"\"><!-- Not Allowed Attribute Filtered ( onerror=alert(1234)) --><img src=1\\>\" onerror=\"alert('XSS')\"&gt;
-```
+{% endhighlight %}
+
+* Filter 사용 : http://www.openeg.co.kr/383
+
 Example above is too basic. Consult link below for smarter attacks 
 
 OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
@@ -177,7 +180,9 @@ OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_She
 And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
 
-# Secure Coding Conclusion : *DO NOT BELIEVE ANYONE*
+# Secure Coding Conclusion : 
+
+> *DO NOT BELIEVE ANYONE*
 
 ----
 
