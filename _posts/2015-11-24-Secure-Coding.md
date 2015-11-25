@@ -177,7 +177,7 @@ OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_She
 And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
 
-# Secure Coding Conclusion : DO NOT BELIEVE ANYONE
+# Secure Coding Conclusion : *DO NOT BELIEVE ANYONE*
 
 ----
 
@@ -200,4 +200,8 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 
 [7] Apache Commons Collection Vulnerability http://www.kb.cert.org/vuls/id/576313
 
+InvokeTransformer
+
 [8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API 닷넷도 있음
+
+[9] exploit-db.com : 공격코드
