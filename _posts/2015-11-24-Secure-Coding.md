@@ -126,9 +126,11 @@ https://www.ssllabs.com/projects/documentation/index.html
 * Application내에서 whitelist, input string validation 등 수행
 
 
-# Cross Site Script
+# Cross Site Script (XSS)
 
-## 종류 regarding where malicious script originated
+클라이언트 대상 해킹기법으로 악성코드를 클라이언트에서 실행시켜 원하는 데이터를 탈취함.
+
+## Type (regarding where malicious script originated)
 
 * Stored XSS
 ![](http://excess-xss.com/persistent-xss.png)
@@ -138,6 +140,10 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 * DOM XSS
 ![](http://excess-xss.com/dom-based-xss.png)
+
+## Mass SQL Injection [참고] http://using.tistory.com/11
+
+# Secure Coding Conclusion : DO NOT BELIEVE ANYONE
 
 ----
 
@@ -160,4 +166,4 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 
 [7] Apache Commons Collection Vulnerability http://www.kb.cert.org/vuls/id/576313
 
-[8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
+[8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API 닷넷도 있음
