@@ -104,6 +104,12 @@ https://www.ssllabs.com/projects/documentation/index.html
     ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
     ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 
+# Mitigate SQL Injection
+
+* Use static query 
+* Use PreparedStatement properly when using JDBC API
+* Use # in My/IBatis query
+* In case of dynamic query, use a proper filter to remove/replace special characters which enable attacks
 
 ----
 
@@ -124,5 +130,6 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 
 [6] Zap : https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
-[7] http://www.kb.cert.org/vuls/id/576313
+[7] Apache Commons Collection Vulnerability http://www.kb.cert.org/vuls/id/576313
 
+[8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
