@@ -204,8 +204,11 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 ![](http://www.opensourceforu.efytimes.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png)
 
-# mitigate csrf : https://www.google.com/recaptcha
+## Mitigate CSRF
 
+* CSRF TOKEN으로 실제 시나리오상의 요청인지 검증
+* 사용자에게 실제 요청의 의도를 확인한다 : 홍길동에게 100만원을 이체하시겠습니까?
+* mitigate csrf : https://www.google.com/recaptcha
 * 이런 의견도 있음. : https://gist.github.com/homakov/5607607
 
 # Secure Coding Conclusion : 
