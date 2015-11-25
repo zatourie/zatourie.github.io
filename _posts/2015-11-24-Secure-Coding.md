@@ -170,11 +170,11 @@ String clean = XssPreventer.escape(dirty); //&quot;&gt;&lt;script&gt;alert(&#39x
 String dirty = "<img src=\"<img src=1\\ onerror=alert(1234)>\" onerror=\"alert('XSS')\">";
 String clean = filter.doFilter(dirty); //<img src=\"\"><!-- Not Allowed Attribute Filtered ( onerror=alert(1234)) --><img src=1\\>\" onerror=\"alert('XSS')\"&gt;
 ```
+Example above is too basic. Consult link below for smarter attacks 
 
-## OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
 
-## Mass SQL Injection [참고] http://using.tistory.com/11
-
+And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
 
 # Secure Coding Conclusion : DO NOT BELIEVE ANYONE
