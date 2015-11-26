@@ -210,6 +210,26 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * 사용자에게 실제 요청의 의도를 확인한다 : 홍길동에게 100만원을 이체하시겠습니까?
 * mitigate csrf : https://www.google.com/recaptcha
 * 이런 의견도 있음. : https://gist.github.com/homakov/5607607
+* 정적 소스코드 진단으로는 검출되지 않으며, 동적진단을 통해 검출해야한다
+* 
+
+# HTTP 응답 분할 (HTTP Response Splitting)
+
+* OWASP : https://www.owasp.org/index.php/HTTP_Response_Splitting
+* JDK 1.6 이상에서는 해결되었다? 확인필요
+* MITRE 참조 : https://cwe.mitre.org/data/definitions/113.html
+
+# 정수형 오버플로우 Integer overflow
+
+* OWASP : https://www.owasp.org/index.php/Integer_overflow
+* Java는 Integer overflow가 발생하지 않는다. 연산오류가 있을 뿐.
+
+## Android Stagefright Vulnerability
+
+* Blog : https://blog.zimperium.com/the-latest-on-stagefright-cve-2015-1538-exploit-is-now-available-for-testing-purposes/
+* Demo : https://www.youtube.com/watch?v=PxQc5gOHnKs
+* CVE-2015-1538
+
 
 # Secure Coding Conclusion : 
 
@@ -241,3 +261,7 @@ InvokeTransformer
 [8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API 닷넷도 있음
 
 [9] exploit-db.com : 공격코드
+
+[10] SpringFramework Request Flow 
+
+![](http://i.stack.imgur.com/IjOIC.jpg)
