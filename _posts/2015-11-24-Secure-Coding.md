@@ -231,6 +231,7 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * Blog : https://blog.zimperium.com/the-latest-on-stagefright-cve-2015-1538-exploit-is-now-available-for-testing-purposes/
 * Demo : https://www.youtube.com/watch?v=PxQc5gOHnKs
 * CVE-2015-1538
+* http://fortune.com/2015/07/28/stagefright-google-android-security/
 
 # 메모리 버퍼 오버플로우 Memory buffer overflow
 
@@ -243,14 +244,6 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * 이것도 Java와 C#처럼 managed code를 사용하는 언어는 관계없음
 
 # 2. 보안기능
-
-# Secure Coding Conclusion : 
-
-> *DO NOT BELIEVE ANYONE*
-
-> *CONSIDER USER AS ATTACKER*
-
-> Secure Coding을 다섯자로 줄이면, 입력값검증
 
 # Java Cripytography
 
@@ -281,6 +274,13 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * java.util.Random < java.security.SecureRandom
 * http://stackoverflow.com/questions/11051205/difference-between-java-util-random-and-java-security-securerandom
 
+# Conclusion : 
+
+> *DO NOT BELIEVE ANYONE*
+
+> *CONSIDER USER AS ATTACKER*
+
+> *INPUT VALUES ARE EVIL*
 
 
 ----
