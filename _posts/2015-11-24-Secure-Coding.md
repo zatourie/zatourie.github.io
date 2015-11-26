@@ -21,7 +21,7 @@ comments: true
 In short, a weakness is in theory, a vulnerability is in practice.
 
 
-# Refs
+# Guidelines
 
 * 행자부 (Secure Coding Guide)
 * CWE (Mitre's Common Weakness Enumeration) cf)CVE(Common Vulnerability Exposure)
@@ -30,14 +30,14 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 # Minimum Requirement
 
-* CWE Top 25 http://cwe.mitre.org/top25/
-* OWASP Top 10 https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo
+* [CWE Top 25](http://cwe.mitre.org/top25/)
+* [OWASP Top 10](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo)
 
 # Mitigate Vulnerability
 
 * Network Layer : Traffic, Packet monitoring
 * App Op Layer : Request, pattern monitoring
-* App Dev Layer : Secure Coding
+* App Dev Layer : Secure Coding (What we are dealing with)
 
 # Cases
 
@@ -46,24 +46,6 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * Library vulneribility exploitation
 
 
-----
-# etc
-
-Secure Coding 진단원 
-
-OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
-
-# Mitre corporation
-
-* http://www.mitre.org/
-* https://en.wikipedia.org/wiki/Mitre_Corporation
-* http://www.oxforddictionaries.com/definition/english/mitre 
-
-# Qualys
-
-https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
-
-https://www.ssllabs.com/projects/documentation/index.html
 
 # MS SDL (Security Development Lifecycle)
 
@@ -287,6 +269,24 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 > *INPUT VALUES ARE EVIL*
 
+
+----
+# etc
+
+Secure Coding 진단원 
+
+OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
+
+# Mitre corporation
+
+* http://www.mitre.org/
+* https://en.wikipedia.org/wiki/Mitre_Corporation
+* http://www.oxforddictionaries.com/definition/english/mitre 
+
+# Qualys SSL Test
+
+* 결과샘플 : https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
+* https://www.ssllabs.com/projects/documentation/index.html
 
 ----
 
