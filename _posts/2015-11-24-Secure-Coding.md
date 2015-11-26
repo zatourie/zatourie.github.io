@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Secure Coding 교육
-excerpt: Secure Coding 교육 정리노트
+excerpt: 2015.11.24 ~ 27 Secure Coding 교육 정리노트
 date:   2015-11-24 09:00:00
 categories:
 tags: [securecoding]
@@ -9,6 +9,8 @@ author: mango
 share: true
 comments: true  
 ---
+
+> 너무 길어서 좀 나눌까 생각중입니다. -민규
 
 # What is vulnerability
 
