@@ -222,7 +222,7 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 # 정수형 오버플로우 Integer overflow
 
 * OWASP : https://www.owasp.org/index.php/Integer_overflow
-* Java는 Integer overflow가 발생하지 않는다. 연산오류가 있을 뿐.
+* Java는 Integer overflow가 발생하지 않는다. 연산오류가 있을 뿐. http://www.mkyong.com/java/javas-silent-killer-buffer-overflow-careful/
 
 ## Android Stagefright Vulnerability
 
@@ -230,10 +230,15 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * Demo : https://www.youtube.com/watch?v=PxQc5gOHnKs
 * CVE-2015-1538
 
+# 메모리 버퍼 오버플로우 Memory buffer overflow
+
+* http://www.openeg.co.kr/331
 
 # Secure Coding Conclusion : 
 
 > *DO NOT BELIEVE ANYONE*
+> *CONSIDER USER AS ATTACKER*
+
 
 ----
 
