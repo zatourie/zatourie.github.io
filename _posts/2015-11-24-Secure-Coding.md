@@ -266,6 +266,18 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * setSecure : http://stackoverflow.com/questions/4578506/servlet-set-cookie-secure
 * setPath 
 
+# read from buffer : http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
+
+> byte[] buffer = new byte[BUFFER_SIZE];
+>
+>int bytesRead = 0;
+>while ((bytesRead = in.read(buffer)) >= 0){
+>  for (int i = 0; i < bytesRead; i++){
+>     //Do whatever you need with the bytes here
+>  }
+>}
+
+
 
 # Conclusion : 
 
