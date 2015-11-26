@@ -10,7 +10,7 @@ share: true
 comments: true  
 ---
 
-> 너무 길어서 좀 나눌까 생각중입니다. -민규
+> NOTE: 너무 길어서 좀 나눌까 생각중입니다. -민규
 
 # What is vulnerability
 
