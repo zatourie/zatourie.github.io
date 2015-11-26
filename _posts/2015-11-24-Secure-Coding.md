@@ -247,7 +247,16 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 # Secure Coding Conclusion : 
 
 > *DO NOT BELIEVE ANYONE*
+
 > *CONSIDER USER AS ATTACKER*
+
+> Secure Coding을 다섯자로 줄이면, 입력값검증
+
+# Java Cripytography
+
+* [Java Cryptography Architecture](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
+* [Java Cryptography Extension](https://en.wikipedia.org/wiki/Java_Cryptography_Extension)
+* 
 
 
 ----
@@ -280,3 +289,6 @@ InvokeTransformer
 [10] SpringFramework Request Flow 
 
 ![](http://i.stack.imgur.com/IjOIC.jpg)
+
+[11] BackTrack https://en.wikipedia.org/wiki/BackTrack
+
