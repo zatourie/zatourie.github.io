@@ -262,7 +262,10 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 > The Java Cryptography Extension (JCE) is an officially released Standard Extension to the Java Platform. JCE provides a framework and implementation for encryption, key generation and key agreement, and Message Authentication Code (MAC) algorithms.
 
+## [Bouncy Castle](http://bouncycastle.org/documentation.html)
 
+* 재미나는 글 : http://stackoverflow.com/questions/2927952/why-do-people-use-bouncycastle-instead-of-java-cryptography-extension-what-is-t
+* Github : https://github.com/bcgit/bc-java
 ----
 
 # Footnotes
