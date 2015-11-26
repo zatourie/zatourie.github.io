@@ -266,6 +266,19 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 * 재미나는 글 : http://stackoverflow.com/questions/2927952/why-do-people-use-bouncycastle-instead-of-java-cryptography-extension-what-is-t
 * Github : https://github.com/bcgit/bc-java
+
+# Javascript Cryptography
+
+## 안전한 난수
+
+* Math.random() is not secure : http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure
+* Google : https://code.google.com/p/crypto-js/
+* MDN : https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues
+* https://github.com/clipperz/javascript-crypto-library
+
+
+
+
 ----
 
 # Footnotes
