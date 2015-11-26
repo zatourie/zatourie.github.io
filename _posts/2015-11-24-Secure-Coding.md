@@ -254,9 +254,13 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 # Java Cripytography
 
-* [Java Cryptography Architecture](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
-* [Java Cryptography Extension](https://en.wikipedia.org/wiki/Java_Cryptography_Extension)
-* 
+## [Java Cryptography Architecture(JCA)](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
+
+> The Java Cryptography Architecture (JCA) is a framework for working with cryptography using the Java programming language.
+
+## [Java Cryptography Extension(JCE)](https://en.wikipedia.org/wiki/Java_Cryptography_Extension)
+
+> The Java Cryptography Extension (JCE) is an officially released Standard Extension to the Java Platform. JCE provides a framework and implementation for encryption, key generation and key agreement, and Message Authentication Code (MAC) algorithms.
 
 
 ----
