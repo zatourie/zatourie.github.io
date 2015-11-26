@@ -260,6 +260,13 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * java.util.Random < java.security.SecureRandom
 * http://stackoverflow.com/questions/11051205/difference-between-java-util-random-and-java-security-securerandom
 
+## 쿠키관련 취약점 : http://www.kisa.or.kr/uploadfile/201409/201409161535469432.pdf
+
+* setHttpOnly : https://www.owasp.org/index.php/HttpOnly
+* setSecure : http://stackoverflow.com/questions/4578506/servlet-set-cookie-secure
+* setPath 
+
+
 # Conclusion : 
 
 > *DO NOT BELIEVE ANYONE*
