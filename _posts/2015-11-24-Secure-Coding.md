@@ -28,8 +28,8 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 # Minimum Requirement
 
-* CWE SANS Top 25
-* OWASP Top 10
+* CWE Top 25 http://cwe.mitre.org/top25/
+* OWASP Top 10 https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo
 
 # Mitigate Vulnerability
 
@@ -99,6 +99,8 @@ https://www.ssllabs.com/projects/documentation/index.html
 
 * URL Encoding : URL에 사용할 수 있는 형태로 encoding
 * HTML Encoding : 브라우저 렌더링 escape
+
+# 1. 입력데이터 검증 및 표현
 
 # MySQL SQL Injection
 
@@ -233,6 +235,14 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 # 메모리 버퍼 오버플로우 Memory buffer overflow
 
 * http://www.openeg.co.kr/331
+* Java와 C#처럼 managed code를 사용하는 언어는 관계없음
+
+# Format String 
+
+* 포맷스트링 함수를 이용한 공격
+* 이것도 Java와 C#처럼 managed code를 사용하는 언어는 관계없음
+
+# 2. 보안기능
 
 # Secure Coding Conclusion : 
 
