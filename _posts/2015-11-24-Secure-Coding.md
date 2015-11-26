@@ -321,3 +321,5 @@ InvokeTransformer
 [11] BackTrack https://en.wikipedia.org/wiki/BackTrack
 
 [12] REGEXPER : http://regexper.com/
+
+[13] Kaspersky Password Strength Checker : https://blog.kaspersky.com/password-check/
