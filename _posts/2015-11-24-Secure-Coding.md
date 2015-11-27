@@ -500,7 +500,7 @@ KISA Secure Coding 진단원 과정이 있음
 
 [16] CC(Common Criteria)인증이란? [Link](http://www.kisa.or.kr/uploadfile/201204/201204061424023641.pdf)
 
-
+[17] [정보보호시스템 평가인증 지침](http://www.미래창조과학부.com/www/brd/m_215/down.do?brd_id=w_g0402&seq=66&data_tp=A&file_seq=2)
 
 아래는 자바 8 관련인데 귀찮아서 여기 남김. 나중에 따로 포스팅 나누겠습니다.
 
