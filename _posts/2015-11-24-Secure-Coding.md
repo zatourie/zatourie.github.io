@@ -45,8 +45,7 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * Library vulneribility exploitation
 
 
-
-# MS SDL (Security Development Lifecycle)
+# MS SDL (Security Development Lifecycle) 
 
 * https://www.microsoft.com/en-us/sdl/
 
@@ -54,11 +53,13 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 ![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
 
-* DREAD : http://www.openeg.co.kr/541
+* MS SDL: DREAD
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-25-728.jpg?cb=1332160190) 
 
-* STRIDE 
+http://www.openeg.co.kr/541
+
+* MS SDL: STRIDE 
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-20-728.jpg?cb=1332160190)
 
@@ -71,51 +72,57 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
 * https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
 
-# HSQLDB: http://hsqldb.org/
-
-* HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
-* Benchmark: http://hsqldb.org/PolePosition.pdf
-
-# web.xml 웹서버 설정 폴더 리스팅 / 파일쓰기 권한 등 
-
 # 보안관련 Encoding
 
 * URL Encoding : URL에 사용할 수 있는 형태로 encoding
 * HTML Encoding : 브라우저 렌더링 escape
+* http://stackoverflow.com/questions/1812473/difference-between-url-encode-and-html-encode
+
+# KISA SW보안약점 7개
+
+* 1. 입력데이터 검증 및 표현 : SQL Injection, XSS
+* 2. 보안기능 : Weak Cryptographic Algorithm
+* 3. 시간 및 상태 : TOCTOU
+* 4. 에러처리 
+* 5. 코드오류
+* 6. 캡슐화
+* 7. API오용
+
+하나의 Attack은 위 7개를 복합적으로 사용할 수 있음.
 
 # 1. 입력데이터 검증 및 표현
 
-# MySQL SQL Injection
+## 1.1. SQL Injection
 
-## SQL Injection Sample
+### MySQL Injection Sample
 
     ' union select 1,2,3,4,5,6 #
     ' union select schema_name,2,3,4,5,6 from information_schema.schemata#
     ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
     ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 
-## Mitigate SQL Injection
+### Mitigate SQL Injection
 
 * Use static query 
 * Use PreparedStatement properly when using JDBC API
 * Use # in My/IBatis query
 * In case of dynamic query, use a proper filter to remove/replace special characters which enable attacks
 
-# Access Control 경로조작 및 자원 삽입
+## 1.2. Access Control 경로조작 및 자원 삽입
 
-## 주어진 권한을 넘어서는 리소스 탈취/수정
+### 주어진 권한을 넘어서는 리소스 탈취/수정
 
-## Mitigate Access Control Attack
+### Mitigate Access Control Attack
 
 * Application에게 과도한 권한을 주지 말 것: root, administrator 사용금지
 * Application내에서 whitelist, input string validation 등 수행
 
 
-# Cross Site Script (XSS)
+##  1.3. Cross Site Script (XSS)
 
 클라이언트 대상 해킹기법으로 악성코드를 클라이언트에서 실행시켜 원하는 데이터를 탈취함.
 
-## Type (regarding where malicious script originated)
+### Type (regarding where malicious script originated)
 
 * Stored XSS
 ![](http://excess-xss.com/persistent-xss.png)
@@ -126,7 +133,7 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * DOM XSS
 ![](http://excess-xss.com/dom-based-xss.png)
 
-## Mitigate
+### Mitigate
 
 * Using JSTL
 
@@ -164,32 +171,32 @@ OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_She
 
 And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
 
-# Malicious File Upload
+## 1.4. Malicious File Upload
 
 * 웹에서 직접 접근이 불가능한 위치에 파일 업로드 할 것
 * 사용자가 올린 파일명과 저장된 물리적 파일명을 다르게 할 것 (둘 사이의 연결 정보 관리필요)
 * 실행가능한 파일 업로드 불가
 * 파일을 업로드하면서 weakness를 모두 없애는 것은 쉽지 않다
 
-# 신뢰되지 않는 URL주소로 Redirect
+## 1.5. 신뢰되지 않는 URL주소로 Redirect
 
 * URL주소를 whitelist로 관리
 * 적절하게 encode
 
-# XPath Injection
+## 1.6. XPath Injection
 
 * XQuery를 사용하라 (PreparedStatement와 유사)
 
-# LDAP Injection
+## 1.7. LDAP Injection
 
 * 검색어);추가정보; : 검색어 정보와 추가정보가 함께 조회됨
 * 검증되지 않은 입력값 검증 필요 
 
-# Cross Site Request Forgery (CSRF)
+## 1.8. Cross Site Request Forgery (CSRF)
 
 ![](http://www.opensourceforu.efytimes.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png)
 
-## Mitigate CSRF
+### Mitigate CSRF
 
 * CSRF TOKEN으로 실제 시나리오상의 요청인지 검증
 * 사용자에게 실제 요청의 의도를 확인한다 : 홍길동에게 100만원을 이체하시겠습니까?
@@ -198,55 +205,55 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * 정적 소스코드 진단으로는 검출되지 않으며, 동적진단을 통해 검출해야한다
 * 
 
-# HTTP 응답 분할 (HTTP Response Splitting)
+## 1.9. HTTP 응답 분할 (HTTP Response Splitting)
 
 * OWASP : https://www.owasp.org/index.php/HTTP_Response_Splitting
 * JDK 1.6 이상에서는 해결되었다? 확인필요
 * MITRE 참조 : https://cwe.mitre.org/data/definitions/113.html
 
-# 정수형 오버플로우 Integer overflow
+## 1.10. 정수형 오버플로우 Integer overflow
 
 * OWASP : https://www.owasp.org/index.php/Integer_overflow
 * Java는 Integer overflow가 발생하지 않는다. 연산오류가 있을 뿐. http://www.mkyong.com/java/javas-silent-killer-buffer-overflow-careful/
 
-## Android Stagefright Vulnerability
+### Android Stagefright Vulnerability
 
 * Blog : https://blog.zimperium.com/the-latest-on-stagefright-cve-2015-1538-exploit-is-now-available-for-testing-purposes/
 * Demo : https://www.youtube.com/watch?v=PxQc5gOHnKs
 * CVE-2015-1538
 * http://fortune.com/2015/07/28/stagefright-google-android-security/
 
-# 메모리 버퍼 오버플로우 Memory buffer overflow
+## 1.11. 메모리 버퍼 오버플로우 Memory buffer overflow
 
 * http://www.openeg.co.kr/331
 * Java와 C#처럼 managed code를 사용하는 언어는 관계없음
 
-# Format String 
+## 1.12. Format String 
 
 * 포맷스트링 함수를 이용한 공격
 * 이것도 Java와 C#처럼 managed code를 사용하는 언어는 관계없음
 
 # 2. 보안기능
 
-# Cripytography
+## 2.1. Cripytography
 
 * http://seed.kisa.or.kr/iwt/ko/index.do
 * 인터넷진흥원(KISA) ![암호정책수립기준](http://seed.kisa.or.kr/iwt/ko/guide/EgovGuideDetail.do?bbsId=BBSMSTR_000000000011&nttId=30&pageIndex=1&searchCnd=&searchWrd=)
 
-## [Java Cryptography Architecture(JCA)](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
+### [Java Cryptography Architecture(JCA)](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
 
 > The Java Cryptography Architecture (JCA) is a framework for working with cryptography using the Java programming language.
 
-## [Java Cryptography Extension(JCE)](https://en.wikipedia.org/wiki/Java_Cryptography_Extension)
+### [Java Cryptography Extension(JCE)](https://en.wikipedia.org/wiki/Java_Cryptography_Extension)
 
 > The Java Cryptography Extension (JCE) is an officially released Standard Extension to the Java Platform. JCE provides a framework and implementation for encryption, key generation and key agreement, and Message Authentication Code (MAC) algorithms.
 
-## [Bouncy Castle](http://bouncycastle.org/documentation.html)
+### [Bouncy Castle](http://bouncycastle.org/documentation.html)
 
 * 재미나는 글 : http://stackoverflow.com/questions/2927952/why-do-people-use-bouncycastle-instead-of-java-cryptography-extension-what-is-t
 * Github : https://github.com/bcgit/bc-java
 
-## 안전한 난수
+## 2.2. 안전하지 않은 난수 Crpytographically insecure random number
 
 ### Javascript
 
@@ -260,46 +267,47 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 * java.util.Random < java.security.SecureRandom
 * http://stackoverflow.com/questions/11051205/difference-between-java-util-random-and-java-security-securerandom
 
-## 쿠키관련 취약점 : http://www.kisa.or.kr/uploadfile/201409/201409161535469432.pdf
+## 2.3. 쿠키관련 취약점 : http://www.kisa.or.kr/uploadfile/201409/201409161535469432.pdf
 
 * setHttpOnly : https://www.owasp.org/index.php/HttpOnly
 * setSecure : http://stackoverflow.com/questions/4578506/servlet-set-cookie-secure
 * setPath 
 
-# read from buffer : http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
+## 2.4. Read from buffer 
 
->byte[] buffer = new byte[BUFFER_SIZE];
->
->int bytesRead = 0;
->while ((bytesRead = in.read(buffer)) >= 0){
->  for (int i = 0; i < bytesRead; i++){
->     //Do whatever you need with the bytes here
->  }
->}
+http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
-# Brute Force Attack
+    >byte[] buffer = new byte[BUFFER_SIZE];
+    >
+    >int bytesRead = 0;
+    >while ((bytesRead = in.read(buffer)) >= 0){
+    >  for (int i = 0; i < bytesRead; i++){
+    >     //Do whatever you need with the bytes here
+    >  }
+    >}
+
+## 2.5. Brute Force Attack
 
 * application 수준에서 BFA를 막기는 쉽지 않음. 
 * 공격의 타겟이 될 수 있는 외부로 열려있는 기능은 throughput 제한을 두거나 세션별 최대 요청수 등을 관리할 수는 있음
 
-
-## [Burp Suite](https://portswigger.net/burp/)
+### [Burp Suite](https://portswigger.net/burp/)
 
 > Burp Suite is an integrated platform for performing security testing of web applications. Its various tools work seamlessly together to support the entire testing process, from initial mapping and analysis of an application's attack surface, through to finding and exploiting security vulnerabilities.
 
 * [Demo](https://www.youtube.com/watch?v=vjb-MrUbvps)
 
-# Race Condition 
+## 2.6. Race Condition 
 
 * CWE-366 https://cwe.mitre.org/data/definitions/366.html
 
-## 경쟁조건 : 검사시점과 사용시점TOCOUT (Time of check, time of use)
+### 경쟁조건 : 검사시점과 사용시점TOCOUT (Time of check, time of use)
 
 * http://capec.mitre.org/data/definitions/29.html
 
-# 에러처리
+## 2.7. 에러처리
 
-## Java Exception
+### Java Exception
 
 > Throwable 
 >> Error -> system abort
@@ -307,11 +315,12 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 >>>> Checked Exception -> Compiler 
 >>>> *Runtime Exception* -> Problematic
 
-## 오류메시지를 통한 정보 노출
+### 오류메시지를 통한 정보 노출
 
 > e.printStackTrace();
 
 위 코드는 정적분석도구로 스캔하면 취약점으로 검색됨. 하지만, 웹시스템에서 위 코드는 콘솔창으로 오류스택을 내보내므로 오류메시지가 노출된다고 할 수 없음. 웹시스템인 경우 분석도구에서 예외처리 필요.
+
 
 # Conclusion (IMHO)
 
@@ -321,7 +330,8 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 > *INPUT VALUES ARE EVIL*
 
-
+개발자 관점에서 secure coding은 정도의 문제. "보안"과 "가독성/성능" 의 trade-off 관계에서 적절한 선을 긋는 것이 중요.
+적절한 선이 어디인지가 전쟁터.
 ----
 # etc
 
@@ -376,3 +386,8 @@ InvokeTransformer
 [12] REGEXPER : http://regexper.com/
 
 [13] Kaspersky Password Strength Checker : https://blog.kaspersky.com/password-check/
+
+[14] HSQLDB: http://hsqldb.org/
+
+* HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
+* Benchmark: http://hsqldb.org/PolePosition.pdf
