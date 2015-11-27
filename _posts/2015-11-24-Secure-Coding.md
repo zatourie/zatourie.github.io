@@ -80,13 +80,13 @@ http://www.openeg.co.kr/541
 
 # KISA SW보안약점 7개
 
-* 1. 입력데이터 검증 및 표현 : SQL Injection, XSS
-* 2. 보안기능 : Weak Cryptographic Algorithm
-* 3. 시간 및 상태 : TOCTOU
-* 4. 에러처리 
-* 5. 코드오류
-* 6. 캡슐화
-* 7. API오용
+1. 입력데이터 검증 및 표현 : SQL Injection, XSS
+2. 보안기능 : Weak Cryptographic Algorithm
+3. 시간 및 상태 : TOCTOU
+4. 에러처리 
+5. 코드오류
+6. 캡슐화
+7. API오용
 
 하나의 Attack은 위 7개를 복합적으로 사용할 수 있음.
 
