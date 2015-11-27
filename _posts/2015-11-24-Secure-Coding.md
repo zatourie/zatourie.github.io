@@ -330,7 +330,7 @@ while ((bytesRead = in.read(buffer)) >= 0){
 
 ### 오류메시지를 통한 정보 노출
 
-> e.printStackTrace();
+    e.printStackTrace();
 
 위 코드는 정적분석도구로 스캔하면 취약점으로 검색됨. 하지만, 웹시스템에서 위 코드는 콘솔창으로 오류스택을 내보내므로 오류메시지가 노출된다고 할 수 없음. 웹시스템인 경우 분석도구에서 예외처리 필요.
 
@@ -362,15 +362,13 @@ https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+
 
 ## 2.9. Memory leak
 
-### Avoid memory leak and callback : http://stackoverflow.com/questions/8475314/avoid-memory-leaks-in-callbacks
+### [Avoid memory leak and callback](http://stackoverflow.com/questions/8475314/avoid-memory-leaks-in-callbacks)
 
 ### tl;dr
 
-* http://stackoverflow.com/questions/9809074/java-difference-between-strong-soft-weak-phantom-reference
-
-* http://javaconceptoftheday.com/types-of-references-in-java-strong-soft-weak-and-phantom/
-
-* http://programmers.stackexchange.com/questions/210428/is-try-finally-expensive
+* [Java Strong vs Weak Reference](http://stackoverflow.com/questions/9809074/java-difference-between-strong-soft-weak-phantom-reference)
+* [Java Strong/Weak/Phantom](http://javaconceptoftheday.com/types-of-references-in-java-strong-soft-weak-and-phantom/)
+* [Java Is fianlly expensive?](http://programmers.stackexchange.com/questions/210428/is-try-finally-expensive)
 
 # 7. API 오용 (엉? 3,4,5,6 다 어디갔지?)
 
@@ -401,7 +399,7 @@ InetAddress의 getCannonicalHostName을 authentication용으로 사용하지 말
 # 8. 정적분석툴 Static Source Code Analysis Tools
 
 * OWASP [Source Code Analysis Tools](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)
-* http://programmers.stackexchange.com/questions/209483/static-code-analysis-application-where-to-start
+* [Static code analysis tool](http://programmers.stackexchange.com/questions/209483/static-code-analysis-application-where-to-start)
 
 ## Yasca
 
@@ -443,7 +441,6 @@ KISA Secure Coding 진단원 과정이 있음
 
 * [OAuth 2.0](http://oauth.net/2/)
 * [RFC6749](https://tools.ietf.org/html/rfc6749)
-* 
 ![flow](http://a5.files.readwrite.com/image/upload/MTIyNDQwNDkxNzM1MjIwODM4.gif)
 
 ## Mitre corporation
