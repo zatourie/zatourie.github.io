@@ -90,14 +90,16 @@ http://www.openeg.co.kr/541
 
 ### MySQL Injection Example
 
-    ' union select 1,2,3,4,5,6 #
-    ' union select schema_name,2,3,4,5,6 from information_schema.schemata#
-    ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
-    ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
+{% highlight sql %}
+    union select 1,2,3,4,5,6 #
+    union select schema_name,2,3,4,5,6 from information_schema.schemata#
+    union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
+    union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
+{% endhighlight %}
 
 pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
 
-### Mitigate SQL Injection
+### How to mitigate SQL Injection
 
 * Use static query 
 * Use PreparedStatement properly when using JDBC API
@@ -108,7 +110,7 @@ pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필
 
 ### 주어진 권한을 넘어서는 리소스 탈취/수정
 
-### Mitigate Access Control Attack
+### How to mitigate Access Control Attack
 
 * Application에게 과도한 권한을 주지 말 것: root, administrator 사용금지
 * Application내에서 whitelist, input string validation 등 수행
@@ -129,7 +131,7 @@ pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필
 #### DOM XSS
 ![](http://excess-xss.com/dom-based-xss.png)
 
-### Mitigate
+### How to mitigate XSS
 
 * Use JSTL
 
@@ -149,7 +151,7 @@ or
 ....
 {% endhighlight %}
 
-* Use Naver Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
+* Use 3rt party library such as Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
 
 {% highlight java%}
 String dirty = "\"><script>alert('xss');</script>";
@@ -285,14 +287,14 @@ And here's a first hand experience of ["Mass SQL Injection"](http://using.tistor
 http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
 {% highlight java%}
-    byte[] buffer = new byte[BUFFER_SIZE];
+byte[] buffer = new byte[BUFFER_SIZE];
     
-    int bytesRead = 0;
-    while ((bytesRead = in.read(buffer)) >= 0){
-      for (int i = 0; i < bytesRead; i++){
-         //Do whatever you need with the bytes here
-      }
-    }
+int bytesRead = 0;
+while ((bytesRead = in.read(buffer)) >= 0){
+  for (int i = 0; i < bytesRead; i++){
+     //Do whatever you need with the bytes here
+  }
+}
 {% endhighlight %}
 
 ## 2.5. Brute Force Attack
@@ -336,12 +338,9 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 > https://www.owasp.org/index.php/Null_Dereference
 
 {% highlight c %}
-    int  c1;
-    int* p1;
-    c1 = 5;
-    p1 = &c1; //p1 references c1 p1은 c1을 참조한다
-    int n1;
-    n1 = (*p1); //*p1 dereferences p1 to yield c1 *p1은 p1를 역참조한다 (뭔소리여 @_@)
+int c1 = 5;
+int* p1 = &c1; //p1 references c1 p1은 c1을 참조한다
+int n1 = (*p1); //*p1 dereferences p1 to yield c1 *p1은 p1를 역참조한다 (뭔소리여 @_@)
 {% endhighlight %}
 
 The expression *p1 dereferences p1 to yield c1 as an lvalue
@@ -366,6 +365,11 @@ https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+
 ### tl;dr
 
 * http://stackoverflow.com/questions/9809074/java-difference-between-strong-soft-weak-phantom-reference
+
+* http://javaconceptoftheday.com/types-of-references-in-java-strong-soft-weak-and-phantom/
+
+* http://programmers.stackexchange.com/questions/210428/is-try-finally-expensive
+
 
 # 8. Conclusion (IMHO)
 
