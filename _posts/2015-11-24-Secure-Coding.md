@@ -247,7 +247,7 @@ And here's a first hand experience of ["Mass SQL Injection"](http://using.tistor
 ## 2.1. Cripytography
 
 * http://seed.kisa.or.kr/iwt/ko/index.do
-* 인터넷진흥원(KISA) ![암호정책수립기준](http://seed.kisa.or.kr/iwt/ko/guide/EgovGuideDetail.do?bbsId=BBSMSTR_000000000011&nttId=30&pageIndex=1&searchCnd=&searchWrd=)
+* 인터넷진흥원(KISA) [암호정책수립기준](http://seed.kisa.or.kr/iwt/ko/guide/EgovGuideDetail.do?bbsId=BBSMSTR_000000000011&nttId=30&pageIndex=1&searchCnd=&searchWrd=)
 
 ### [Java Cryptography Architecture(JCA)](https://en.wikipedia.org/wiki/Java_Cryptography_Architecture)
 
