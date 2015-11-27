@@ -370,6 +370,27 @@ https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+
 
 * http://programmers.stackexchange.com/questions/210428/is-try-finally-expensive
 
+# 7. API 오용 (엉? 3,4,5,6 다 어디갔지?)
+
+## 7.1. DNS lookup에 의존한 보안결정 
+
+* DNS lookup/resolution : 도메인으로 IP를 찾는 것
+* Reverse DNS lookup/resolution : IP로 도메인을 찾는 것. 공격자에 의해 hostname이 변조될 수 있음
+* [CWE-350: Reliance on Reverse DNS Resolution for a Security-Critical Action](https://cwe.mitre.org/data/definitions/350.html)
+
+> When the software performs a reverse DNS resolution for an IP address, if an attacker controls the server for that IP address, then the attacker can cause the server to return an arbitrary hostname. As a result, the attacker may be able to bypass authentication, cause the wrong hostname to be recorded in log files to hide activities, or perform other attacks.
+
+> Attackers can spoof DNS names by either (1) compromising a DNS server and modifying its records (sometimes called DNS cache poisoning), or (2) having legitimate control over a DNS server associated with their IP address.
+
+{% highlight java %}
+String ip = request.getRemoteAddr();
+InetAddress addr = InetAddress.getByName(ip);
+if (addr.getCanonicalHostName().endsWith("trustme.com")) {
+  trusted = true;
+}
+{% endhighlight %}
+
+InetAddress의 getCannonicalHostName을 authentication용으로 사용하지 말것.
 
 # 8. Conclusion (IMHO)
 
