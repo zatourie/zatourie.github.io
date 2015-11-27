@@ -268,7 +268,7 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 # read from buffer : http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
-> byte[] buffer = new byte[BUFFER_SIZE];
+>byte[] buffer = new byte[BUFFER_SIZE];
 >
 >int bytesRead = 0;
 >while ((bytesRead = in.read(buffer)) >= 0){
@@ -277,7 +277,17 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 >  }
 >}
 
+# Brute Force Attack
 
+* application 수준에서 BFA를 막기는 쉽지 않음. 
+* 공격의 타겟이 될 수 있는 외부로 열려있는 기능은 throughput 제한을 두거나 세션별 최대 요청수 등을 관리할 수는 있음
+
+
+## [Burp Suite](https://portswigger.net/burp/)
+
+> Burp Suite is an integrated platform for performing security testing of web applications. Its various tools work seamlessly together to support the entire testing process, from initial mapping and analysis of an application's attack surface, through to finding and exploiting security vulnerabilities.
+
+* [Demo](https://www.youtube.com/watch?v=vjb-MrUbvps)
 
 # Conclusion : 
 
