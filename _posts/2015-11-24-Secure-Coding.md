@@ -259,32 +259,34 @@ And here's a first hand experience of ["Mass SQL Injection"](http://using.tistor
 
 ### [Bouncy Castle](http://bouncycastle.org/documentation.html)
 
-* 재미나는 글 : http://stackoverflow.com/questions/2927952/why-do-people-use-bouncycastle-instead-of-java-cryptography-extension-what-is-t
-* Github : https://github.com/bcgit/bc-java
+* [재미나는 글](http://stackoverflow.com/questions/2927952/why-do-people-use-bouncycastle-instead-of-java-cryptography-extension-what-is-t)
+* [Github](https://github.com/bcgit/bc-java)
 
 ## 2.2. 안전하지 않은 난수 Crpytographically insecure random number
 
 ### Javascript
 
-* Math.random() is not secure : http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure
-* Google : https://code.google.com/p/crypto-js/
-* MDN : https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues
-* https://github.com/clipperz/javascript-crypto-library
+* [Math.random() is not secure](http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure)
+* [Google crypto](https://code.google.com/p/crypto-js/)
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)
+* [Clipperz](https://github.com/clipperz/javascript-crypto-library)
 
 ### Java
 
 * java.util.Random < java.security.SecureRandom
-* http://stackoverflow.com/questions/11051205/difference-between-java-util-random-and-java-security-securerandom
+* [Difference between random and securerandom](http://stackoverflow.com/questions/11051205/difference-between-java-util-random-and-java-security-securerandom)
 
 ## 2.3. 쿠키관련 취약점 : [download](http://www.kisa.or.kr/uploadfile/201409/201409161535469432.pdf)
 
-* setHttpOnly : https://www.owasp.org/index.php/HttpOnly
-* setSecure : http://stackoverflow.com/questions/4578506/servlet-set-cookie-secure
+* [setHttpOnly](https://www.owasp.org/index.php/HttpOnly) 
+* [setSecure](http://stackoverflow.com/questions/4578506/servlet-set-cookie-secure): SSL/TLS 통신을 강제함
 * setPath 
 
 ## 2.4. Read from buffer 
 
-http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
+[InputStream reading problem](http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem)
+
+아래와 같이 버퍼크기를 지정해서 가져오는 것을 권고
 
 {% highlight java%}
 byte[] buffer = new byte[BUFFER_SIZE];
@@ -297,7 +299,7 @@ while ((bytesRead = in.read(buffer)) >= 0){
 }
 {% endhighlight %}
 
-## 2.5. Brute Force Attack
+## 2.5. Brute Force Attack 막무가내 공격
 
 * application 수준에서 BFA를 막기는 쉽지 않음. 
 * 공격의 타겟이 될 수 있는 외부로 열려있는 기능은 throughput 제한을 두거나 세션별 최대 요청수 등을 관리할 수는 있음
@@ -310,11 +312,11 @@ while ((bytesRead = in.read(buffer)) >= 0){
 
 ## 2.6. Race Condition 
 
-* CWE-366 https://cwe.mitre.org/data/definitions/366.html
+* [CWE-366](https://cwe.mitre.org/data/definitions/366.html)
 
 ### 경쟁조건 : 검사시점과 사용시점TOCOUT (Time of check, time of use)
 
-* http://capec.mitre.org/data/definitions/29.html
+* [TOCTOU](http://capec.mitre.org/data/definitions/29.html)
 
 ## 2.7. 에러처리
 
@@ -415,7 +417,9 @@ InetAddress의 getCannonicalHostName을 authentication용으로 사용하지 말
 
 ## SK Nextcore Code Inspector
 
+## Fasoo sparrow
 
+![Sparrow screenshot](http://image2.aving.net/2009/07/03/20090703172240690.jpg)
 
 # 9. Conclusion (IMHO)
 
