@@ -289,7 +289,31 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 * [Demo](https://www.youtube.com/watch?v=vjb-MrUbvps)
 
-# Conclusion : 
+# Race Condition 
+
+* CWE-366 https://cwe.mitre.org/data/definitions/366.html
+
+## 경쟁조건 : 검사시점과 사용시점TOCOUT (Time of check, time of use)
+
+* http://capec.mitre.org/data/definitions/29.html
+
+# 에러처리
+
+## Java Exception
+
+> Throwable 
+>> Error -> system abort
+>> Exception 
+>>>> Checked Exception -> Compiler 
+>>>> *Runtime Exception* -> Problematic
+
+## 오류메시지를 통한 정보 노출
+
+> e.printStackTrace();
+
+위 코드는 정적분석도구로 스캔하면 취약점으로 검색됨. 하지만, 웹시스템에서 위 코드는 콘솔창으로 오류스택을 내보내므로 오류메시지가 노출된다고 할 수 없음. 웹시스템인 경우 분석도구에서 예외처리 필요.
+
+# Conclusion (IMHO)
 
 > *DO NOT BELIEVE ANYONE*
 
