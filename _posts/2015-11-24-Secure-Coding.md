@@ -326,14 +326,17 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
 > *INPUT VALUES ARE EVIL*
 
-개발자 관점에서 secure coding은 정도의 문제. "보안"과 "가독성/성능" 의 trade-off 관계에서 적절한 선을 긋는 것이 중요.
-적절한 선이 어디인지가 전쟁터.
+* 개발자 관점에서 secure coding은 정도의 문제. 
+* "보안"과 "가독성/성능" 의 trade-off 관계에서 적절한 선을 긋는 것이 중요.
+* 적절한 선이 어디인지가 전쟁터.
 
 ----
 
 # 9. MISC
 
-KISA Secure Coding 진단원 과정
+KISA Secure Coding 진단원 과정이 있음
+
+## 인증관련 
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
