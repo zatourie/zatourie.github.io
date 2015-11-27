@@ -330,6 +330,42 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
 위 코드는 정적분석도구로 스캔하면 취약점으로 검색됨. 하지만, 웹시스템에서 위 코드는 콘솔창으로 오류스택을 내보내므로 오류메시지가 노출된다고 할 수 없음. 웹시스템인 경우 분석도구에서 예외처리 필요.
 
+## 2.8. Null dereference, Null pointer 역참조...
+
+> A null-pointer dereference takes place when a pointer with a value of NULL is used as though it pointed to a valid memory area.
+> https://www.owasp.org/index.php/Null_Dereference
+
+{% highlight c %}
+    int  c1;
+    int* p1;
+    c1 = 5;
+    p1 = &c1; //p1 references c1 p1은 c1을 참조한다
+    int n1;
+    n1 = (*p1); //*p1 dereferences p1 to yield c1 *p1은 p1를 역참조한다 (뭔소리여 @_@)
+{% endhighlight %}
+
+The expression *p1 dereferences p1 to yield c1 as an lvalue
+
+다시 말해서, *p1은 p1을 역참조한다는 말은 포인터인 p1이 참조하고 있는 c1의 값을 가지고 온다는 뜻. 
+역참조라는 말은 개인적으로 안썼으면 좋겠다. 
+
+그나저나, Java는 pointer가 없는데 왠 Null pointer 역참조? NullPointerException이랑 관련이 있는건가?
+KISA에서 얘기하고 있는 Null pointer 역참조는 아래 내용. 
+CERT에서는 역참조--따위의--와같은 혼동스런 단어를 쓰지 않고 깔끔하게 "Do not use a null in a case where an object is required"로 정리했다. 
+
+https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+null+in+a+case+where+an+object+is+required
+
+객체가 null이 아닐꺼라고 간주하지 말라. 
+
+그렇다면, 모든 객체를 매번 null체크 하란 말? obj != null && 아 손꾸락 아퍼
+
+## 2.9. Memory leak
+
+### Avoid memory leak and callback : http://stackoverflow.com/questions/8475314/avoid-memory-leaks-in-callbacks
+
+### tl;dr
+
+* http://stackoverflow.com/questions/9809074/java-difference-between-strong-soft-weak-phantom-reference
 
 # 8. Conclusion (IMHO)
 
