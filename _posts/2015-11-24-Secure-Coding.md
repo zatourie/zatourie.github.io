@@ -392,7 +392,17 @@ if (addr.getCanonicalHostName().endsWith("trustme.com")) {
 
 InetAddress의 getCannonicalHostName을 authentication용으로 사용하지 말것.
 
-# 8. Conclusion (IMHO)
+## 7.2. 취약한 API 사용
+
+* OWASP [Using Components with Known Vulnerabilities](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities)
+
+# 8. 정적분석툴 Static Source Code Analysis Tools
+
+* OWASP [Source Code Analysis Tools](https://www.owasp.org/index.php/Source_Code_Analysis_Tools)
+* http://programmers.stackexchange.com/questions/209483/static-code-analysis-application-where-to-start
+
+
+# 9. Conclusion (IMHO)
 
 > *DO NOT BELIEVE ANYONE*
 
@@ -472,6 +482,10 @@ KISA Secure Coding 진단원 과정이 있음
 
 * WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
 * https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+
+[16] CC(Common Criteria)인증이란? [Link](http://www.kisa.or.kr/uploadfile/201204/201204061424023641.pdf)
+
+
 
 아래는 자바 8 관련인데 귀찮아서 여기 남김. 나중에 따로 포스팅 나누겠습니다.
 
