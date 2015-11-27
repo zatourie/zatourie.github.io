@@ -381,7 +381,7 @@ https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+
 
 ----
 
-# 9. MISC
+# 9. miscellaneous
 
 KISA Secure Coding 진단원 과정이 있음
 
