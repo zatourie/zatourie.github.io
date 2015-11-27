@@ -12,7 +12,9 @@ comments: true
 
 > NOTE: 너무 길어서 좀 나눌까 생각중입니다. -민규
 
-# 1. What is vulnerability
+# 0. OVERVIEW
+
+## 0.1. What is vulnerability
 
 > In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
 > from https://en.wikipedia.org/wiki/Vulnerability_(computing)
@@ -20,59 +22,57 @@ comments: true
 In short, a weakness is in theory, a vulnerability is in practice.
 
 
-# 2. Guidelines
+## 0.2. Guidelines
 
 * 행자부 (Secure Coding Guide)
 * CWE (Mitre's Common Weakness Enumeration) cf)CVE(Common Vulnerability Exposure)
 * OWASP
 * CERT (Secure Coding Standard)
 
-# 3. Minimum Requirement
+## 0.3. Minimum Requirement
 
 * [CWE Top 25](http://cwe.mitre.org/top25/)
 * [OWASP Top 10](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo)
 
-# Mitigate Vulnerability Strategy
+## 0.4. Mitigate Vulnerability Strategy
 
 * Network Layer : Traffic, Packet monitoring
 * App Op Layer : Request, pattern monitoring
 * App Dev Layer : Secure Coding (What we are dealing with)
 
-# MS SDL (Security Development Lifecycle) 
+## 0.5. MS SDL (Security Development Lifecycle) 
 
-## [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/)
+### [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/)
 
 ![](http://i.msdn.microsoft.com/cc448177.SDL-Lifecycle-gradient_0609(en-us,MSDN.10).jpg)
 
 ![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
 
-## MS SDL: DREAD
+### MS SDL: DREAD
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-25-728.jpg?cb=1332160190) 
 
 http://www.openeg.co.kr/541
 
-## MS SDL: STRIDE 
+### MS SDL: STRIDE 
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-20-728.jpg?cb=1332160190)
 
-## Definition
+### Definition
 
 ![](https://i-technet.sec.s-msft.com/en-us/security/hh855044.STRIDE-definitions(en-us,MSDN.10).jpg)
 
-## Mitigation
+### Mitigation
 
 ![](https://i-technet.sec.s-msft.com/en-us/security/hh855044.STRIDE-mitigation-categories(en-us,MSDN.10).jpg)
 
-
-
-# 보안관련 Encoding
+## 0.6. 보안관련 Encoding
 
 * URL Encoding : URL에 사용할 수 있는 형태로 encoding
 * HTML Encoding : 브라우저 렌더링 escape
 * http://stackoverflow.com/questions/1812473/difference-between-url-encode-and-html-encode
 
-# KISA SW보안약점 7개
+## 0.7. KISA SW보안약점 7개
 
 1. 입력데이터 검증 및 표현 : SQL Injection, XSS
 2. 보안기능 : Weak Cryptographic Algorithm
@@ -318,7 +318,7 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 위 코드는 정적분석도구로 스캔하면 취약점으로 검색됨. 하지만, 웹시스템에서 위 코드는 콘솔창으로 오류스택을 내보내므로 오류메시지가 노출된다고 할 수 없음. 웹시스템인 경우 분석도구에서 예외처리 필요.
 
 
-# Conclusion (IMHO)
+# 8. Conclusion (IMHO)
 
 > *DO NOT BELIEVE ANYONE*
 
@@ -331,7 +331,7 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
 ----
 
-# ETC
+# 9. MISC
 
 KISA Secure Coding 진단원 과정
 
@@ -350,7 +350,7 @@ OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
 ----
 
-# Footnotes
+# 10. Footnotes
 
 [1] Wehshell : 웹상에서 서버 CLI를 사용하도록 해주는 툴
 
