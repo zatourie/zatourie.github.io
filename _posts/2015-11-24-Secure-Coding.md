@@ -354,7 +354,7 @@ The expression *p1 dereferences p1 to yield c1 as an lvalue
 KISA에서 얘기하고 있는 Null pointer 역참조는 아래 내용. 
 CERT에서는 역참조~~따위의~~와 같은 혼란스런 단어를 쓰지 않고 깔끔하게 "Do not use a null in a case where an object is required"로 정리했다. 
 
-https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+null+in+a+case+where+an+object+is+required
+[Do not use a null in a case where an object is required](https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+null+in+a+case+where+an+object+is+required)
 
 객체가 null이 아닐꺼라고 간주하지 말라. 
 
