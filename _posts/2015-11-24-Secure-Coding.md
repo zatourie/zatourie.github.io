@@ -391,18 +391,21 @@ KISA Secure Coding 진단원 과정이 있음
 
 ## 인증관련 
 
-OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
+* [OAuth 2.0](http://oauth.net/2/)
+* [RFC6749](https://tools.ietf.org/html/rfc6749)
+* 
+![flow](http://a5.files.readwrite.com/image/upload/MTIyNDQwNDkxNzM1MjIwODM4.gif)
 
 ## Mitre corporation
 
-* http://www.mitre.org/
-* https://en.wikipedia.org/wiki/Mitre_Corporation
-* http://www.oxforddictionaries.com/definition/english/mitre 
+* [Homepage](http://www.mitre.org/)
+* [Wikipedia]https://en.wikipedia.org/wiki/Mitre_Corporation
+* [Meaning and proper Pronounciation]http://www.oxforddictionaries.com/definition/english/mitre 
 
 ## Qualys SSL Test
 
-* 결과샘플 : https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
-* https://www.ssllabs.com/projects/documentation/index.html
+* [Link](https://www.ssllabs.com/ssltest/analyze.html)
+* [Documentation](https://www.ssllabs.com/projects/documentation/index.html)
 
 ----
 
