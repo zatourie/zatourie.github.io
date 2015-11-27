@@ -32,45 +32,39 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * [CWE Top 25](http://cwe.mitre.org/top25/)
 * [OWASP Top 10](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo)
 
-# Mitigate Vulnerability
+# Mitigate Vulnerability Strategy
 
 * Network Layer : Traffic, Packet monitoring
 * App Op Layer : Request, pattern monitoring
 * App Dev Layer : Secure Coding (What we are dealing with)
 
-# Cases
-
-* Authentication flaw + non-authorized request exploitation
-* Webshell[1] attack using Paros[2]
-* Library vulneribility exploitation
-
-
 # MS SDL (Security Development Lifecycle) 
 
-* https://www.microsoft.com/en-us/sdl/
+## [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/)
 
 ![](http://i.msdn.microsoft.com/cc448177.SDL-Lifecycle-gradient_0609(en-us,MSDN.10).jpg)
 
 ![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
 
-* MS SDL: DREAD
+## MS SDL: DREAD
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-25-728.jpg?cb=1332160190) 
 
 http://www.openeg.co.kr/541
 
-* MS SDL: STRIDE 
+## MS SDL: STRIDE 
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-20-728.jpg?cb=1332160190)
 
+## Definition
+
 ![](https://i-technet.sec.s-msft.com/en-us/security/hh855044.STRIDE-definitions(en-us,MSDN.10).jpg)
+
+## Mitigation
 
 ![](https://i-technet.sec.s-msft.com/en-us/security/hh855044.STRIDE-mitigation-categories(en-us,MSDN.10).jpg)
 
-# OWASP Webgoat Project
 
-* WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
-* https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
 
 # 보안관련 Encoding
 
@@ -124,13 +118,13 @@ http://www.openeg.co.kr/541
 
 ### Type (regarding where malicious script originated)
 
-* Stored XSS
+#### Stored XSS
 ![](http://excess-xss.com/persistent-xss.png)
 
-* Reflected XSS
+#### Reflected XSS
 ![](http://excess-xss.com/reflected-xss.png)
 
-* DOM XSS
+#### DOM XSS
 ![](http://excess-xss.com/dom-based-xss.png)
 
 ### Mitigate
@@ -277,14 +271,16 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
-    >byte[] buffer = new byte[BUFFER_SIZE];
-    >
-    >int bytesRead = 0;
-    >while ((bytesRead = in.read(buffer)) >= 0){
-    >  for (int i = 0; i < bytesRead; i++){
-    >     //Do whatever you need with the bytes here
-    >  }
-    >}
+{% highlight java%}
+    byte[] buffer = new byte[BUFFER_SIZE];
+    
+    int bytesRead = 0;
+    while ((bytesRead = in.read(buffer)) >= 0){
+      for (int i = 0; i < bytesRead; i++){
+         //Do whatever you need with the bytes here
+      }
+    }
+{% endhighlight %}
 
 ## 2.5. Brute Force Attack
 
@@ -391,3 +387,8 @@ InvokeTransformer
 
 * HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 * Benchmark: http://hsqldb.org/PolePosition.pdf
+
+[15] OWASP Webgoat Project
+
+* WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
+* https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
