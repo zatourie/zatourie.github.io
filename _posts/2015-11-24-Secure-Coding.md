@@ -475,5 +475,5 @@ KISA Secure Coding 진단원 과정이 있음
 
 아래는 자바 8 관련인데 귀찮아서 여기 남김. 나중에 따로 포스팅 나누겠습니다.
 
-https://github.com/winterbe/java8-tutorial
-http://winterbe.com/java/
+* https://github.com/winterbe/java8-tutorial
+* http://winterbe.com/java/
