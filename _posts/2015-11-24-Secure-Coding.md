@@ -10,7 +10,7 @@ share: true
 comments: true  
 ---
 
-> NOTE: 너무 길어서 좀 나눌까 생각중입니다. -민규
+> NOTE: 너무 길어서 좀 나눌까 생각중입니다. 귀찮으면 그냥 둘 예정; -민규
 
 # 0. OVERVIEW
 
