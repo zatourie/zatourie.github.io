@@ -328,20 +328,22 @@ http://stackoverflow.com/questions/6160432/java-inputstream-reading-problem
 
 개발자 관점에서 secure coding은 정도의 문제. "보안"과 "가독성/성능" 의 trade-off 관계에서 적절한 선을 긋는 것이 중요.
 적절한 선이 어디인지가 전쟁터.
-----
-# etc
 
-Secure Coding 진단원 
+----
+
+# ETC
+
+KISA Secure Coding 진단원 과정
 
 OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
-# Mitre corporation
+## Mitre corporation
 
 * http://www.mitre.org/
 * https://en.wikipedia.org/wiki/Mitre_Corporation
 * http://www.oxforddictionaries.com/definition/english/mitre 
 
-# Qualys SSL Test
+## Qualys SSL Test
 
 * 결과샘플 : https://www.ssllabs.com/ssltest/analyze.html?d=skbiok.com
 * https://www.ssllabs.com/projects/documentation/index.html
@@ -352,8 +354,8 @@ OAuth 2.0 https://developers.daum.net/services/apis/docs/oauth2_0/reference
 
 [1] Wehshell : 웹상에서 서버 CLI를 사용하도록 해주는 툴
 
-http://darksoulstory.tistory.com/324 
-https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
+* http://darksoulstory.tistory.com/324 
+* https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
 
 [2] Paros : http://www.parosproxy.org/
 
@@ -366,8 +368,6 @@ https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Cod
 [6] Zap : https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
 [7] Apache Commons Collection Vulnerability http://www.kb.cert.org/vuls/id/576313
-
-InvokeTransformer
 
 [8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API 닷넷도 있음
 
