@@ -40,7 +40,7 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * App Op Layer : Request, pattern monitoring
 * App Dev Layer : Secure Coding (What we are dealing with)
 
-## 0.5. MS SDL (Security Development Lifecycle) 
+## 0.5. [Microsoft Security Development Lifecycle:MSSDL](https://www.microsoft.com/en-us/sdl/)
 
 ### [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/)
 
@@ -72,7 +72,7 @@ http://www.openeg.co.kr/541
 * HTML Encoding : 브라우저 렌더링 escape
 * http://stackoverflow.com/questions/1812473/difference-between-url-encode-and-html-encode
 
-## 0.7. KISA SW보안약점 7개
+## 0.7. KISA SW보안약점 카테고리 7개
 
 1. 입력데이터 검증 및 표현 : SQL Injection, XSS
 2. 보안기능 : Weak Cryptographic Algorithm
@@ -82,18 +82,20 @@ http://www.openeg.co.kr/541
 6. 캡슐화
 7. API오용
 
-하나의 Attack은 위 7개를 복합적으로 사용할 수 있음.
+하나의 Attack은 위 7개 카테고리를 복합적으로 사용할 수 있음.
 
 # 1. 입력데이터 검증 및 표현
 
 ## 1.1. SQL Injection
 
-### MySQL Injection Sample
+### MySQL Injection Example
 
     ' union select 1,2,3,4,5,6 #
     ' union select schema_name,2,3,4,5,6 from information_schema.schemata#
     ' union select table_name,2,3,4,5,6 from information_schema.tables where table_schema = database()#
     ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
+
+pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
 
 ### Mitigate SQL Injection
 
@@ -129,7 +131,7 @@ http://www.openeg.co.kr/541
 
 ### Mitigate
 
-* Using JSTL
+* Use JSTL
 
 {% highlight java%}
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -147,7 +149,7 @@ or
 ....
 {% endhighlight %}
 
-* Using Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
+* Use Naver Lucy XssPreventer/XssFilter : https://github.com/naver/lucy-xss-filter
 
 {% highlight java%}
 String dirty = "\"><script>alert('xss');</script>";
@@ -157,13 +159,13 @@ String dirty = "<img src=\"<img src=1\\ onerror=alert(1234)>\" onerror=\"alert('
 String clean = filter.doFilter(dirty); //<img src=\"\"><!-- Not Allowed Attribute Filtered ( onerror=alert(1234)) --><img src=1\\>\" onerror=\"alert('XSS')\"&gt;
 {% endhighlight %}
 
-* Filter 사용 : http://www.openeg.co.kr/383
+* Spring Framework인 경우, Filter 사용 : http://www.openeg.co.kr/383
 
-Example above is too basic. Consult link below for smarter attacks 
+Examples above is too basic. Consult link below for smarter attacks 
 
 OWASP Cheat Sheet : https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
 
-And here's a first hand experience of "Mass SQL Injection" http://using.tistory.com/11, Korean
+And here's a first hand experience of ["Mass SQL Injection"](http://using.tistory.com/11)
 
 ## 1.4. Malicious File Upload
 
@@ -174,12 +176,18 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 ## 1.5. 신뢰되지 않는 URL주소로 Redirect
 
-* URL주소를 whitelist로 관리
-* 적절하게 encode
+* 피싱에 쓰이는 기법, 사용자가 인지하지 못하도록 공격싸이트로 이동시켜서 정보 탈취
+
+### How to mitigate
+
+* URL주소를 whitelist로 관리할 것
+* 적절하게 encode 할 것
 
 ## 1.6. XPath Injection
 
-* XQuery를 사용하라 (PreparedStatement와 유사)
+* SQL Injection과 유사.
+* XML문서를 검색하는 입력값을 이용하여 공격
+* 방어방법은 XQuery 클래스를 사용 (PreparedStatement와 유사)
 
 ## 1.7. LDAP Injection
 
@@ -190,14 +198,19 @@ And here's a first hand experience of "Mass SQL Injection" http://using.tistory.
 
 ![](http://www.opensourceforu.efytimes.com/wp-content/uploads/2010/11/Figure-1-CSRF-attack-on-GET.png)
 
-### Mitigate CSRF
+사용자로 하여금 공격자가 의도한 요청을 서버로 보내 처리하도록 하는 공격
+누군가 보내준 링크를 클릭했더니 페이스북에 광고글(썬글래스)이 게시된다든지 하는 시나리오 (내가 안올렸는데)
 
-* CSRF TOKEN으로 실제 시나리오상의 요청인지 검증
-* 사용자에게 실제 요청의 의도를 확인한다 : 홍길동에게 100만원을 이체하시겠습니까?
-* mitigate csrf : https://www.google.com/recaptcha
-* 이런 의견도 있음. : https://gist.github.com/homakov/5607607
+일베의 적 일간워스트 개발자가 싸이트를 리뉴얼하는 동안 일워싸이트를 페북글쓰기로 리다이렉션을 걸어놓았는데, 일베사용자들이 페이스북에 로그인된 상태에서 악성댓글을 달다가 일베인증을 한 적이 있다. 바람직한 CSRF예
+
+### How to mitigate CSRF
+
 * 정적 소스코드 진단으로는 검출되지 않으며, 동적진단을 통해 검출해야한다
-* 
+* Verify requests even from authorized users : CSRF TOKEN으로 실제 시나리오상의 요청인지 검증
+* 사용자에게 실제 요청의 의도를 다시 확인한다 : 홍길동에게 100만원을 이체하시겠습니까?
+* USE captcha : https://www.google.com/recaptcha
+* discussion about captcha : https://gist.github.com/homakov/5607607
+
 
 ## 1.9. HTTP 응답 분할 (HTTP Response Splitting)
 
