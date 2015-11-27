@@ -12,7 +12,7 @@ comments: true
 
 > NOTE: 너무 길어서 좀 나눌까 생각중입니다. -민규
 
-# What is vulnerability
+# 1. What is vulnerability
 
 > In computer security, a vulnerability is a weakness which allows an attacker to reduce a system's information assurance.
 > from https://en.wikipedia.org/wiki/Vulnerability_(computing)
@@ -20,14 +20,14 @@ comments: true
 In short, a weakness is in theory, a vulnerability is in practice.
 
 
-# Guidelines
+# 2. Guidelines
 
 * 행자부 (Secure Coding Guide)
 * CWE (Mitre's Common Weakness Enumeration) cf)CVE(Common Vulnerability Exposure)
 * OWASP
 * CERT (Secure Coding Standard)
 
-# Minimum Requirement
+# 3. Minimum Requirement
 
 * [CWE Top 25](http://cwe.mitre.org/top25/)
 * [OWASP Top 10](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo)
