@@ -472,3 +472,8 @@ KISA Secure Coding 진단원 과정이 있음
 
 * WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
 * https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+
+아래는 자바 8 관련인데 귀찮아서 여기 남김. 나중에 따로 포스팅 나누겠습니다.
+
+https://github.com/winterbe/java8-tutorial
+http://winterbe.com/java/
