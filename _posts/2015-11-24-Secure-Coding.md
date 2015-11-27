@@ -12,6 +12,7 @@ comments: true
 
 > NOTE: 너무 길어서 좀 나눌까 생각중입니다. 귀찮으면 그냥 둘 예정; -민규
 
+
 # 0. OVERVIEW
 
 ## 0.1. What is vulnerability
@@ -502,6 +503,10 @@ KISA Secure Coding 진단원 과정이 있음
 [16] CC(Common Criteria)인증이란? [Link](http://www.kisa.or.kr/uploadfile/201204/201204061424023641.pdf)
 
 [17] [정보보호시스템 평가인증 지침](http://www.미래창조과학부.com/www/brd/m_215/down.do?brd_id=w_g0402&seq=66&data_tp=A&file_seq=2)
+
+[18] [KISA 공개용 소스코드 보안약점 분석도구 개발 동향 PDF](http://www.kisa.or.kr/uploadfile/201406/201406160957543174.pdf)
+
+----
 
 아래는 자바 8 관련인데 귀찮아서 여기 남김. 나중에 따로 포스팅 나누겠습니다.
 
