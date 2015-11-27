@@ -345,12 +345,12 @@ int n1 = (*p1); //*p1 dereferences p1 to yield c1 *p1은 p1를 역참조한다 (
 
 The expression *p1 dereferences p1 to yield c1 as an lvalue
 
-다시 말해서, *p1은 p1을 역참조한다는 말은 포인터인 p1이 참조하고 있는 c1의 값을 가지고 온다는 뜻. 
+다시 말해서, *p1은 p1을 역참조한다는 말은 포인터인 p1이 참조하고 있는 c1의 값(여기서는 5)을 가지고 온다는 뜻. 
 역참조라는 말은 개인적으로 안썼으면 좋겠다. 
 
 그나저나, Java는 pointer가 없는데 왠 Null pointer 역참조? NullPointerException이랑 관련이 있는건가?
 KISA에서 얘기하고 있는 Null pointer 역참조는 아래 내용. 
-CERT에서는 역참조--따위의--와같은 혼동스런 단어를 쓰지 않고 깔끔하게 "Do not use a null in a case where an object is required"로 정리했다. 
+CERT에서는 역참조~~따위의~~와 같은 혼란스런 단어를 쓰지 않고 깔끔하게 "Do not use a null in a case where an object is required"로 정리했다. 
 
 https://www.securecoding.cert.org/confluence/display/java/EXP01-J.+Do+not+use+a+null+in+a+case+where+an+object+is+required
 
