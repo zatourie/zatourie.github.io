@@ -454,13 +454,10 @@ KISA Secure Coding 진단원 과정이 있음
 * http://darksoulstory.tistory.com/324 
 * https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
 
-[2] Paros : http://www.parosproxy.org/
-
-[3] Burp Suite : https://portswigger.net/burp/
-
-[4] Pangolin : http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/
-
-[5] Cooxie Toolbar : http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html
+[2]: Paros : http://www.parosproxy.org/
+[3]: Burp Suite : https://portswigger.net/burp/
+[4]: Pangolin : http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/
+[5]: Cooxie Toolbar : http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html
 
 [6] Zap : https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
