@@ -89,7 +89,7 @@ In short, a weakness is in theory, a vulnerability is in practice.
 ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 {% endhighlight %}
 
-pangoline[4] 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
+pangoline [4] 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
 
 ### How to mitigate SQL Injection
 
