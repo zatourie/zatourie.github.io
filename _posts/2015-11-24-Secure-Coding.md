@@ -486,16 +486,18 @@ KISA Secure Coding 진단원 과정이 있음
 # 10. Footnotes
 
 [1]: http://www.parosproxy.org/          "Paros"
-[2]: https://portswigger.net/burp/       "Burp Suite"
-[3]: http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/ "Pangolin"
-[4]: http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html "Cooxie Toolbar"
-[5]: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project  "Zap"
-[7]: http://www.kb.cert.org/vuls/id/576313 "Apache Commons Collection Vulnerability"
-[8]: https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API  "OWASP Enterprise Security API"
-[9]: exploit-db.com "공격코드를 공유하는 싸이트"
-[10]: https://en.wikipedia.org/wiki/BackTrack "BackTrack"
-[11]: http://regexper.com/ "REGEXPER"
-[12]: https://blog.kaspersky.com/password-check/ "Kaspersky Password Strength Checker"
+[2]: http://www.telerik.com/fiddler       "Fiddler"
+[3]: https://www.charlesproxy.com/      "Charles"
+[4]: https://portswigger.net/burp/       "Burp Suite"
+[5]: http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/ "Pangolin"
+[6]: http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html "Cooxie Toolbar"
+[7]: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project  "Zap"
+[8]: http://www.kb.cert.org/vuls/id/576313 "Apache Commons Collection Vulnerability"
+[9]: https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API  "OWASP Enterprise Security API"
+[10]: http://exploit-db.com "공격코드를 공유하는 싸이트"
+[11]: https://en.wikipedia.org/wiki/BackTrack "BackTrack"
+[12]: http://regexper.com/ "REGEXPER"
+[13]: https://blog.kaspersky.com/password-check/ "Kaspersky Password Strength Checker"
 
 ----
 
