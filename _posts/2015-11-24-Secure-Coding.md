@@ -30,11 +30,6 @@ In short, a weakness is in theory, a vulnerability is in practice.
 * [OWASP Top 10 vulnerabilities](https://www.owasp.org/index.php/Top_10_2013-Top_10)
 * [CERT (Secure Coding Standard)](https://www.securecoding.cert.org/confluence/display/seccode/SEI+CERT+Coding+Standards)
 
-## 0.3. Minimum Requirement
-
-* [CWE Top 25](http://cwe.mitre.org/top25/)
-* [OWASP Top 10](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwix_KHtga3JAhXBF5QKHedtB08QFgghMAA&url=https%3A%2F%2Fwww.owasp.org%2Fimages%2F2%2F2c%2FOWASP_Top_10_-_2013_Final_-_Korean.pdf&usg=AFQjCNE1EkTUTkxfsVwHCLfnozE7J21Kpg&bvm=bv.108194040,d.dGo)
-
 ## 0.4. Mitigate Vulnerability Strategy
 
 * Network Layer : Traffic, Packet monitoring
