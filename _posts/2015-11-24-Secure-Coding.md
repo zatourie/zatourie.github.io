@@ -76,6 +76,14 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 하나의 Attack은 위 7개 카테고리를 복합적으로 사용할 수 있음.
 
+## 0.8 보안관련툴
+
+* Proxy : Paros [1] , Fiddler [2] , Charles [3] , Burp Suite [4]
+* SQL Injection : Pangolin [5]
+* Toolbar for IE : Cooxie Toolbar [6]
+* Integrated penetration testing tool : ZAP [7]
+* Backtrack [11]
+
 # 1. 입력데이터 검증 및 표현
 
 ## 1.1. SQL Injection
@@ -445,53 +453,49 @@ KISA Secure Coding 진단원 과정이 있음
 * [Link](https://www.ssllabs.com/ssltest/analyze.html)
 * [Documentation](https://www.ssllabs.com/projects/documentation/index.html)
 
-----
-
-# 10. Footnotes
-
-[1] Wehshell : 웹상에서 서버 CLI를 사용하도록 해주는 툴
+## Wehshell : 웹상에서 서버 CLI를 사용하도록 해주는 툴
 
 * http://darksoulstory.tistory.com/324 
 * https://www.trustwave.com/Resources/SpiderLabs-Blog/Hiding-Webshell-Backdoor-Code-in-Image-Files/
 
-[2]: Paros : http://www.parosproxy.org/
-[3]: Burp Suite : https://portswigger.net/burp/
-[4]: Pangolin : http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/
-[5]: Cooxie Toolbar : http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html
-
-[6] Zap : https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
-
-[7] Apache Commons Collection Vulnerability http://www.kb.cert.org/vuls/id/576313
-
-[8] OWASP Enterprise Security API : https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API 닷넷도 있음
-
-[9] exploit-db.com : 공격코드
-
-[10] SpringFramework Request Flow 
+## SpringFramework Request Flow 
 
 ![](http://i.stack.imgur.com/IjOIC.jpg)
 
-[11] BackTrack https://en.wikipedia.org/wiki/BackTrack
-
-[12] REGEXPER : http://regexper.com/
-
-[13] Kaspersky Password Strength Checker : https://blog.kaspersky.com/password-check/
-
-[14] HSQLDB: http://hsqldb.org/
+## HSQLDB: http://hsqldb.org/
 
 * HSQLDB (HyperSQL DataBase) is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 * Benchmark: http://hsqldb.org/PolePosition.pdf
 
-[15] OWASP Webgoat Project
+## OWASP Webgoat Project
 
 * WebGoat is a deliberately insecure web application maintained by OWASP designed to teach web application security lessons. You can install and practice with WebGoat in either J2EE (this page) or WebGoat for .Net in ASP.NET. In each lesson, users must demonstrate their understanding of a security issue by exploiting a real vulnerability in the WebGoat applications. For example, in one of the lessons the user must use SQL injection to steal fake credit card numbers. The application is a realistic teaching environment, providing users with hints and code to further explain the lesson.
 * https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
 
-[16] CC(Common Criteria)인증이란? [Link](http://www.kisa.or.kr/uploadfile/201204/201204061424023641.pdf)
+## CC(Common Criteria)인증이란? 
 
-[17] [정보보호시스템 평가인증 지침](http://www.미래창조과학부.com/www/brd/m_215/down.do?brd_id=w_g0402&seq=66&data_tp=A&file_seq=2)
+[Link](http://www.kisa.or.kr/uploadfile/201204/201204061424023641.pdf)
 
-[18] [KISA 공개용 소스코드 보안약점 분석도구 개발 동향 PDF](http://www.kisa.or.kr/uploadfile/201406/201406160957543174.pdf)
+## [정보보호시스템 평가인증 지침](http://www.미래창조과학부.com/www/brd/m_215/down.do?brd_id=w_g0402&seq=66&data_tp=A&file_seq=2)
+
+## [KISA 공개용 소스코드 보안약점 분석도구 개발 동향 PDF](http://www.kisa.or.kr/uploadfile/201406/201406160957543174.pdf)
+
+
+----
+
+# 10. Footnotes
+
+[1]: http://www.parosproxy.org/          "Paros"
+[2]: https://portswigger.net/burp/       "Burp Suite"
+[3]: http://www.toolswatch.org/2011/04/pangolin-automated-sql-injection-test-tool-free-edition-v3-2-3-released/ "Pangolin"
+[4]: http://download.cnet.com/Cooxie-Toolbar-for-Microsoft-Internet-Explorer/3000-2144_4-10268044.html "Cooxie Toolbar"
+[5]: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project  "Zap"
+[7]: http://www.kb.cert.org/vuls/id/576313 "Apache Commons Collection Vulnerability"
+[8]: https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API  "OWASP Enterprise Security API"
+[9]: exploit-db.com "공격코드를 공유하는 싸이트"
+[10]: https://en.wikipedia.org/wiki/BackTrack "BackTrack"
+[11]: http://regexper.com/ "REGEXPER"
+[12]: https://blog.kaspersky.com/password-check/ "Kaspersky Password Strength Checker"
 
 ----
 
