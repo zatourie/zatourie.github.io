@@ -38,8 +38,6 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 ## 0.5. [Microsoft Security Development Lifecycle:MSSDL](https://www.microsoft.com/en-us/sdl/)
 
-### [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/)
-
 ![](http://i.msdn.microsoft.com/cc448177.SDL-Lifecycle-gradient_0609(en-us,MSDN.10).jpg)
 
 ![MS-SDL openeg](http://cfile22.uf.tistory.com/R750x0/227AA74355630C1A13AFA8)
@@ -47,8 +45,6 @@ In short, a weakness is in theory, a vulnerability is in practice.
 ### MS SDL: DREAD
 
 ![](http://image.slidesharecdn.com/praetorianthreatmodelingpresentation-110117095334-phpapp02/95/threat-modeling-improve-security-drive-testing-reduce-costs-25-728.jpg?cb=1332160190) 
-
-http://www.openeg.co.kr/541
 
 ### MS SDL: STRIDE 
 
@@ -66,7 +62,7 @@ http://www.openeg.co.kr/541
 
 * URL Encoding : URL에 사용할 수 있는 형태로 encoding
 * HTML Encoding : 브라우저 렌더링 escape
-* http://stackoverflow.com/questions/1812473/difference-between-url-encode-and-html-encode
+* [SO Difference between Url Encode and HTML encode](http://stackoverflow.com/questions/1812473/difference-between-url-encode-and-html-encode)
 
 ## 0.7. KISA SW보안약점 카테고리 7개
 
@@ -93,7 +89,7 @@ http://www.openeg.co.kr/541
 ' union select group_concat(column_name),2,3,4,5,6 from information_schema.columns where table_name = '테이블명'#
 {% endhighlight %}
 
-pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
+pangoline[4] 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필요없음
 
 ### How to mitigate SQL Injection
 
@@ -110,7 +106,6 @@ pangoline 같은 툴을 사용하면 일일이 손으로 공격값을 넣을 필
 
 * Application에게 과도한 권한을 주지 말 것: root, administrator 사용금지
 * Application내에서 whitelist, input string validation 등 수행
-
 
 ##  1.3. Cross Site Script (XSS)
 
