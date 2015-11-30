@@ -25,10 +25,10 @@ In short, a weakness is in theory, a vulnerability is in practice.
 
 ## 0.2. Guidelines
 
-* 행자부 (Secure Coding Guide)
-* CWE (Mitre's Common Weakness Enumeration) cf)CVE(Common Vulnerability Exposure)
-* OWASP
-* CERT (Secure Coding Standard)
+* [행정안전부 시큐어코딩 가이드 (Secure Coding Guide)](http://www.mogaha.go.kr/frt/bbs/type001/commonSelectBoardArticle.do;jsessionid=IcuGyiF19H0HFQ7aauptfaJZhfaMFdTeEKXebtlcmwyhxIgc6BbdXtT4bRmkykmc.mopwas52_servlet_engine1?bbsId=BBSMSTR_000000000045&nttId=34430)
+* [CWE (Mitre's Common Weakness Enumeration) Top 25](http://cwe.mitre.org/top25/) cf)CVE(Common Vulnerability Exposure)
+* [OWASP Top 10 vulnerabilities](https://www.owasp.org/index.php/Top_10_2013-Top_10)
+* [CERT (Secure Coding Standard)](https://www.securecoding.cert.org/confluence/display/seccode/SEI+CERT+Coding+Standards)
 
 ## 0.3. Minimum Requirement
 
